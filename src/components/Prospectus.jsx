@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Style from '../public/css/style.css';
 
  class Prospectus extends React.Component {
   render() {

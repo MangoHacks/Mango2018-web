@@ -1,0 +1,104 @@
+@font-face {
+    font-family: 'FuturaLT-Bold';
+    src: url('../fonts/Futura-Font/FuturaLT-Bold.ttf'); /* IE9 Compat Modes */
+}
+@font-face {
+    font-family: 'FuturaLT-Light';
+    src: url('../fonts/Futura-Font/FuturaLT-Light.ttf'); /* IE9 Compat Modes */
+}
+@font-face {
+    font-family: 'FuturaLT';
+    src: url('../fonts/Futura-Font/FuturaLT.ttf'); /* IE9 Compat Modes */
+}
+@font-face {
+    font-family: 'FuturaLT-Book';
+    src: url('../fonts/Futura-Font/FuturaLT-Book.ttf'); /* IE9 Compat Modes */
+}
+
+*{
+    font-family: FuturaLT-Bold;
+}
+header{
+    font-size:60px;
+    padding-bottom: 3%;
+}
+p{
+    font-size: 2em;
+    font-family: FuturaLT;
+}
+h1{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-size: 115px;
+}
+h2{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-size: 115px;
+}
+i{
+    font-family: FuturaLT-Light;
+}
+input{
+    outline: none;
+    border:none;
+    box-shadow: none;
+    border-bottom: 1px solid black;
+    font-size:20px;
+    width:25%;
+    font-family:FuturaLT-Book;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    padding:7% 0 0 0;
+}
+button{
+    outline: none;
+    border:none;
+    font-family:FuturaLT-Book;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: transparent;
+    margin: 3% 45%;
+    font-size:30px !important;
+}
+button:hover{
+  color:#F5771D;
+}
+.orange-gradient{
+    background: linear-gradient(188deg, #ffbd17, #58f51d);}    
+.content{
+    padding: 10%;    
+}
+.hero{
+    padding:5% 10%;
+}
+.hero h1{
+    color:#C8F020;
+}
+.mango{
+    height:10em;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+}
+.header-info{
+    padding: 10% 0 3%;
+}
+.header-info p{
+    font-family: FuturaLT-Book;
+}
+.info-2{
+    padding-top: 5em;
+}
+.slogan{
+    margin-top: -35px;
+    font-family: FuturaLT-Light !important;
+}
+.macbook{
+    background-image: url('');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
