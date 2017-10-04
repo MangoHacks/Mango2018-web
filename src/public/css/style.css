@@ -14,7 +14,6 @@
     font-family: 'FuturaLT-Book';
     src: url('../fonts/Futura-Font/FuturaLT-Book.ttf'); /* IE9 Compat Modes */
 }
-
 *{
     font-family: FuturaLT-Bold;
 }
@@ -30,13 +29,17 @@ h1{
     align-items: center;
     justify-content: center;
     display: flex;
-    font-size: 115px;
+    font-size: 135px;
 }
-h2{
+h3{
     align-items: center;
     justify-content: center;
     display: flex;
     font-size: 115px;
+}
+h4{
+    font-size:35px;
+    padding: 0px 0 10px 0px;
 }
 i{
     font-family: FuturaLT-Light;
@@ -61,7 +64,7 @@ button{
     margin-left: auto;
     margin-right: auto;
     background-color: transparent;
-    margin: 3% 45%;
+    margin: 3% 44%;
     font-size:30px !important;
 }
 button:hover{
@@ -72,14 +75,18 @@ button:hover{
 .content{
     padding: 10%;    
 }
+.content-sm{
+    width: 47%;
+    padding:0 7% 5% 0;
+}
 .hero{
-    padding:5% 10%;
+    padding:15% 10%;
 }
 .hero h1{
     color:#C8F020;
 }
 .mango{
-    height:10em;
+    height:15em;
     margin-left: auto;
     margin-right: auto;
     display: flex;
@@ -101,4 +108,8 @@ button:hover{
     background-image: url('');
     background-repeat: no-repeat;
     background-size: cover;
+}
+.faq{
+    display:flex;
+    flex-wrap: wrap;
 }

@@ -3,8 +3,8 @@ import React, { Component } from 'react';
  class Signup extends React.Component {
   render() {
     return (
-      <div className="hero">
-        <h2>Signup</h2>
+      <div className="">
+        <h3>Signup</h3>
         <form action="submit">
           <input type="text" name="name" id="name" placeholder="Name"/>
           <input type="text" name="name" id="email" placeholder="Email"/>          
