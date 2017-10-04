@@ -10,7 +10,6 @@ import style from './public/css/style.css'
 // Components
 import Main from './components/Main';
 import Signup from './components/Signup';
-import Signin from './components/Signin';
 import Prospectus from './components/Prospectus';
 import AdminDashboard from './components/AdminDashboard';
 
@@ -21,7 +20,6 @@ ReactDOM.render(
         <Route path='/signup' component={Signup} />
         <Route path='/admindashboard' component={AdminDashboard} />
         <Route path='/prospectus' component={Prospectus} />
-        <Route path='/signin' component={Signin} />
         
       </div>
     </BrowserRouter>, document.getElementById('root'));

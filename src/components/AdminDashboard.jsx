@@ -29,7 +29,7 @@ class AdminDashboard extends Component {
     const target = event.target;
     const id = target.id;
 
-    fetch('http://localhost:8050/users',
+    fetch('http://localhost:8050/users/' + id,
       {
         method: 'DELETE'
       })
@@ -37,10 +37,7 @@ class AdminDashboard extends Component {
         this.renderAdminDashboard();
       })
   }
-  componentWillMount(){
-  }
-
-
+ 
   renderAdminDashboard() {
     fetch('http://localhost:8050/users',
       {
@@ -72,24 +69,27 @@ class AdminDashboard extends Component {
                 <th>Email</th>
                 <th>School</th>
                 <th>Shirt Size</th>
+                <th></th>
               </tr>
             </thead>
             <tbody>
-              {/* Begin loop */} 
-              {this.state.list.map((list, index) => {(
-                <tr key={list._id}>
-                  <td  key={list._id}>{index+1}</td>
-                  <td  key={list._id}>{list.name}</td>
-                  <td  key={list._id}>{list.email}</td>
-                  <td  key={list._id}>{list.school}</td>
-                  <td  key={list._id}>{list.size}</td>
-                  <td>
-                    <button id={list._id} onClick={this.deleteUser} className="btn btn-danger">Delete User</button>
-                  </td>
-                </tr>
-              )}
-            )}
-              {/* end Loop */}
+                {
+                  
+                  this.state.list.map((list,index) => {
+                    return(
+                    <tr key={list._id}>     
+                        <td  key={list._id}>{index+1}</td>
+                        <td >{list.name}</td>
+                        <td >{list.email}</td>
+                        <td >{list.school}</td>
+                        <td >{list.size}</td>
+                        <td>
+                          <button id={list._id} onClick={this.deleteUser} className="btn btn-danger">Delete User</button>
+                        </td>
+                    </tr>    
+                    )}
+                  )}
+
             </tbody>
           </table>
 
