@@ -11,3 +11,8 @@
 - Anything that is a component will be exported and used in the index.js file where everything is put together.
 - Anything static will be in the public folder inside src folder. [CSS, img, js, fonts]
 
+## Who is doing what?
+
+Amir - Front-End
+David - Middleware
+Cesia - Backend
