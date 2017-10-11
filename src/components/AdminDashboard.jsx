@@ -10,6 +10,7 @@ class AdminDashboard extends Component {
     };
     this.handleInputChange = this.handleInputChange.bind(this);
     this.deleteUser = this.deleteUser.bind(this);
+    this.editUser = this.editUser.bind(this);    
     this.renderAdminDashboard = this.renderAdminDashboard.bind(this);
   }
   componentDidMount() {
@@ -53,6 +54,20 @@ class AdminDashboard extends Component {
           })
      })
   }
+  getInitialState() {
+    return {
+      editing: null
+    };
+  }
+toggleEditing( itemId ) {
+    this.setState( { editing: itemId } );
+  }
+editUser(event){
+  event.preventDefault();
+  const target = event.target;
+  const id = target.id;
+console.log('yay' + id)
+}
   render() {
     
     return (
@@ -73,23 +88,22 @@ class AdminDashboard extends Component {
               </tr>
             </thead>
             <tbody>
-                {
-                  
-                  this.state.list.map((list,index) => {
+                {    
+                  this.state.list.map((item,index) => {
                     return(
-                    <tr key={list._id}>     
-                        <td  key={list._id}>{index+1}</td>
-                        <td >{list.name}</td>
-                        <td >{list.email}</td>
-                        <td >{list.school}</td>
-                        <td >{list.size}</td>
+                    <tr key={item._id}>     
+                        <td >{index+1}</td>
+                        <td >{item.name}</td>
+                        <td >{item.email}</td>
+                        <td >{item.school}</td>
+                        <td >{item.size}</td>
                         <td>
-                          <button id={list._id} onClick={this.deleteUser} className="btn btn-danger">Delete User</button>
+                        <button id={item._id} onClick={this.editUser} className="btn btn-primary">Edit User</button>                          
+                        <button id={item._id} onClick={this.deleteUser} className="btn btn-danger">Delete User</button>
                         </td>
                     </tr>    
                     )}
                   )}
-
             </tbody>
           </table>
 

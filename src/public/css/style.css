@@ -14,6 +14,7 @@
     font-family: 'FuturaLT-Book';
     src: url('../fonts/Futura-Font/FuturaLT-Book.ttf'); /* IE9 Compat Modes */
 }
+
 *{
     font-family: FuturaLT-Bold;
 }
@@ -44,7 +45,10 @@ h4{
 i{
     font-family: FuturaLT-Light;
 }
-input{
+
+/* Attendee form */
+
+.attendee-input-form input{
     outline: none;
     border:none;
     box-shadow: none;
@@ -57,7 +61,8 @@ input{
     display: flex;
     padding:7% 0 0 0;
 }
-button{
+
+.attendee-input-form button{
     outline: none;
     border:none;
     font-family:FuturaLT-Book;
@@ -67,9 +72,16 @@ button{
     margin: 3% 44%;
     font-size:30px !important;
 }
-button:hover{
+
+.attendee-input-form button:hover{
   color:#F5771D;
 }
+
+/* END Attendee form */
+
+
+
+/* MAIN PAGE */
 .orange-gradient{
     background: linear-gradient(188deg, #ffbd17, #58f51d);}    
 .content{
@@ -117,3 +129,17 @@ button:hover{
 {
     opacity:0;
 }
+
+/* END MAIN PAGE */
+
+
+/* Sponsors infp page */
+.sponsor-info-form {
+    text-align: center;
+    padding: 2% 0;
+
+}
+.sponsor-info-form input{
+    
+}
+/* End Sponsors info */

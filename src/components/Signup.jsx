@@ -61,7 +61,7 @@ handleInputChange(event) {
     return (
       <div className="">
         <h3>Signup</h3>
-        <form action="/form" onSubmit={this.signup}>
+        <form className="attendee-input-form" action="/form" onSubmit={this.signup}>
           <input type="name" name="name" id="name" placeholder="Name" required value={this.state.name} onChange={this.handleInputChange}/>
           <input type="email" name="email" required value={this.state.email} onChange={this.handleInputChange} id="email" placeholder="Email"/>          
           <input type="school" name="school" id="school" placeholder="School" required value={this.state.school} onChange={this.handleInputChange}/>

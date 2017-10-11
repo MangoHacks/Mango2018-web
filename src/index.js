@@ -12,6 +12,8 @@ import Main from './components/Main';
 import Signup from './components/Signup';
 import Prospectus from './components/Prospectus';
 import AdminDashboard from './components/AdminDashboard';
+import SponsorInfo from './components/SponsorInfo';
+
 
 ReactDOM.render(
     <BrowserRouter>
@@ -20,6 +22,8 @@ ReactDOM.render(
         <Route path='/signup' component={Signup} />
         <Route path='/admindashboard' component={AdminDashboard} />
         <Route path='/prospectus' component={Prospectus} />
+        <Route path='/sponsors' component={SponsorInfo} />
+        
         
       </div>
     </BrowserRouter>, document.getElementById('root'));
