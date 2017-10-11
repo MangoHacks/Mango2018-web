@@ -12,8 +12,15 @@
 - Anything static will be in the public folder inside src folder. [CSS, img, js, fonts]
 
 
-##Endpoints
+## Endpoints
+
 - /sponsors view sponsor dahsboard
 - /admindashboard view users attending mango
 - /prospectus 
 - /signup
+
+## Who is doing what?
+
+Amir - Front-End
+David - Middleware
+Cesia - Backend
