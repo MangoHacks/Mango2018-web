@@ -160,6 +160,37 @@ i{
 /* END MAIN PAGE */
 
 
+/* TEAM GRID */
+.team .content{
+    padding: 0% 15% 10% 15%;   
+}
+.team img{
+    height: 300px;
+    border-radius: 50%;
+    padding-bottom: 2%;
+}
+.team img:hover{
+    opacity: 0.4;
+}
+.team .row{
+    padding-bottom: 5%;
+    text-align: center;
+}
+.team header{
+    text-align: center;
+    font-size: 5em;
+    padding-bottom: 1.5em;
+}
+.team h4{
+    font-family: FuturaLT-Book;
+}
+.team p{
+    font-family: FuturaLT-Light;
+    margin-top: -10px;
+}
+/* END Team grid */
+
+
 /* Sponsors info page */
 .sponsor-info-form {
     text-align: center;
@@ -188,8 +219,8 @@ i{
 
 /* Footer */
 footer{
-    height:70px;
-    background: #2DD276;
+    height:120px;
+    background: #f5bb1d;
     text-align: center;
 }
 footer div{
@@ -200,6 +231,32 @@ footer div{
     font-family: FuturaLT;    
     font-size: 20px;
 }
+.footer-link{
+
+    margin: auto;
+}
+.fa-facebook {
+    color: white;    
+}
+.fa-facebook:hover{
+    text-decoration: none;
+    color:#3B5998;     
+} 
+.fa-twitter {
+    color: white;  
+    padding: 0 1.5%; 
+}
+.fa-twitter:hover{
+    text-decoration: none;
+    color:#00aced;
+}  
+.fa-slack {
+    color: white;    
+} 
+.fa-slack:hover{
+    text-decoration: none;
+    color: #e6186d;     
+} 
 /* END OF FOOTER */
 
 
@@ -245,6 +302,9 @@ footer div{
 
 /* PHONES */
 @media only screen and (max-width:575px){
+    .content{
+        padding: 5% 5% 10% 10%;
+    }
     h1{
         font-size:70px; 
     }
@@ -270,6 +330,9 @@ footer div{
     }
 
     /* Celebration */
+    .hero .content{
+        padding: 5% 5% 10% 10%;
+    }
     .hero .content header {
         font-size: 40px;
     }
@@ -308,8 +371,57 @@ footer div{
 .prospectus-page img{
     height: 34em;
 }
-    /* FOOTER */
-    .footer-text {
-        font-size: 15px;
-    }
+
+/* TEAM Grid */
+.team img{
+    height: 100px;
+}
+.team header{
+    font-size: 35px;
+}
+.team h4{
+    padding-top: 10px;
+    font-size: 15px;
+}
+.team p{
+    font-size: 13px;
+    margin-top: -15px;
+}
+.team .content header {
+    padding-bottom: 10%;
+}
+.team .col{
+    text-align: center;
+}
+.team .content {
+    padding: 0% 10% 10% 7%;
+}
+.team .row{
+    text-align: -webkit-auto;
+}
+
+
+ /* FOOTER */
+ footer{
+    height:100px;
+}
+footer div{
+    padding: 10px 0;
+}
+.footer-text {
+    font-size: 15px;
+}
+.footer-link{
+    font-size: 12px;
+}
+.fa-facebook{
+    font-size:25px;
+}
+.fa-twitter {
+    font-size: 25px;
+    padding: 0 7.5%;
+}
+.fa-slack{
+    font-size: 25px;
+}
 }

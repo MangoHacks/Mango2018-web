@@ -9,6 +9,7 @@ import logo from "../public/img/mangos/green-mango.svg"
 import Faq from './Faq'
 import Footer from './Footer'
 import Prospectus from './Prospectus'
+import Team from './Team'
 
 
 class Main extends React.Component {
@@ -70,7 +71,7 @@ class Main extends React.Component {
           <Faq />
 
           {/* <button className="btn btn-primary" onClick={this._onButtonClick}>Prospectus</button> */}
-
+          <Team />
           <Footer />
       </div>
       
