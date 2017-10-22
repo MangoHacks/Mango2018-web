@@ -304,7 +304,10 @@ footer div{
         font-size: 30px;
     }
 
-
+/* PROSPECTUS PAGE */
+.prospectus-page img{
+    height: 34em;
+}
     /* FOOTER */
     .footer-text {
         font-size: 15px;
