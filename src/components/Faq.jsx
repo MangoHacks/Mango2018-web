@@ -6,7 +6,8 @@ import React, { Component } from 'react';
     return (
       <div>
               <div className="content">
-                     <header>FAQ</header>
+                    <header>FAQ</header>
+
                      <div className="faq">
                             <div className="content-sm">
                                   <h4>When and where?</h4>

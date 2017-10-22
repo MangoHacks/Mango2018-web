@@ -26,21 +26,23 @@ class Main extends React.Component {
               <h1 className="innovate">Innovate.</h1>
               </div>
           </div>
-          <div className="hero ">
+          <div className="hero">
+            <div className="content">
                   <h2>2018</h2>
                   <header>MangoHacks</header>
                   <p className="slogan">"A celebration with Hackathon elements"</p>
                   <div className="info-2">
-                    <p>MangoHacks is a place for discovery.</p>
-                    <p>Its a 36 hour hackathon that encourages learning, collaboration, growth, innovation, and fun.<br></br>
-                      We will welcome 250+ students from Florida and accross the country<br></br>
-                      with amazing mentors, and wonderful sponsors to create amazing things.
-                    </p>
-                    <p><i>MangoHacks is organized by students for students.</i></p>
+                      <p>MangoHacks is a place for discovery.</p>
+                      <p>Its a 36 hour hackathon that encourages learning, collaboration, growth, innovation, and fun.<br></br>
+                        We will welcome 250+ students from Florida and accross the country<br></br>
+                        with amazing mentors, and wonderful sponsors to create amazing things.
+                      </p>
+                      <p><i>MangoHacks is organized by students for students.</i></p>
                    </div>
-              </div>
+            </div>
+          </div>
   
-            <div className="content change ">
+            <div className="content change">
                   <header> What is <br></br>a Hackathon?</header>
                   <p>MangoHacks is a chance to meet new people, learn something, make something, dream along, and have fun.</p>
                   <p>Everyone is welcomed - from the most experienced hackers, designers, and builders to the thinkers and the curious who have never heard of a hackathon. Regardless of your experience, there is something for you at MangoHacks.</p>
