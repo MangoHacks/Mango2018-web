@@ -1,12 +1,29 @@
+// Dependencies
 import React, { Component } from 'react';
+
 import $ from'jquery';
 
 import logo from "../public/img/mangos/green-mango.svg"
 
-// Dependencies
+// Components
 import Faq from './Faq'
 import Footer from './Footer'
+import Prospectus from './Prospectus'
+
+
 class Main extends React.Component {
+  constructor(props){
+  super(props);
+  this.state = {
+    };
+
+    this._onButtonClick = this._onButtonClick.bind(this);
+
+  }
+ _onButtonClick() {
+  window.location = "/Prospectus";
+  }
+
    
   render() {
     // Jquery
@@ -23,7 +40,7 @@ class Main extends React.Component {
         <div className="macbook">
           <div className="hero">
             <img className="mango" src={logo} alt="mangologo"/>
-              <h1 className="innovate">Innovate.</h1>
+              <h1 className="innovate">Imagine.</h1>
               </div>
           </div>
           <div className="hero">
@@ -42,16 +59,19 @@ class Main extends React.Component {
             </div>
           </div>
   
-            <div className="content change">
+           <div className="content change">
                   <header> What is <br></br>a Hackathon?</header>
                   <p>MangoHacks is a chance to meet new people, learn something, make something, dream along, and have fun.</p>
                   <p>Everyone is welcomed - from the most experienced hackers, designers, and builders to the thinkers and the curious who have never heard of a hackathon. Regardless of your experience, there is something for you at MangoHacks.</p>
                   <p> We’d love for you to come learn something new, take the things you love (sports, art, traveling, dogs!) or care about (poverty, sea level rise, hunger) and combine them with techonology to make something different, something cool, or something to improve the world.</p>
                   <p>It'll be sweet. We Promise.</p>
-              </div>
-              <Faq />
+          </div>
 
-              <Footer />
+          <Faq />
+
+          {/* <button className="btn btn-primary" onClick={this._onButtonClick}>Prospectus</button> */}
+
+          <Footer />
       </div>
       
     );

@@ -125,10 +125,10 @@ i{
     font-family: FuturaLT-Book;
 }
 .info-2{
-    padding-top: 3em;
+    padding-top: 5em;
 }
 .slogan{
-    margin-top: -20px;
+    margin-top: -30px;
     font-family: FuturaLT-Light !important;
 }
 .macbook{
@@ -170,6 +170,20 @@ i{
     
 }
 /* End Sponsors info */
+
+
+
+/* PROSPECTUS PAGE */
+.prospectus-page{
+    background: rgb(202, 202, 202);
+    text-align: -webkit-center;
+}
+.prospectus-page img{
+    height: 70em;
+    display: block;
+}
+/* END Prospectus page */
+
 
 
 /* Footer */
@@ -215,6 +229,9 @@ footer div{
     .info-2{
         padding-top: 2em;
     }
+    .hero .content header {
+        font-size: 65px;
+    }
 
     /* FAQ */
     .content-sm{
@@ -259,14 +276,12 @@ footer div{
     .hero .content p{
         font-size: 1em;
     }
-    .slogan{
-        margin: 0px;
-    }
     .info-2 {
         padding-top: 1em;
     }
     .slogan{
         padding-top: 2%;
+        margin: 0px;
     }
 
 
