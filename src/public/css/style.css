@@ -133,7 +133,7 @@ i{
 /* END MAIN PAGE */
 
 
-/* Sponsors infp page */
+/* Sponsors info page */
 .sponsor-info-form {
     text-align: center;
     padding: 2% 0;
@@ -143,3 +143,23 @@ i{
     
 }
 /* End Sponsors info */
+
+
+/* Footer */
+footer{
+    height:70px;
+    background: #2DD276;
+    text-align: center;
+}
+footer div{
+    padding: 20px 0;
+}
+.footer-text{
+    color:white !important;
+    font-family: FuturaLT;    
+    font-size: 20px;
+}
+
+
+
+/* END OF FOOTER */

@@ -3,8 +3,10 @@ import $ from'jquery';
 
 import logo from "../public/img/mangos/green-mango.svg"
 
+// Dependencies
 import Faq from './Faq'
- class Main extends React.Component {
+import Footer from './Footer'
+class Main extends React.Component {
    
   render() {
     // Jquery
@@ -46,6 +48,8 @@ import Faq from './Faq'
                   <p>It'll be sweet. We Promise.</p>
               </div>
               <Faq />
+
+              <Footer />
       </div>
       
     );
