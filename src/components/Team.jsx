@@ -33,7 +33,7 @@ class Team extends React.Component{
                                 <div className="col">
                                     <img src={david} alt="David Castaneda"/>
                                     <h4>David Castaneda</h4>
-                                    <p>Lead Developer</p>
+                                    <p>Developer</p>
                                 </div>
                          </div>
                          <div className="row">

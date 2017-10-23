@@ -162,17 +162,22 @@ i{
 /* Sponsors Grid */
 .sponsors header{
     text-align:center;
-    font-size: 5em;
+    font-size: 50px;
+    padding-bottom: 8%;
 }
 .sponsors .content{
-    padding: 0% 15% 5% 15%;
+    padding: 0% 15% 0% 15%;
 }
 .sponsors .content .row{
     text-align: center;
-    padding-bottom:5%;
+    padding-bottom:10%;
 }
 .sponsors img{
-    height: 10em;
+    height: 120px;
+    opacity: 0.7;
+}
+.sponsors img:hover{
+    opacity: 1;
 }
 
 /* END Sponsors Grid */
@@ -180,10 +185,10 @@ i{
 
 /* TEAM GRID */
 .team .content{
-    padding: 0% 15% 2% 15%;   
+    padding: 0% 15% 5% 15%;   
 }
 .team img{
-    height: 300px;
+    height: 250px;
     border-radius: 50%;
     padding-bottom: 2%;
 }
@@ -196,15 +201,17 @@ i{
 }
 .team header{
     text-align: center;
-    font-size: 5em;
-    padding-bottom: 1.5em;
+    font-size: 50px;
+    padding-bottom: 1.8em;
 }
 .team h4{
+    font-size: 30px;
     font-family: FuturaLT-Book;
 }
 .team p{
     font-family: FuturaLT-Light;
     margin-top: -10px;
+    font-size: 25px;
 }
 /* END Team grid */
 

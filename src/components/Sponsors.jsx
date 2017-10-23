@@ -6,6 +6,8 @@ import honors from '../public/img/sponsors/honors.png'
 import startup from '../public/img/sponsors/startup.png'
 import ultimate from '../public/img/sponsors/ultimate.png'
 import fifteenseventeen from '../public/img/sponsors/1517.png'
+import mlh from '../public/img/sponsors/mlh.png'
+
 
 class Sponsors extends React.Component{
     render(){
@@ -16,6 +18,9 @@ class Sponsors extends React.Component{
         <div className="row">
                         <div className="col">
                            <a href="https://www.ultimatesoftware.com/" title="Ultimate Software" target="_blank"> <img src={ultimate} alt="Ultimate Software"/></a>
+                        </div> 
+                        <div className="col">
+                           <a href="https://www.mlh.io/" title="Major League Hacking" target="_blank"> <img src={mlh} alt="Major League Hacking"/></a>
                         </div> 
                         <div className="col">
                             <a href="http://www.1517fund.com/" title="1517" target="_blank"><img src={fifteenseventeen} alt="1517 Fund"/></a>
