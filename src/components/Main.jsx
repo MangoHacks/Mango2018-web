@@ -10,6 +10,7 @@ import Faq from './Faq'
 import Footer from './Footer'
 import Prospectus from './Prospectus'
 import Team from './Team'
+import Sponsors from './Sponsors'
 
 
 class Main extends React.Component {
@@ -71,6 +72,7 @@ class Main extends React.Component {
           <Faq />
 
           {/* <button className="btn btn-primary" onClick={this._onButtonClick}>Prospectus</button> */}
+          <Sponsors />
           <Team />
           <Footer />
       </div>

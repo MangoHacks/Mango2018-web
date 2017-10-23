@@ -159,6 +159,24 @@ i{
 
 /* END MAIN PAGE */
 
+/* Sponsors Grid */
+.sponsors header{
+    text-align:center;
+    font-size: 5em;
+}
+.sponsors .content{
+    padding: 0% 15% 5% 15%;
+}
+.sponsors .content .row{
+    text-align: center;
+    padding-bottom:5%;
+}
+.sponsors img{
+    height: 10em;
+}
+
+/* END Sponsors Grid */
+
 
 /* TEAM GRID */
 .team .content{
@@ -296,8 +314,10 @@ footer div{
     }
     .content header{
         padding-bottom: 5%;
-        
     }
+
+    /* SPONSORS */
+
 }
 
 /* PHONES */
@@ -361,7 +381,7 @@ footer div{
     }
     .faq h4 {
         font-size: 20px;
-        padding: 0% 0% 0% 0%;
+        padding: 0%;
     }
     .content header {
         font-size: 30px;
@@ -371,6 +391,22 @@ footer div{
 .prospectus-page img{
     height: 34em;
 }
+
+/* Sponsors Grid */
+.sponsors img{
+    height: 50px;
+}
+.sponsors .content {
+    padding: 0% 5% 10% 5% !important;
+}
+.sponsors header{
+    font-size: 35px;
+    padding-bottom: 7%;
+}
+.sponsors .content .row{
+    padding-bottom:5%;
+}
+
 
 /* TEAM Grid */
 .team img{
