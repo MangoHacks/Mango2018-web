@@ -8,9 +8,9 @@ let DOMPurify = require('../dist/purify.js');
     super(props);
     this.state = {
       list: [],
-      // name:"",
-      // email:"",
-      // amount:"",
+      name:"",
+      email:"",
+      amount:"",
       // confirmed:'',
       // contacted: ''
     };
@@ -36,8 +36,8 @@ let DOMPurify = require('../dist/purify.js');
 
     this.setState({
       [name]: value,
-      // [contacted]:value,
-      // [confirmed]:confirmed
+      [contacted]:value,
+      [confirmed]:confirmed
     });
   }
   deleteUser(event) {
@@ -115,8 +115,8 @@ signup(event) {
     let cleanEmail = DOMPurify.sanitize(this.state.email);
     let cleanName = DOMPurify.sanitize(this.state.name);
     let cleanAmount = DOMPurify.sanitize(this.state.amount);
-    // let cleanConfirmed = DOMPurify.sanitize(this.state.confirmed);
-    // let cleanContacted = DOMPurify.sanitize(this.state.contacted);
+    let cleanConfirmed = DOMPurify.sanitize(this.state.confirmed);
+    let cleanContacted = DOMPurify.sanitize(this.state.contacted);
         
     fetch('http://localhost:8050/sponsor', {
         method: 'POST',
@@ -127,7 +127,7 @@ signup(event) {
             email: cleanEmail,
             name: cleanName,
             amount: cleanAmount ,      
-            // confirmed: cleanConfirmed
+            confirmed: cleanConfirmed
 
         })
         
@@ -149,7 +149,7 @@ signup(event) {
       <form className="sponsor-info-form" action="/sponsorform" onSubmit={this.signup}>
           <input type="name" name="name" id="name" placeholder="Sponsor Name" required value={this.state.name} onChange={this.handleInputChange}/>
           <input type="email" name="email" required value={this.state.email} onChange={this.handleInputChange} id="email" placeholder="Email"/>          
-          <input type="amount" name="amount" required value={this.state.amount} onChange={this.handleInputChange} id="amount" placeholder="Amount"/>                   
+          <input type="number" name="amount" required value={this.state.amount} onChange={this.handleInputChange} id="amount" placeholder="Amount"/>                   
           <button className="btn btn-primary" type="submit" onClick={this.registered}>Confirm</button>  
       </form>
 
@@ -178,8 +178,8 @@ signup(event) {
                         <td >{item.amount}</td>
                         <td >{item.confirmed}</td>
                         <td>                         
-                        <button id={item._id} onClick={this.updateConfirmation} className="btn btn-success">Confirm</button>          
-                        <button id={item._id} onClick={this.updateContacted} className="btn btn-primary">Contacted</button>                                                                  
+                        {/* <button id={item._id} onClick={this.updateConfirmation} className="btn btn-success">Confirm</button>           */}
+                        {/* <button id={item._id} onClick={this.updateContacted} className="btn btn-primary">Contacted</button>                                                                   */}
                         <button id={item._id} onClick={this.deleteUser} className="btn btn-danger">Delete Sponsor</button>
                         </td>
                     </tr>    

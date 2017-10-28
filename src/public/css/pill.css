@@ -1,0 +1,47 @@
+/* Pill Size */
+/* height: 500px; width: 200px;
+height: 300px; width:140px;
+height: 150px; width: 75px; */
+
+
+.pill{
+    height:300px;
+    width: 140px;
+    border: 1px solid black;
+    background: transparent;
+    border-radius: 100px;
+    -webkit-transform: rotate(15deg);
+}
+.pill-move{
+    animation-name:pill;
+    animation-duration: 300s;
+    animation-iteration-count: infinite;
+    animation-delay: 0s;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+    position: absolute;
+    z-index: -10;
+}
+@keyframes pill{
+   0% {
+       transform: translatex(0px) translatey(2080px);
+   }
+   100% {
+       transform: translatex(0px) translatey(0px);
+   }
+}
+/* PILLS */
+#pill-1{
+    height: 650px;
+    width: 250px;
+    border-radius: 150px;
+    position: inherit;
+    right: -1000px;
+    opacity: 0.8;
+    background: linear-gradient(233deg, #6800ff, #f52376);
+    border: transparent;
+}
+#pill-2{
+    
+}

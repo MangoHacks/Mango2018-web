@@ -56,6 +56,16 @@ handleInputChange(event) {
       [email]: value
   });
 }
+// SIGNUP 
+// name
+// email
+// gender
+// school
+// year
+// resume
+// github
+// first time?
+// MLH CODE OF CONDUCT
 
   render() {
     return (
@@ -63,9 +73,10 @@ handleInputChange(event) {
         <h3>Signup</h3>
         <form className="attendee-input-form" action="/form" onSubmit={this.signup}>
           <input type="name" name="name" id="name" placeholder="Name" required value={this.state.name} onChange={this.handleInputChange}/>
-          <input type="email" name="email" required value={this.state.email} onChange={this.handleInputChange} id="email" placeholder="Email"/>          
-          <input type="school" name="school" id="school" placeholder="School" required value={this.state.school} onChange={this.handleInputChange}/>
-          <input type="major" name="major" id="major" placeholder="Major" required value={this.state.major} onChange={this.handleInputChange}/>
+          <input type="email" name="email" required value={this.state.email} onChange={this.handleInputChange} id="email" placeholder="Email"/>     
+          <input type="radio" name="gender" required value={this.state.gender} onChange={this.handleInputChange} id="gender" placeholder=""/>                         
+          <input type="text" name="school" id="school" placeholder="School" required value={this.state.school} onChange={this.handleInputChange}/>
+          <input type="text" name="major" id="major" placeholder="Major" required value={this.state.major} onChange={this.handleInputChange}/>
           <input type="text" name="diet" id="diet" placeholder="Dietary Restrictions" required value={this.state.diet} onChange={this.handleInputChange}/>          
           <input type="text" name="travel" id="travel" placeholder="Travel Reimbursement" required value={this.state.travel} onChange={this.handleInputChange}/>
           <button className="btn btn-default" type="submit" onClick={this.registered}>✓ Register</button>  
