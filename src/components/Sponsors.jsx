@@ -14,7 +14,7 @@ class Sponsors extends React.Component{
         return(
  <div className="sponsors">
  <div className="content">
-     <header>Sponsors</header>
+     <header>MangoHacks is supported by...</header>
         <div className="row">
                         <div className="col">
                            <a href="https://www.ultimatesoftware.com/" title="Ultimate Software" target="_blank"> <img src={ultimate} alt="Ultimate Software"/></a>
@@ -24,6 +24,9 @@ class Sponsors extends React.Component{
                         </div> 
                         <div className="col">
                             <a href="http://www.1517fund.com/" title="1517" target="_blank"><img src={fifteenseventeen} alt="1517 Fund"/></a>
+                        </div> 
+                        <div className="col">
+                            <a href="http://www.github.com/" title="GitHub" target="_blank"><img src={github} alt="GitHub"/></a>
                         </div> 
          </div>
 

@@ -93,8 +93,7 @@ i{
 .orange-gradient{
     background: linear-gradient(188deg, #ffbd17, #58f51d);}    
 .content{
-    padding: 10% 15% 10% 15%;  
-    z-index: 100000 !important; 
+    padding: 5% 15% 5% 15%;  
 }
 .content-sm{
     width: 50%;
@@ -167,15 +166,15 @@ i{
 
 /* Sponsors Grid */
 .sponsors header{
-    text-align:center;
     font-size: 50px;
-    padding-bottom: 8%;
+    padding-bottom: 7%;
+    width: fit-content;
 }
 .sponsors .content{
     padding: 0% 15% 0% 15%;
 }
 .sponsors .content .row{
-    text-align: center;
+    margin-right: -350px;
     padding-bottom:10%;
 }
 .sponsors img{
@@ -348,6 +347,14 @@ footer div{
 
 
 
+/* IMAGES Styles */
+.vr{
+    position: absolute;
+    right: -25%;
+    top: 150em;
+}
+
+
 /* MEDIA Queries */
 
 /* MEDIUM */
@@ -508,7 +515,7 @@ footer div{
 
 
  /* FOOTER */
- footer{
+footer{
     height:100px;
 }
 footer div{

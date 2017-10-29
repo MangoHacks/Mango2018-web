@@ -3,17 +3,22 @@ import React, { Component } from 'react';
 
 import $ from'jquery';
 
-import logo from "../public/img/mangos/green-mango.svg"
+import logo from "../public/img/mangos/green-mango.svg";
 
 // CSS
-import pill from '../public/css/pill.css'
+import pill from '../public/css/pill.css';
+
+// Images
+import vr from '../public/img/misc/vr2.png';
+
 // Components
-import Faq from './Faq'
-import Footer from './Footer'
-import Prospectus from './Prospectus'
-import Team from './Team'
-import Sponsors from './Sponsors'
-import SignupModal from './SignupModal'
+import Faq from './Faq';
+import Footer from './Footer';
+import Prospectus from './Prospectus';
+import Team from './Team';
+import Sponsors from './Sponsors';
+import SignupModal from './SignupModal';
+import WhatLike from './WhatLike';
 
 
 class Main extends React.Component {
@@ -40,17 +45,11 @@ class Main extends React.Component {
   $(document).ready(function(){$("div").hide().fadeIn(1000);});
 
     return (
-
       <div>
-
-
         <div className="pill-move">
            <div className="pill" id="pill-1"></div>
            <div className="pill" id="pill-2"></div>
-           
         </div>
-
-
 
         <div className="macbook">
           <div className="hero">
@@ -83,9 +82,13 @@ class Main extends React.Component {
                   <SignupModal />                     
           </div>
 
+          <div>
+            <img src={vr} className="vr" alt="Virtual Reality"/>
+          </div>
           <Faq />
+          <WhatLike />
           <Sponsors />
-          <Team /> 
+          {/* <Team />  */}
           <Footer />
       </div>
       
