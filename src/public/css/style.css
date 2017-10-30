@@ -96,7 +96,7 @@ i{
 .orange-gradient{
     background: linear-gradient(188deg, #ffbd17, #58f51d);}    
 .content{
-    padding: 5% 15% 0% 15%;  
+    padding: 5% 15% 0% 15%; 
 }
 .content-sm{
     width: 50%;
@@ -154,6 +154,9 @@ i{
 /* WHAT is a Hackathon section */
 .whatis .content{
     padding: 5% 15% 5% 15%;  
+    -webkit-box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.5);
+    box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.5);
 }
 
 /* END WHAT is a Hackathon section */
@@ -176,6 +179,9 @@ i{
 
 .whatlike .content{
     padding: 5% 15% 5% 15%;
+    -webkit-box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.5);
+    box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.5);
 }
 
 /* END Whatlike section */
