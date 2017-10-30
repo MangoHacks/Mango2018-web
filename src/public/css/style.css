@@ -154,9 +154,9 @@ i{
 /* WHAT is a Hackathon section */
 .whatis .content{
     padding: 5% 15% 5% 15%;  
-    -webkit-box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.5);
-    -moz-box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.5);
-    box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 0px 4px 131px -32px rgba(0,0,0,6);
+    -moz-box-shadow: 0px 4px 131px -32px rgba(0,0,0,0.6);
+    box-shadow: 0px 4px 131px -32px rgba(0,0,0,0.6);
 }
 
 /* END WHAT is a Hackathon section */
@@ -179,9 +179,9 @@ i{
 
 .whatlike .content{
     padding: 5% 15% 5% 15%;
-    -webkit-box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.5);
-    -moz-box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.5);
-    box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 0px 4px 131px -32px rgba(0,0,0,0.6);
+    -moz-box-shadow: 0px 4px 131px -32px rgba(0,0,0,0.6);
+    box-shadow: 0px 4px 131px -32px rgba(0,0,0,0.6);
 }
 .whatlike .row{
     width: fit-content;
@@ -337,9 +337,9 @@ footer{
     height:140px;
     background: #f5bb1d;
     text-align: center;
-    -webkit-box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.5);
-    -moz-box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.5);
-    box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 0px 4px 131px -32px rgba(0,0,0,0.6);
+    -moz-box-shadow: 0px 4px 131px -32px rgba(0,0,0,0.6);
+    box-shadow: 0px 4px 131px -32px rgba(0,0,0,0.6);
 }
 footer div{
     padding: 30px 0;
@@ -395,6 +395,8 @@ footer div{
 
 
 /* MEDIA Queries */
+
+/* FOR VIDEO  */
 
 /* MEDIUM */
 @media only screen and (max-width:875px){
