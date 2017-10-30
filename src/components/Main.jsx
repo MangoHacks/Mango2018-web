@@ -26,7 +26,6 @@ class Main extends React.Component {
   super(props);
   this.state = {
     };
-
     this._onButtonClick = this._onButtonClick.bind(this);
   }
 
@@ -45,7 +44,7 @@ class Main extends React.Component {
   $(document).ready(function(){$("div").hide().fadeIn(1000);});
 
     return (
-      <div>
+      <div class="">
         <div className="pill-move">
            <div className="pill" id="pill-1"></div>
            <div className="pill" id="pill-2"></div>
@@ -73,17 +72,19 @@ class Main extends React.Component {
             </div>
           </div>
   
-           <div className="content change">
-                  <header> What is <br></br>a Hackathon?</header>
-                  <p>MangoHacks is a chance to meet new people, learn something, make something, dream along, and have fun.</p>
-                  <p>Everyone is welcomed - from the most experienced hackers, designers, and builders to the thinkers and the curious who have never heard of a hackathon. Regardless of your experience, there is something for you at MangoHacks.</p>
-                  <p> We’d love for you to come learn something new, take the things you love (sports, art, traveling, dogs!) or care about (poverty, sea level rise, hunger) and combine them with techonology to make something different, something cool, or something to improve the world.</p>
-                  <p>It'll be sweet. We Promise.</p>
-                  <SignupModal />                     
+          <div className="whatis">
+              <div className="content change">
+                      <header> What is <br></br>a Hackathon?</header>
+                      <p>MangoHacks is a chance to meet new people, learn something, make something, dream along, and have fun.</p>
+                      <p>Everyone is welcomed - from the most experienced hackers, designers, and builders to the thinkers and the curious who have never heard of a hackathon. Regardless of your experience, there is something for you at MangoHacks.</p>
+                      <p> We’d love for you to come learn something new, take the things you love (sports, art, traveling, dogs!) or care about (poverty, sea level rise, hunger) and combine them with techonology to make something different, something cool, or something to improve the world.</p>
+                      <p>It'll be sweet. We Promise.</p>
+                      <SignupModal />                    
+              </div>
           </div>
-
-          <div>
-            <img src={vr} className="vr" alt="Virtual Reality"/>
+          <div className="vr-img">
+            <img src={vr} className="vr" alt="Virtual Reality"/>   
+            
           </div>
           <Faq />
           <WhatLike />

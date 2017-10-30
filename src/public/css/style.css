@@ -18,6 +18,9 @@
 *{
     font-family: FuturaLT-Bold;
 }
+body{
+    overflow-x: hidden;
+}
 *:focus{
     outline: none;
     z-index: 0;
@@ -93,7 +96,7 @@ i{
 .orange-gradient{
     background: linear-gradient(188deg, #ffbd17, #58f51d);}    
 .content{
-    padding: 5% 15% 5% 15%;  
+    padding: 5% 15% 0% 15%;  
 }
 .content-sm{
     width: 50%;
@@ -146,6 +149,16 @@ i{
     height: 100vh;
 }
 
+/* END MAIN PAGE */
+
+/* WHAT is a Hackathon section */
+.whatis .content{
+    padding: 5% 15% 5% 15%;  
+}
+
+/* END WHAT is a Hackathon section */
+
+/* FAQ Section */
 .faq{
     display:flex;
     flex-wrap: wrap;
@@ -156,13 +169,16 @@ i{
 .faq h4{
     font-size: 30px;
 }
+/* END FAQ Section */
 
-.hideme
-{
-    opacity:0;
+
+/* WHAT LIKE Section */
+
+.whatlike .content{
+    padding: 5% 15% 5% 15%;
 }
 
-/* END MAIN PAGE */
+/* END Whatlike section */
 
 /* Sponsors Grid */
 .sponsors header{
@@ -171,7 +187,7 @@ i{
     width: fit-content;
 }
 .sponsors .content{
-    padding: 0% 15% 0% 15%;
+    padding: 5% 15% 0% 15%;
 }
 .sponsors .content .row{
     margin-right: -350px;
@@ -318,7 +334,6 @@ footer div{
     font-size: 20px;
 }
 .footer-link{
-
     margin: auto;
 }
 .fa-facebook {
@@ -349,10 +364,15 @@ footer div{
 
 /* IMAGES Styles */
 .vr{
-    position: absolute;
-    right: -25%;
-    top: 150em;
+    margin: auto;
+    display: -webkit-box;
+    height: 44rem;
+    position: relative;
 }
+.vr-img{
+    position: absolute;
+}
+
 
 
 /* MEDIA Queries */
@@ -512,8 +532,6 @@ footer div{
     text-align: -webkit-auto;
 }
 
-
-
  /* FOOTER */
 footer{
     height:100px;
@@ -536,5 +554,5 @@ footer div{
 }
 .fa-slack{
     font-size: 25px;
-}
+    }   
 }
