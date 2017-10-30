@@ -46,8 +46,8 @@ class Main extends React.Component {
     return (
       <div class="">
         <div className="pill-move">
-           <div className="pill" id="pill-1"></div>
-           <div className="pill" id="pill-2"></div>
+           {/* <div className="pill" id="pill-1"></div>
+           <div className="pill" id="pill-2"></div> */}
         </div>
 
         <div className="macbook">
@@ -83,13 +83,12 @@ class Main extends React.Component {
               </div>
           </div>
           <div className="vr-img">
-            <img src={vr} className="vr" alt="Virtual Reality"/>   
-            
+            {/* <img src={vr} className="vr" alt="Virtual Reality"/>    */}
           </div>
           <Faq />
           <WhatLike />
           <Sponsors />
-          {/* <Team />  */}
+          <Team /> 
           <Footer />
       </div>
       

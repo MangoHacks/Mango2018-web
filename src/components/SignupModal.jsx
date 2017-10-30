@@ -27,7 +27,7 @@ open() {
                   <Modal.Title>MangoHacks Registration</Modal.Title>
             </Modal.Header>
             <Modal.Body>
-                            <form className="attendee-input-form" action="/form" onSubmit={this.signup}>
+                            {/* <form className="attendee-input-form" action="/form" onSubmit={this.signup}>
                                 <input type="name" name="name" id="name" placeholder="Name" required value={this.state.name} onChange={this.handleInputChange}/>
                                 <input type="email" name="email" required value={this.state.email} onChange={this.handleInputChange} id="email" placeholder="Email"/>     
                                 <input type="radio" name="gender" required value={this.state.gender} onChange={this.handleInputChange} id="gender" placeholder=""/>                         
@@ -40,7 +40,7 @@ open() {
                                 <input type="text" name="time" id="time" placeholder="" required value={this.state.time} onChange={this.handleInputChange}/>      
                                 <input type="text" name="mlh" id="mlh" placeholder="" label="MLH Code of Conduct" required value={this.state.mlh} onChange={this.handleInputChange}/>                                                                                                                        
                                 <button className="btn btn-default" type="submit" onClick={this.registered}>✓ Register</button> 
-                            </form>
+                            </form> */}
             </Modal.Body>
             <Modal.Footer>
             <Button className="modal-close" onClick={this.close}>Close</Button>
