@@ -30,17 +30,17 @@ header{
     padding-bottom: 3%;
 }
 p{
-    font-size: 2em;
+    font-size: 20px;
     font-family: FuturaLT;
 }
 h1{
     align-items: center;
     justify-content: center;
     display: flex;
-    font-size: 135px;
+    font-size: 90px;
 }
 h2{
-    font-size: 3em;
+    /* font-size: 3em; */
 }
 h3{
     align-items: center;
@@ -103,13 +103,13 @@ i{
     padding:0 5% 5% 0;
 }
 .content header{
-    font-size: 50px;
+    font-size: 35px;
 }
 .hero .content header{
-    font-size: 80px;
+    font-size: 60px;
 }
-.content p{
-    font-size:1.8em;
+.hero .content p{
+    font-size: 25px;
 }
 .hero{
     padding:5% 0% 0% 0%;
@@ -121,7 +121,7 @@ i{
     padding: 5% 15% 10% 15%;
 }
 .mango{
-    height:20em;
+    height:15em;
     margin-left: auto;
     margin-right: auto;
     display: flex;
@@ -167,10 +167,10 @@ i{
     flex-wrap: wrap;
 }
 .faq p{
-    font-size: 1.7em;
+    font-size: 20px;
 }
 .faq h4{
-    font-size: 30px;
+    font-size: 22px;
 }
 /* END FAQ Section */
 
@@ -183,12 +183,19 @@ i{
     -moz-box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.5);
     box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.5);
 }
+.whatlike .row{
+    width: fit-content;
+}
+.video-wrapper{
+    width: fit-content;
+    float: right;
+}
 
 /* END Whatlike section */
 
 /* Sponsors Grid */
 .sponsors header{
-    font-size: 50px;
+    font-size: 35px;
     padding-bottom: 7%;
     width: fit-content;
 }
@@ -200,7 +207,7 @@ i{
     padding-bottom:10%;
 }
 .sponsors img{
-    height: 120px;
+    height: 90px;
     opacity: 0.7;
 }
 .sponsors img:hover{
