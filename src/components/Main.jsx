@@ -46,8 +46,17 @@ class Main extends React.Component {
     return (
       <div class="">
         <div className="pill-move">
-           {/* <div className="pill" id="pill-1"></div>
-           <div className="pill" id="pill-2"></div> */}
+           <div className="pill" id="pill-1"></div>
+           <div className="pill" id="pill-2"></div>
+           <div className="pill" id="pill-3"></div>
+           <div className="pill" id="pill-4"></div>           
+        </div>
+
+        <div className="pill-move top-pills">
+           <div className="pill" id="pill-5"></div>
+           <div className="pill" id="pill-6"></div>
+           <div className="pill" id="pill-7"></div>
+           <div className="pill" id="pill-8"></div>           
         </div>
 
         <div className="macbook">

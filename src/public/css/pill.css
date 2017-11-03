@@ -15,6 +15,7 @@ height: 150px; width: 75px; */
 .pill-move{
     animation-name:pill;
     animation-duration: 300s;
+    /* animation-duration: 300s; */
     animation-iteration-count: infinite;
     animation-delay: 0s;
     animation-direction: normal;
@@ -22,6 +23,10 @@ height: 150px; width: 75px; */
     animation-play-state: running;
     position: absolute;
     z-index: -10;
+}
+
+.top-pills{
+    top:-2000px;
 }
 @keyframes pill{
    0% {
@@ -38,10 +43,57 @@ height: 150px; width: 75px; */
     border-radius: 150px;
     position: inherit;
     right: -1000px;
-    opacity: 0.8;
-    background: linear-gradient(233deg, #6800ff, #f52376);
+    opacity: 1;
+    background: linear-gradient(233deg, #FBD249, #F5A623);    
     border: transparent;
 }
 #pill-2{
-    
+    opacity: 0.3;
+}
+#pill-3{
+    position: inherit;
+    left: 400px;
+    top: 900px;
+    background: linear-gradient(233deg, #FBD249, #F5A623);    
+    border: none;   
+}
+#pill-4{
+    top: 200px;
+    opacity: 1;
+    position: inherit;
+    border: 2px solid #FBD249;
+}
+
+
+/* TOP PILLS */
+#pill-5{
+    height: 650px;
+    width: 250px;
+    border-radius: 150px;
+    position: inherit;
+    right: -1500px;
+    opacity: 1;
+    background: linear-gradient(233deg, #FBD249, #F5A623);
+    border: transparent;
+}
+#pill-6{
+    height: 650px;
+    bottom:100px;
+    opacity: 0.3;
+    width: 250px;
+    border-radius: 150px;
+    position: inherit;
+    right: -1500px;
+    background:transparent;
+}
+#pill-7{
+    background: linear-gradient(233deg, #F5A623, #FBD249);
+    border: none;    
+}
+#pill-8{
+    left: 300px;
+    position: inherit;
+    height: 500px;
+    width: 200px;
+    border: 5px solid #FBD249;
 }
