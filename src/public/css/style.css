@@ -191,6 +191,16 @@ i{
     float: right;
 }
 
+#mango-video{
+
+}
+#hackathon-video{
+
+}
+#mlh-video{
+    
+}
+
 /* END Whatlike section */
 
 /* Sponsors Grid */
@@ -254,7 +264,6 @@ i{
 .sponsor-info-form {
     text-align: center;
     padding: 2% 0;
-
 }
 .sponsor-info-form input{
     
@@ -476,7 +485,7 @@ footer div{
         padding: 5% 5% 10% 10%;
     }
     .hero .content header {
-        font-size: 40px;
+        font-size: 35px;
     }
     .hero .content p{
         font-size: 1em;
@@ -487,6 +496,14 @@ footer div{
     .slogan{
         padding-top: 2%;
         margin: 0px;
+    }
+
+    /* WHAT IS */
+    .whatis{
+        padding-bottom: 30px;
+    }
+    .whatis .content{
+        padding: 10% 15% 10% 15%;
     }
 
 
@@ -506,7 +523,7 @@ footer div{
         padding: 0%;
     }
     .content header {
-        font-size: 30px;
+        font-size: 25px;
     }
 
 /* PROSPECTUS PAGE */
@@ -514,28 +531,58 @@ footer div{
     height: 34em;
 }
 
-/* Sponsors Grid */
-.sponsors img{
-    height: 50px;
+
+/* What like section */
+#mango-video{
+    height: 250px;
+    width: 350px;
+    position: relative;
 }
-.sponsors .content {
-    padding: 0% 5% 10% 5% !important;
+#mlh-video{
+    display: none;
 }
-.sponsors header{
-    font-size: 35px;
-    padding-bottom: 7%;
+#hackathon-video{
+    display: none;
 }
-.sponsors .content .row{
-    padding-bottom:5%;
+.whatlike{
+    padding-bottom: 45px;
+}
+.whatlike .content{
+    padding: 5% 10% 5% 10% !important;
+}
+.whatlike .content header{
+    font-size: 20px;
 }
 
+
+
+/* Sponsors Grid */
+
+.sponsors img{
+    height: 35px;
+}
+.sponsors .content {
+    padding: 0% 10% 0% 10% !important;
+}
+.sponsors header{
+    font-size: 20px;    
+    padding-bottom: 30px;
+}
+.sponsors .content .row{
+    margin-right: 0;
+    padding-right:10px; 
+    text-align: center;
+}
+
+/* 
 
 /* TEAM Grid */
 .team img{
-    height: 100px;
+    height: 70px;
 }
 .team header{
-    font-size: 35px;
+    font-size: 25px;
+
 }
 .team h4{
     padding-top: 10px;
