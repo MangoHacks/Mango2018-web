@@ -146,7 +146,7 @@ i{
 }
 .macbook .hero{
     padding:15% 0% 0% 0%;
-    height: 100vh;
+    height: 720px;
 }
 
 /* END MAIN PAGE */
@@ -204,25 +204,26 @@ i{
 /* END Whatlike section */
 
 /* Sponsors Grid */
-.sponsors header{
-    font-size: 35px;
-    padding-bottom: 7%;
-    width: fit-content;
-}
 .sponsors .content{
-    padding: 5% 15% 0% 15%;
-}
-.sponsors .content .row{
-    margin-right: -350px;
-    padding-bottom:10%;
+    padding: 7% 15% 3% 15%;       
 }
 .sponsors img{
-    height: 90px;
+    height: 80px;
+    padding-bottom: 5%;
     opacity: 0.7;
 }
 .sponsors img:hover{
     opacity: 1;
 }
+.sponsors header{
+    font-size: 35px;
+    padding-bottom: 7%;
+    width: fit-content;
+}
+
+.sponsors .row{
+    padding-bottom: 5%;
+} 
 
 /* END Sponsors Grid */
 
@@ -411,32 +412,50 @@ footer div{
 /* MEDIA Queries */
 
 /* FOR VIDEO  */
+@media only screen and (max-width: 1630px){
+#hackathon-video{
+    display: none;
+}
+#mlh-video{
+    display: none;
+}
+#mango-video{
+    width: -webkit-fill-available;
+}
+
+}
+
+
+
 
 /* MEDIUM */
 @media only screen and (max-width:875px){
     h2{
-        font-size:3em;
+        font-size:35px;
     }
+
     /* TOP */
   .macbook .hero{
         padding-top: 30%;
     }
     .macbook .mango{
-        height: 17em;
+        height: 250px;
     }
     .hero h1{
-        font-size: 120px;
+        font-size: 90px;
     }
-
+    .hero .content p {
+        font-size: 20px;
+    }
     /* CELEBRATION */
     .slogan{
-        padding-top: 10%;
+        padding-top: 3%;
     }
     .info-2{
         padding-top: 2em;
     }
     .hero .content header {
-        font-size: 65px;
+        font-size: 50px;
     }
 
     /* FAQ */
@@ -446,13 +465,41 @@ footer div{
     .content header{
         padding-bottom: 5%;
     }
+     /* WHAT IS LIKE - VIDEO */
+     #mango-video{
+        height: 350px;
+    }
 
     /* SPONSORS */
+    .sponsors .content header{
+        font-size: 30px;
+        padding-bottom: 50px;
+    }
+    .sponsors .row{
+        padding-bottom: 50px;
+        text-align: -webkit-center;
+    
+    }
+    .sponsors img{
+        height: 50px;       
+    }
+
+   
+    /* TEAM */
+    .team img{
+        height: 90px !important;
+    }
+    .team h4{
+        font-size: 15px;
+    }
+    .team p{
+        font-size: 15px;
+    }
 
 }
 
 /* PHONES */
-@media only screen and (max-width:575px){
+@media only screen and (max-width:575px){x
     .content{
         padding: 5% 5% 10% 10%;
     }
@@ -559,20 +606,19 @@ footer div{
 /* Sponsors Grid */
 
 .sponsors img{
-    height: 35px;
+    height: 30px;
 }
 .sponsors .content {
     padding: 0% 10% 0% 10% !important;
 }
 .sponsors header{
-    font-size: 20px;    
+    font-size: 20px !important;    
     padding-bottom: 30px;
 }
-.sponsors .content .row{
-    margin-right: 0;
-    padding-right:10px; 
-    text-align: center;
-}
+.sponsors .row{
+    text-align: -webkit-center;
+    
+} 
 
 /* 
 
@@ -586,7 +632,7 @@ footer div{
 }
 .team h4{
     padding-top: 10px;
-    font-size: 15px;
+    font-size: 12px;
 }
 .team p{
     font-size: 13px;

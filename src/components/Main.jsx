@@ -45,7 +45,7 @@ class Main extends React.Component {
 
     return (
       <div class="">
-        {/* <div className="pill-move">
+        <div className="pill-move">
            <div className="pill" id="pill-1"></div>
            <div className="pill" id="pill-2"></div>
            <div className="pill" id="pill-3"></div>
@@ -57,7 +57,7 @@ class Main extends React.Component {
            <div className="pill" id="pill-6"></div>
            <div className="pill" id="pill-7"></div>
            <div className="pill" id="pill-8"></div>           
-        </div> */}
+        </div>
 
         <div className="macbook">
           <div className="hero">
