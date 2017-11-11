@@ -4,8 +4,8 @@ import React, { Component } from 'react';
 import $ from'jquery';
 
 import imaginemango from "../public/img/mangos/imagine-mango.svg";
-import innovatemango from "../public/img/mangos/inspire-mango.svg";
-import inspiremango from "../public/img/mangos/innovate-mango.svg";
+import innovatemango from "../public/img/mangos/innovate-mango.svg";
+import inspiremango from "../public/img/mangos/inspire-mango.svg";
 
 // CSS
 import pill from '../public/css/pill.css';
@@ -22,6 +22,7 @@ import Sponsors from './Sponsors';
 import SignupModal from './SignupModal';
 import WhatLike from './WhatLike';
 
+var mango;
 
 class Main extends React.Component {
   constructor(props){
@@ -38,7 +39,7 @@ class Main extends React.Component {
   render() {
     // Jquery
     $(document).ready(function() {
-      var liststyle = [ 'imagine','innovate','inspire'];
+      var liststyle = [ 'imagine','inspire','innovate'];
       var style = liststyle[Math.floor(Math.random() * liststyle.length)];
 
       if(style == 'imagine'){
@@ -57,6 +58,7 @@ class Main extends React.Component {
         $('.title').css('color','#C8F020')
 
         // Logo Style
+         $('.mango').attr('src' , imaginemango)
       }
 
       if(style == 'inspire'){
@@ -73,6 +75,9 @@ class Main extends React.Component {
         // Text Style
         $(".title").text('Inspire.');
         $('.title').css('color','#23F5E9');
+
+        // Logo Style
+        $('.mango').attr('src' , inspiremango)
       }
 
       if(style == 'innovate'){
@@ -88,7 +93,11 @@ class Main extends React.Component {
 
         // Text Style
         $('.title').text('Innovate.');
-        $('.title').css('color','#4652F7')
+        $('.title').css('color','#4652F7');
+
+
+        // Logo Style
+        $('.mango').attr('src' , innovatemango)
       }
   });
 
