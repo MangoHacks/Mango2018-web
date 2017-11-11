@@ -13,6 +13,7 @@ import macbook from "../public/img/misc/macbookpro.png";
 import motherboard from "../public/img/misc/motherboard.png";
 import submissions from "../public/img/misc/submissions.png";
 
+
 // CSS
 import pill from '../public/css/pill.css';
 
@@ -43,10 +44,60 @@ class Main extends React.Component {
   }
 
   render() {
+    // Cookies Functions
+    function setCookie(name, value, expires, path, domain, secure) {
+      var curCookie = name + "=" + escape(value) +
+          ((expires) ? "; expires=" + expires.toGMTString() : "") +
+          ((path) ? "; path=" + path : "") +
+          ((domain) ? "; domain=" + domain : "") +
+          ((secure) ? "; secure" : "");
+      document.cookie = curCookie;
+    }
+    
+    function getCookie(name) {
+      var dc = document.cookie;
+      var prefix = name + "=";
+      var begin = dc.indexOf("; " + prefix);
+      if (begin == -1) {
+        begin = dc.indexOf(prefix);
+        if (begin != 0) return null;
+      } else
+        begin += 2;
+      var end = document.cookie.indexOf(";", begin);
+      if (end == -1)
+        end = dc.length;
+      return unescape(dc.substring(begin + prefix.length, end));
+    }
+    
+    function deleteCookie(name, path, domain) {
+      if (getCookie(name)) {
+        document.cookie = name + "=" +
+        ((path) ? "; path=" + path : "") +
+        ((domain) ? "; domain=" + domain : "") +
+        "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+      }
+    }
+    
+    function fixDate(date) {
+      var base = new Date(0);
+      var skew = base.getTime();
+      if (skew > 0)
+        date.setTime(date.getTime() - skew);
+    }
+
+    // Visit Counter
+    var visits = getCookie("counter");
+    if (!visits) {
+      visits = 1;
+    } else {
+      visits = parseInt(visits) + 1;
+    }
+    setCookie("counter", visits);
+
     // Jquery
     $(document).ready(function() {
-      var liststyle = [ 'innovate'];
-      var style = liststyle[Math.floor(Math.random() * liststyle.length)];
+      var liststyle = ['inspire','imagine','innovate'];
+      var style = liststyle[(visits + 3) % 3];
 
       if(style == 'imagine'){
         // BG Styles
