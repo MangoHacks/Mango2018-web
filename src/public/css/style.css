@@ -14,7 +14,9 @@
     font-family: 'FuturaLT-Book';
     src: url('../fonts/Futura-Font/FuturaLT-Book.ttf'); /* IE9 Compat Modes */
 }
-
+.page{
+    /* overflow-x: hidden; */
+}
 *{
     font-family: FuturaLT-Bold;
 }
@@ -30,14 +32,13 @@ header{
     padding-bottom: 3%;
 }
 p{
-    font-size: 20px;
+    font-size: 18px;
     font-family: FuturaLT;
 }
 h1{
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    font-size: 90px;
+    width: -webkit-fill-available;
+    text-align: center;
+    font-size: 100px;
 }
 h2{
     /* font-size: 3em; */
@@ -90,6 +91,35 @@ i{
 
 /* END Attendee form */
 
+/* BG IMAGES */
+.bg-hero{
+}
+.motherboard{
+    z-index: -1;
+    margin:auto;
+    display: block;
+    height:310px;
+}
+.macbook{
+    position: absolute;
+    z-index: -1;
+    height: 620px;
+    margin: -350px auto;
+    display: block;
+    left: 0;
+    right: 0;
+}
+.submissions{
+    position: absolute;
+    z-index: -1;
+    top:0;
+    left:0;
+    right:0;
+    height:850px;
+    margin: auto;
+}
+
+/* END OF BG IMAGES */
 
 
 /* MAIN PAGE */
@@ -103,28 +133,25 @@ i{
     padding:0 5% 5% 0;
 }
 .content header{
-    font-size: 35px;
+    font-size: 30px;
 }
 .hero .content header{
-    font-size: 60px;
+    font-size: 55px;
 }
 .hero .content p{
-    font-size: 25px;
+    font-size: 20px;
 }
 .hero{
     padding:5% 0% 0% 0%;
 }
-.hero h1{
-    color:#C8F020;
-}
 .hero .content{
     padding: 5% 15% 10% 15%;
+    background: #fff;
 }
 .mango{
-    height:15em;
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
+    height:180px;
+    display: block;
+    margin: auto;
 }
 .header-info{
     padding: 10% 0 3%;
@@ -139,14 +166,13 @@ i{
     margin-top: -30px;
     font-family: FuturaLT-Light !important;
 }
-.macbook{
-    background-image: url('');
-    background-repeat: no-repeat;
-    background-size: cover;
+.title{
+
 }
-.macbook .hero{
-    padding:15% 0% 0% 0%;
-    height: 720px;
+
+.page .hero{
+    height:100vh;
+    padding-top: 130px;
 }
 
 /* END MAIN PAGE */
@@ -166,11 +192,14 @@ i{
     display:flex;
     flex-wrap: wrap;
 }
+.faq-section{
+    background: #fff;
+}
 .faq p{
-    font-size: 20px;
+    font-size: 18px;
 }
 .faq h4{
-    font-size: 22px;
+    font-size: 20px;
 }
 /* END FAQ Section */
 
@@ -205,6 +234,7 @@ i{
 
 /* Sponsors Grid */
 .sponsors .content{
+    background: #fff;
     padding: 7% 15% 3% 15%;       
 }
 .sponsors img{
@@ -216,7 +246,7 @@ i{
     opacity: 1;
 }
 .sponsors header{
-    font-size: 35px;
+    font-size: 30px;
     padding-bottom: 7%;
     width: fit-content;
 }
@@ -349,7 +379,7 @@ i{
 
 /* Footer */
 footer{
-    height:140px;
+    height:100px;
     background: #f5bb1d;
     text-align: center;
     -webkit-box-shadow: 0px 4px 131px -32px rgba(0,0,0,0.6);
@@ -357,12 +387,12 @@ footer{
     box-shadow: 0px 4px 131px -32px rgba(0,0,0,0.6);
 }
 footer div{
-    padding: 30px 0;
+    padding: 15px 0;
 }
 .footer-text{
     color:white !important;
     font-family: FuturaLT;    
-    font-size: 17px;
+    font-size: 15px;
 }
 .footer-link{
     margin: auto;
@@ -415,14 +445,13 @@ footer div{
 @media only screen and (max-width: 1630px){
 #hackathon-video{
     display: none;
-}
+    }
 #mlh-video{
     display: none;
-}
+    }
 #mango-video{
     width: -webkit-fill-available;
-}
-
+    }
 }
 
 
@@ -435,11 +464,11 @@ footer div{
     }
 
     /* TOP */
-  .macbook .hero{
+  .page .hero{
         padding-top: 30%;
     }
-    .macbook .mango{
-        height: 250px;
+    .page .mango{
+        height: 170px;
     }
     .hero h1{
         font-size: 90px;
@@ -458,6 +487,18 @@ footer div{
         font-size: 50px;
     }
 
+    /* BG Images */
+    .motherboard{
+        height:250px;
+    }
+    .macbook{
+        height:500px;
+        margin: -320px auto;
+    }
+    .submissions{
+        height: 700px;
+    }
+
     /* FAQ */
     .content-sm{
         width: 100%;
@@ -472,7 +513,7 @@ footer div{
 
     /* SPONSORS */
     .sponsors .content header{
-        font-size: 30px;
+        font-size: 25px;
         padding-bottom: 50px;
     }
     .sponsors .row{
@@ -517,14 +558,29 @@ footer div{
     }
 
     /* TOP HERO */
-    .macbook .hero{
+    .page .hero{
         padding-top: 50%;
     }
-    .macbook .mango{
-        height: 10em;
+    .page .mango{
+        height: 130px;
     }
     .hero h1 {
         font-size: 60px;
+    }
+
+    /* BG Images */
+    .motherboard{
+        height:200px;
+    }
+    .macbook{
+        height:350px;
+        margin: -230px auto;
+    }
+    .submissions{
+        top:50px;
+        height: 550px;
+        left: -50px;
+        position: fixed;
     }
 
     /* Celebration */
@@ -547,7 +603,7 @@ footer div{
 
     /* WHAT IS */
     .whatis{
-        padding-bottom: 30px;
+        /* padding-bottom: 30px; */
     }
     .whatis .content{
         padding: 10% 15% 10% 15%;
@@ -592,7 +648,7 @@ footer div{
     display: none;
 }
 .whatlike{
-    padding-bottom: 45px;
+    /* padding-bottom: 45px; */
 }
 .whatlike .content{
     padding: 5% 10% 5% 10% !important;
@@ -609,10 +665,10 @@ footer div{
     height: 30px;
 }
 .sponsors .content {
-    padding: 0% 10% 0% 10% !important;
+    padding: 10% 10% 0% 10% !important;
 }
 .sponsors header{
-    font-size: 20px !important;    
+    font-size: 19px !important;    
     padding-bottom: 30px;
 }
 .sponsors .row{

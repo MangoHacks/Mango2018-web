@@ -4,7 +4,7 @@ import React, { Component } from 'react';
    
   render() {
     return (
-      <div>
+      <div class="faq-section">
               <div className="content">
                     <header>FAQ</header>
 

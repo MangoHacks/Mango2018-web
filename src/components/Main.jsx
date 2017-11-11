@@ -1,7 +1,7 @@
 // Dependencies
 import React, { Component } from 'react';
 
-import $ from'jquery';
+import $ from 'jquery';
 
 // Mango's
 import imaginemango from "../public/img/mangos/imagine-mango.svg";
@@ -31,183 +31,184 @@ import WhatLike from './WhatLike';
 var mango;
 
 class Main extends React.Component {
-  constructor(props){
-  super(props);
-  this.state = {
+  constructor(props) {
+    super(props);
+    this.state = {
     };
     this._onButtonClick = this._onButtonClick.bind(this);
   }
 
- _onButtonClick() {
-  window.location = "/Prospectus";
+  _onButtonClick() {
+    window.location = "/Prospectus";
   }
 
   render() {
     // Jquery
-    $(document).ready(function() {
-      var liststyle = [ 'innovate'];
+    $(document).ready(function () {
+      var liststyle = ['inspire'];
       var style = liststyle[Math.floor(Math.random() * liststyle.length)];
 
-      if(style == 'imagine'){
+      if (style == 'imagine') {
         // BG Styles
-         $('.style').css('background','linear-gradient(233deg, #ffc400, #c1f523');
-         $('.style').css('color','#000');
-         $('.modal-btn').css('color','#000');
-         $('.modal-btn').css('border','1px solid #000');
-         $('.modal-btn').hover(function(e){
-           $(this).css('background', e.type === 'mouseenter' ? "#000":'transparent');
-           $(this).css('color',e.type === 'mouseenter' ? '#fff':'#000');
-         });
+        $('.style').css('background', 'linear-gradient(233deg, #ffc400, #c1f523');
+        $('.style').css('color', '#000');
+        $('.modal-btn').css('color', '#000');
+        $('.modal-btn').css('border', '1px solid #000');
+        $('.modal-btn').hover(function (e) {
+          $(this).css('background', e.type === 'mouseenter' ? "#000" : 'transparent');
+          $(this).css('color', e.type === 'mouseenter' ? '#fff' : '#000');
+        });
 
         // Text Style
         $('.title').text('Imagine.');
-        $('.title').css('color','#C8F020')
+        $('.title').css('color', '#C8F020')
 
         // Logo Style
-         $('.mango').attr('src' , imaginemango)
+        $('.mango').attr('src', imaginemango)
 
         //  BG Picture
-         $('.bg-hero').attr('src', macbook)
-         $('bg-hero').addClass('macbook').removeClass('bg-hero');
+        $('.bg-hero').attr('src', macbook)
+        $('.bg-hero').removeClass('bg-hero').addClass('macbook');
       }
 
-      if(style == 'inspire'){
-        $('.style').css('background','linear-gradient(233deg, #efff92, #d2fcf9');
-        $('.style').css('color','#000');
-        $('.modal-btn').css('color','#000');
-        $('.modal-btn').css('border','1px solid #000');
-        $('.modal-btn').hover(function(e){
-          $(this).css('background', e.type === 'mouseenter' ? "#000":'transparent');
-          $(this).css('color',e.type === 'mouseenter' ? '#fff':'#000');
+      if (style == 'inspire') {
+        $('.style').css('background', 'linear-gradient(233deg, #efff92, #d2fcf9');
+        $('.style').css('color', '#000');
+        $('.modal-btn').css('color', '#000');
+        $('.modal-btn').css('border', '1px solid #000');
+        $('.modal-btn').hover(function (e) {
+          $(this).css('background', e.type === 'mouseenter' ? "#000" : 'transparent');
+          $(this).css('color', e.type === 'mouseenter' ? '#fff' : '#000');
         });
 
 
         // Text Style
         $(".title").text('Inspire.');
-        $('.title').css('color','#23F5E9');
+        $('.title').css('color', '#23F5E9');
 
         // Logo Style
-        $('.mango').attr('src' , inspiremango)
+        $('.mango').attr('src', inspiremango);
 
-         //  BG Picture
-         $('.bg-hero').attr('src', submissions)
+        //  BG Picture
+        $('.bg-hero').attr('src', submissions);
+        $('.bg-hero').removeClass('bg-hero').addClass('submissions');
       }
 
-      if(style == 'innovate'){
-        $('.style').css('background','linear-gradient(233deg, #6800ff, #f52376');
-        $('.style').css('color','#fff');
-        $('.modal-btn').css('color','#fff');
-        $('.modal-btn').css('border','1px solid #fff');
-        $('.modal-btn').hover(function(e){
-          $(this).css('background', e.type === 'mouseenter' ? "#fff":'transparent');
-          $(this).css('color',e.type === 'mouseenter' ? '#000':'white');
+      if (style == 'innovate') {
+        $('.style').css('background', 'linear-gradient(233deg, #6800ff, #f52376');
+        $('.style').css('color', '#fff');
+        $('.modal-btn').css('color', '#fff');
+        $('.modal-btn').css('border', '1px solid #fff');
+        $('.modal-btn').hover(function (e) {
+          $(this).css('background', e.type === 'mouseenter' ? "#fff" : 'transparent');
+          $(this).css('color', e.type === 'mouseenter' ? '#000' : 'white');
         });
 
 
         // Text Style
         $('.title').text('Innovate.');
-        $('.title').css('color','#4652F7');
+        $('.title').css('color', '#4652F7');
 
 
         // Logo Style
-        $('.mango').attr('src' , innovatemango)
+        $('.mango').attr('src', innovatemango);
 
-         //  BG Picture
-         $('.bg-hero').attr('src', motherboard)
-         $('bg-hero').css('position', 'absolute');
+        //  BG Picture
+        $('.bg-hero').attr('src', motherboard);
+        $('.bg-hero').removeClass('bg-hero').addClass('motherboard');
 
       }
-  });
+    });
 
-  $(document).ready(function(){$("div").hide().fadeIn(1000);});
+    $(document).ready(function () { $("div").hide().fadeIn(1000); });
 
     return (
       <div class="">
         <div className="pill-move">
-           {/* <div className="pill" id="pill-1"></div>
+          {/* <div className="pill" id="pill-1"></div>
            <div className="pill" id="pill-2"></div>
            <div className="pill" id="pill-3"></div>
            <div className="pill" id="pill-4"></div>            */}
         </div>
 
         <div className="pill-move top-pills">
-           {/* <div className="pill" id="pill-5"></div>
+          {/* <div className="pill" id="pill-5"></div>
            <div className="pill" id="pill-6"></div>
            <div className="pill" id="pill-7"></div>
            <div className="pill" id="pill-8"></div>            */}
         </div>
 
-        <div className="macbook">
+        <div className="page">
           <div className="hero">
-            <img className="mango" src={imaginemango} alt="mangologo"/>
-            <img className="bg-hero" src={motherboard} alt="bg-picture"/>
-              <h1 className="title"></h1>
-              </div>
+            <img className="mango" src={imaginemango} alt="mangologo" />
+            <h1 className="title"></h1>
+            <img className="bg-hero" src={motherboard} alt="bg-picture" />
+            
           </div>
-          <div className="hero">
-            <div className="content">
-                  <h2>2018</h2>
-                  <header>MangoHacks</header>
-                  <p className="slogan">"A celebration with Hackathon elements"</p>
-                  <div className="info-2">
-                      <p>MangoHacks is a place for discovery.</p>
-                      <p>Its a 36 hour hackathon that encourages learning, collaboration, growth, innovation, and fun.<br></br>
-                        We will welcome 250+ students from Florida and accross the country<br></br>
-                        with amazing mentors, and wonderful sponsors to create amazing things.
-                      </p>
-                      <p><i>MangoHacks is organized by students for students.</i></p>
-                   </div>
+        </div>
+        <div className="hero">
+          <div className="content">
+            <h2>2018</h2>
+            <header>MangoHacks</header>
+            <p className="slogan">"A celebration with Hackathon elements"</p>
+            <div className="info-2">
+              <p>MangoHacks is a place for discovery.</p>
+              <p>Its a 36 hour hackathon that encourages learning, collaboration, growth, innovation, and fun.<br></br>
+                We will welcome 250+ students from Florida and accross the country<br></br>
+                with amazing mentors, and wonderful sponsors to create amazing things.</p>
+              <p><i>MangoHacks is organized by students for students.</i></p>
             </div>
           </div>
-  
-          <div className="whatis">
-              <div className="content style">
-                      <header> What is <br></br>a Hackathon?</header>
-                      <p>MangoHacks is a chance to meet new people, learn something, make something, dream along, and have fun.</p>
-                      <p>Everyone is welcomed - from the most experienced hackers, designers, and builders to the thinkers and the curious who have never heard of a hackathon. Regardless of your experience, there is something for you at MangoHacks.</p>
-                      <p> We’d love for you to come learn something new, take the things you love (sports, art, traveling, dogs!) or care about (poverty, sea level rise, hunger) and combine them with techonology to make something different, something cool, or something to improve the world.</p>
-                      <p>It'll be sweet. We Promise.</p>
-                      <SignupModal />                    
-              </div>
-          </div>
-          <div className="vr-img">
-            {/* <img src={vr} className="vr" alt="Virtual Reality"/>    */}
-          </div>
+        </div>
 
-          <Faq />
-          
-          <div className="whatlike">
-                <div className="content style">
-                    <header> What is it like?</header>
-                        <iframe id="mango-video" width="720" height="510" src="https://www.youtube.com/embed/iuPGCi9VEco" frameborder="0" gesture="media" allowfullscreen></iframe> 
-                        <div className="video-wrapper">
-                            <div className="row">
-                                <div className="col">
-                                    <iframe id="hackathon-video" width="420" height="250" src="https://www.youtube.com/embed/qj4DQfYx2Hg" frameborder="0" gesture="media" allowfullscreen></iframe>  
-                                </div>
-                            </div>           
-                            <div className="row">
-                                <div className="col">
-                                    <iframe id="mlh-video" width="420" height="250" src="https://www.youtube.com/embed/fcsugf8I0ms" frameborder="0" gesture="media" allowfullscreen></iframe>  
-                            </div>           
-                        </div>
-                    </div> 
+        <div className="whatis">
+          <div className="content style">
+            <header> What is <br></br>a Hackathon?</header>
+            <p>MangoHacks is a chance to meet new people, learn something, make something, dream along, and have fun.</p>
+            <p>Everyone is welcomed - from the most experienced hackers, designers, and builders to the thinkers and the curious who have never heard of a hackathon. Regardless of your experience, there is something for you at MangoHacks.</p>
+            <p> We’d love for you to come learn something new, take the things you love (sports, art, traveling, dogs!) or care about (poverty, sea level rise, hunger) and combine them with techonology to make something different, something cool, or something to improve the world.</p>
+            <p>It'll be sweet. We Promise.</p>
+            <SignupModal />
+          </div>
+        </div>
+        <div className="vr-img">
+          {/* <img src={vr} className="vr" alt="Virtual Reality"/>    */}
+        </div>
+
+        <Faq />
+
+        <div className="whatlike">
+          <div className="content style">
+            <header> What is it like?</header>
+            <iframe id="mango-video" width="720" height="510" src="https://www.youtube.com/embed/iuPGCi9VEco" frameborder="0" gesture="media" allowfullscreen></iframe>
+            <div className="video-wrapper">
+              <div className="row">
+                <div className="col">
+                  <iframe id="hackathon-video" width="420" height="250" src="https://www.youtube.com/embed/qj4DQfYx2Hg" frameborder="0" gesture="media" allowfullscreen></iframe>
                 </div>
-            </div>
-
-          <Sponsors />
-          <Team /> 
-
-          <footer className="footer style"> 
-              <div className="footer-link">
-                <a href="https://www.facebook.com/mangohacks" className="fa fa-facebook fa-2x" aria-hidden="true"></a>
-                <a href="https://www.twitter.com/mangohacks" className="fa fa-twitter fa-2x" aria-hidden="true"></a>  
-                <a href="https://www.twitter.com/mangohacks" className="fa fa-slack fa-2x" aria-hidden="true"></a>                  
               </div>
-             <span className="footer-text">Made with ❤️ by MangoHacks</span>         
+              <div className="row">
+                <div className="col">
+                  <iframe id="mlh-video" width="420" height="250" src="https://www.youtube.com/embed/fcsugf8I0ms" frameborder="0" gesture="media" allowfullscreen></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <Sponsors />
+        {/* <Team /> */}
+
+        <footer className="footer style">
+          <div className="footer-link">
+            <a href="https://www.facebook.com/mangohacks" className="fa fa-facebook fa-2x" aria-hidden="true"></a>
+            <a href="https://www.twitter.com/mangohacks" className="fa fa-twitter fa-2x" aria-hidden="true"></a>
+            <a href="https://www.twitter.com/mangohacks" className="fa fa-slack fa-2x" aria-hidden="true"></a>
+          </div>
+          <span className="footer-text">Made with ❤️ by MangoHacks</span>
         </footer>
       </div>
-      
+
     );
   }
 }
