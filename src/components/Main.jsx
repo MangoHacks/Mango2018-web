@@ -3,9 +3,15 @@ import React, { Component } from 'react';
 
 import $ from'jquery';
 
+// Mango's
 import imaginemango from "../public/img/mangos/imagine-mango.svg";
 import innovatemango from "../public/img/mangos/innovate-mango.svg";
 import inspiremango from "../public/img/mangos/inspire-mango.svg";
+
+// Hardware
+import macbook from "../public/img/misc/macbookpro.png";
+import motherboard from "../public/img/misc/motherboard.png";
+import submissions from "../public/img/misc/submissions.png";
 
 // CSS
 import pill from '../public/css/pill.css';
@@ -39,7 +45,7 @@ class Main extends React.Component {
   render() {
     // Jquery
     $(document).ready(function() {
-      var liststyle = [ 'imagine','inspire','innovate'];
+      var liststyle = [ 'innovate'];
       var style = liststyle[Math.floor(Math.random() * liststyle.length)];
 
       if(style == 'imagine'){
@@ -59,6 +65,10 @@ class Main extends React.Component {
 
         // Logo Style
          $('.mango').attr('src' , imaginemango)
+
+        //  BG Picture
+         $('.bg-hero').attr('src', macbook)
+         $('bg-hero').addClass('macbook').removeClass('bg-hero');
       }
 
       if(style == 'inspire'){
@@ -78,6 +88,9 @@ class Main extends React.Component {
 
         // Logo Style
         $('.mango').attr('src' , inspiremango)
+
+         //  BG Picture
+         $('.bg-hero').attr('src', submissions)
       }
 
       if(style == 'innovate'){
@@ -98,6 +111,11 @@ class Main extends React.Component {
 
         // Logo Style
         $('.mango').attr('src' , innovatemango)
+
+         //  BG Picture
+         $('.bg-hero').attr('src', motherboard)
+         $('bg-hero').css('position', 'absolute');
+
       }
   });
 
@@ -122,6 +140,7 @@ class Main extends React.Component {
         <div className="macbook">
           <div className="hero">
             <img className="mango" src={imaginemango} alt="mangologo"/>
+            <img className="bg-hero" src={motherboard} alt="bg-picture"/>
               <h1 className="title"></h1>
               </div>
           </div>
@@ -154,11 +173,39 @@ class Main extends React.Component {
           <div className="vr-img">
             {/* <img src={vr} className="vr" alt="Virtual Reality"/>    */}
           </div>
+
           <Faq />
-          <WhatLike />
+          
+          <div className="whatlike">
+                <div className="content style">
+                    <header> What is it like?</header>
+                        <iframe id="mango-video" width="720" height="510" src="https://www.youtube.com/embed/iuPGCi9VEco" frameborder="0" gesture="media" allowfullscreen></iframe> 
+                        <div className="video-wrapper">
+                            <div className="row">
+                                <div className="col">
+                                    <iframe id="hackathon-video" width="420" height="250" src="https://www.youtube.com/embed/qj4DQfYx2Hg" frameborder="0" gesture="media" allowfullscreen></iframe>  
+                                </div>
+                            </div>           
+                            <div className="row">
+                                <div className="col">
+                                    <iframe id="mlh-video" width="420" height="250" src="https://www.youtube.com/embed/fcsugf8I0ms" frameborder="0" gesture="media" allowfullscreen></iframe>  
+                            </div>           
+                        </div>
+                    </div> 
+                </div>
+            </div>
+
           <Sponsors />
           <Team /> 
-          <Footer />
+
+          <footer className="footer style"> 
+              <div className="footer-link">
+                <a href="https://www.facebook.com/mangohacks" className="fa fa-facebook fa-2x" aria-hidden="true"></a>
+                <a href="https://www.twitter.com/mangohacks" className="fa fa-twitter fa-2x" aria-hidden="true"></a>  
+                <a href="https://www.twitter.com/mangohacks" className="fa fa-slack fa-2x" aria-hidden="true"></a>                  
+              </div>
+             <span className="footer-text">Made with ❤️ by MangoHacks</span>         
+        </footer>
       </div>
       
     );
