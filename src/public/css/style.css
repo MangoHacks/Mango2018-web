@@ -459,6 +459,14 @@ footer div{
     .motherboard{
         height:300px;
     }
+    .submissions{
+        height:1100px;
+    }
+    .macbook{
+        height:550px;
+        margin: -330px auto;
+    
+    }
 }
 
 
