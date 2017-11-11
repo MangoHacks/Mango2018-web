@@ -9,9 +9,9 @@ import innovatemango from "../public/img/mangos/innovate-mango.svg";
 import inspiremango from "../public/img/mangos/inspire-mango.svg";
 
 // Hardware
-import macbook from "../public/img/misc/macbookpro.png";
-import motherboard from "../public/img/misc/motherboard.png";
-import submissions from "../public/img/misc/submissions.png";
+import macbook from "../public/img/misc/macbook.svg";
+import motherboard from "../public/img/misc/motherboard.svg";
+import submissions from "../public/img/misc/Submissions.svg";
 
 
 // CSS
@@ -191,10 +191,11 @@ class Main extends React.Component {
 
         <div className="page">
           <div className="hero">
+            <div className="top-hero">
             <img className="mango" src={imaginemango} alt="mangologo" />
             <h1 className="title"></h1>
             <img className="bg-hero" src={motherboard} alt="bg-picture" />
-            
+            </div>      
           </div>
         </div>
         <div className="hero">
@@ -222,10 +223,7 @@ class Main extends React.Component {
             <SignupModal />
           </div>
         </div>
-        <div className="vr-img">
-          {/* <img src={vr} className="vr" alt="Virtual Reality"/>    */}
-        </div>
-
+        {/* <img src={vr} className="vr" alt="Virtual Reality"/>    */}
         <Faq />
 
         <div className="whatlike">

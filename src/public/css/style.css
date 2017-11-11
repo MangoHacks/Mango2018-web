@@ -92,16 +92,20 @@ i{
 /* END Attendee form */
 
 /* BG IMAGES */
-.bg-hero{
+.top-hero{
+
 }
 .motherboard{
+    position: fixed;
     z-index: -1;
     margin:auto;
     display: block;
+    left: 0;
+    right: 0;
     height:310px;
 }
 .macbook{
-    position: absolute;
+    position: fixed;
     z-index: -1;
     height: 620px;
     margin: -350px auto;
@@ -110,15 +114,20 @@ i{
     right: 0;
 }
 .submissions{
-    position: absolute;
+    position: fixed;
     z-index: -1;
-    top:0;
     left:0;
     right:0;
-    height:850px;
+    height:1100px;
     margin: auto;
+    top: -160px;
 }
-
+.vr{
+    position: absolute;
+    /* height: 550px;
+    right: -430px;
+    margin-top: -300px; */
+}
 /* END OF BG IMAGES */
 
 
@@ -146,10 +155,10 @@ i{
 }
 .hero .content{
     padding: 5% 15% 10% 15%;
-    background: #fff;
+    background: #fff;    
 }
 .mango{
-    height:180px;
+    height:150px;
     display: block;
     margin: auto;
 }
@@ -425,20 +434,6 @@ footer div{
 /* END OF FOOTER */
 
 
-
-/* IMAGES Styles */
-.vr{
-    margin: auto;
-    display: -webkit-box;
-    height: 44rem;
-    position: relative;
-}
-.vr-img{
-    position: absolute;
-}
-
-
-
 /* MEDIA Queries */
 
 /* FOR VIDEO  */
@@ -454,7 +449,13 @@ footer div{
     }
 }
 
-
+@media only screen and (max-width:1200px){
+    .vr{
+        margin-top:-300px;
+        right:-350px;
+        height: 450px;
+    }
+}
 
 
 /* MEDIUM */
@@ -475,6 +476,7 @@ footer div{
     }
     .hero .content p {
         font-size: 20px;
+    
     }
     /* CELEBRATION */
     .slogan{
@@ -497,6 +499,11 @@ footer div{
     }
     .submissions{
         height: 700px;
+    }
+    .vr{
+        right:-300px;
+        margin-top:-250px;
+        height:400px;
     }
 
     /* FAQ */
@@ -582,10 +589,17 @@ footer div{
         left: -50px;
         position: fixed;
     }
+    .vr{
+        height:300px;
+        right:-230px;
+        margin-top:-180px;
+    }
 
     /* Celebration */
     .hero .content{
         padding: 5% 5% 10% 10%;
+        background: #fff;
+        
     }
     .hero .content header {
         font-size: 35px;
