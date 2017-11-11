@@ -95,9 +95,6 @@ class Main extends React.Component {
     setCookie("counter", visits);
 
     // Jquery
-    $(document).ready(function () {
-      var liststyle = ['inspire'];
-      var style = liststyle[Math.floor(Math.random() * liststyle.length)];
     $(document).ready(function() {
       var liststyle = ['inspire','imagine','innovate'];
       var style = liststyle[(visits + 3) % 3];
@@ -264,7 +261,7 @@ class Main extends React.Component {
       </div>
 
     );
+    }
   }
-}
 
 export default Main;
