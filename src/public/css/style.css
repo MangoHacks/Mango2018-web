@@ -447,7 +447,20 @@ footer div{
 #mango-video{
     width: -webkit-fill-available;
     }
+    .page .hero{
+        padding-top: 200px;
+    }
+    .mango{
+        height:160px;
+    }
+    h1{
+        font-size: 100px;
+    }
+    .motherboard{
+        height:300px;
+    }
 }
+
 
 @media only screen and (max-width:1200px){
     .vr{
