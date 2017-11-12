@@ -10,7 +10,7 @@ class AdminDashboard extends Component {
     };
     this.handleInputChange = this.handleInputChange.bind(this);
     this.deleteUser = this.deleteUser.bind(this);
-    this.editUser = this.editUser.bind(this);    
+    this.editUser = this.editUser.bind(this);
     this.renderAdminDashboard = this.renderAdminDashboard.bind(this);
   }
   componentDidMount() {
@@ -45,7 +45,7 @@ class AdminDashboard extends Component {
 
     fetch('http://localhost:8050/users/' + id,
       {
-        method: 'PUT'
+        method: 'GET'
       })
       .then(response => {
         this.renderAdminDashboard();
@@ -81,9 +81,9 @@ editUser(event){
 console.log('yay' + id)
 }
   render() {
-    
+
     return (
-      
+
 
       <div className="col-lg-12">
         <h1>Admin Dashboard</h1>
@@ -95,34 +95,33 @@ console.log('yay' + id)
                 <th>Name</th>
                 <th>Email</th>
                 <th>School</th>
-                <th>Resume</th>
+                  <th>Resume</th>
+                <th>Edit</th>
                 <th></th>
               </tr>
             </thead>
             <tbody>
-                {    
+                {
                   this.state.list.map((item,index) => {
                     return(
-                    <tr key={item._id}>     
+                    <tr key={item._id}>
                         <td >{index+1}</td>
                         <td >{item.name}</td>
                         <td >{item.email}</td>
                         <td >{item.school}</td>
-                        {/* <td >{item.resume}</td> */}
-                        
-                        
+                        <td >{item.size}</td>
                         <td>
-                        <button id={item._id} onClick={this.editUser} className="btn btn-primary">Edit User</button>                          
+                        <button id={item._id} onClick={this.editUser} className="btn btn-primary">Edit User</button>
                         <button id={item._id} onClick={this.deleteUser} className="btn btn-danger">Delete User</button>
-                        <button id={item._id} onClick={this.downloadResume} className="btn btn-success">Resume</button>
+                        <a href={"http://localhost:8050/dlresume/"+item.resume.filename}><button id={item._id} className="btn btn-success">Resume</button></a>
                         </td>
-                    </tr>    
+                    </tr>
                     )}
                   )}
             </tbody>
           </table>
 
-       
+
         </div>
       </div>
     )
@@ -130,5 +129,3 @@ console.log('yay' + id)
 }
 
 export default AdminDashboard;
-
-
