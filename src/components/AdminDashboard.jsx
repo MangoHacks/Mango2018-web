@@ -38,7 +38,19 @@ class AdminDashboard extends Component {
         this.renderAdminDashboard();
       })
   }
- 
+  downloadResume(event) {
+    event.preventDefault();
+    const target = event.target;
+    const id = target.id;
+
+    fetch('http://localhost:8050/users/' + id,
+      {
+        method: 'PUT'
+      })
+      .then(response => {
+        this.renderAdminDashboard();
+      })
+  }
   renderAdminDashboard() {
     fetch('http://localhost:8050/users',
       {
@@ -83,7 +95,7 @@ console.log('yay' + id)
                 <th>Name</th>
                 <th>Email</th>
                 <th>School</th>
-                <th>Shirt Size</th>
+                <th>Resume</th>
                 <th></th>
               </tr>
             </thead>
@@ -96,10 +108,13 @@ console.log('yay' + id)
                         <td >{item.name}</td>
                         <td >{item.email}</td>
                         <td >{item.school}</td>
-                        <td >{item.size}</td>
+                        {/* <td >{item.resume}</td> */}
+                        
+                        
                         <td>
                         <button id={item._id} onClick={this.editUser} className="btn btn-primary">Edit User</button>                          
                         <button id={item._id} onClick={this.deleteUser} className="btn btn-danger">Delete User</button>
+                        <button id={item._id} onClick={this.downloadResume} className="btn btn-success">Resume</button>
                         </td>
                     </tr>    
                     )}
