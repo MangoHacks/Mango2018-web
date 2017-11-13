@@ -1,27 +1,9 @@
 import React, { Component } from 'react';
 import Main from './Main';
 import Autosuggest from 'react-autosuggest';
+import school from '../data/schools';
 
 let DOMPurify = require('../dist/purify.js');
-
-const school = [
-  {
-    name: 'Florida International University',
-  },
-  {
-    name: 'University of Central Florida',
-  },
-  {
-    name: 'University of Florida',
-  },
-  {
-    name: 'Florida State University',
-  },
-  {
-    name: 'University of Miami',
-  },
-];
-
 
 const getSuggestions = value => {
   const inputValue = value.trim().toLowerCase();
