@@ -312,11 +312,31 @@ i{
 
 
 /* SIGNUP  */
-
-.signup {
-    /* background: linear-gradient(to right, #f52376, #6800ff);    */
+.signup-bg-color{
+    background:linear-gradient(233deg, #6800ff, #f52376);
+    height: -webkit-fill-available;
 }
-
+.signup{
+    background: rgba(255, 255, 255, 0.3);
+    height: fit-content;
+    width: fit-content;
+    padding:50px;
+    position: absolute;
+    top:100px;
+    left:0;
+    right:0;
+    margin: auto;
+}
+.signup input{
+    background: transparent;
+    color: white;
+    border: 0px;
+    border-bottom: 1px solid white;
+    font-family: FuturaLT-Light;
+}
+.signup input::placeholder{
+    color:white;
+}
 /* END OF SIGNUP */
 
 /* PROSPECTUS PAGE */

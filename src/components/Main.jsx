@@ -244,7 +244,7 @@ class Main extends React.Component {
         </div>
 
         <Sponsors />
-        {/* <Team /> */}
+        <Team />
 
         <footer className="footer style">
           <div className="footer-link">
