@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import Main from './Main';
 import Autosuggest from 'react-autosuggest';
+
 import school from '../data/schools';
+import major from '../data/majors';
 
 let DOMPurify = require('../dist/purify.js');
 
@@ -16,7 +18,7 @@ const getSuggestions = value => {
 
 const getSuggestionValue = suggestion => suggestion.name;
 
-const renderSuggestion = suggestion => (
+const renderSchoolSuggestion = suggestion => (
   <div>
     {suggestion.name}
   </div>
@@ -31,7 +33,7 @@ const renderSuggestion = suggestion => (
       name:"",
       email: '',
       school: '',      
-      // major: '',
+      major: '',
       // year: '',      
       // firsttime: '',
       // gender: '',
@@ -69,7 +71,7 @@ const renderSuggestion = suggestion => (
     let cleanName = DOMPurify.sanitize(this.state.name);    
     let cleanEmail = DOMPurify.sanitize(this.state.email);
     let cleanSchool = DOMPurify.sanitize(this.state.school);
-    // let cleanMajor = DOMPurify.sanitize(this.state.major);
+    let cleanMajor = DOMPurify.sanitize(this.state.major);
     // let cleanYear = DOMPurify.sanitize(this.state.year);
     // let cleanFirstTime = DOMPurify.sanitize(this.state.firsttime);
     // let cleanGender = DOMPurify.sanitize(this.state.gender);
@@ -88,7 +90,7 @@ const renderSuggestion = suggestion => (
             name: cleanName,
             email: cleanEmail,
             school: cleanSchool,      
-            // major: cleanMajor,
+            major: cleanMajor,
             // year: cleanYear,      
             // firsttime: cleanFirstTime,
             // gender: cleanGender,
@@ -108,7 +110,7 @@ handleInputChange(event) {
   let name = target.name;
   let email = target.email;
   let school = target.school;
-  // let major = target.major;
+  let major = target.major;
   // let year = target.year;
   // let firsttime = target.firsttime;
   // let gender = target.gender;
@@ -122,7 +124,7 @@ handleInputChange(event) {
       [name]: value,
       [email]: value,
       [school]: value,
-      // [major]: value,
+      [major]: value,
       // [year]: value,
       // [firsttime]: value,
       // [gender]: value,
@@ -146,6 +148,7 @@ handleInputChange(event) {
     return (
       <div className="signup">
         <h3>Signup</h3>
+
         <form action="/form" onSubmit={this.signup} encType="multipart/form-data">
           <input type="name" name="name" id="name" placeholder="Name" required value={this.state.name} onChange={this.handleInputChange}/>
           <br/>
@@ -157,10 +160,20 @@ handleInputChange(event) {
             onSuggestionsFetchRequested={this.onSuggestionsFetchRequested}
             onSuggestionsClearRequested={this.onSuggestionsClearRequested}
             getSuggestionValue={getSuggestionValue}
-            renderSuggestion={renderSuggestion}
+            renderSuggestion={renderSchoolSuggestion}
             inputProps={inputProps}
            />
+           
+          <input type="text" list="majors" name="major" required value={this.state.major} onChange={this.handleInputChange} id="major" placeholder="Major"/>
+          <datalist id="majors">
+            <option value="Computer Science" />
+            <option value="Computer Engineering" />
+            <option value="Information Technology" />
+            <option value="Business" />
+            <option value="Electrical Engineering" />
+          </datalist>
 
+           <br/>
           <input type="text" name="diet" id="diet" placeholder="diet" required value={this.state.diet} onChange={this.handleInputChange}/>
           <br/>
           <button className="btn btn-default" type="submit" onClick={this.registered}>✓ Register</button>  
