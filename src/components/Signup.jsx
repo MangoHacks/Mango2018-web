@@ -1,43 +1,21 @@
 import React, { Component } from 'react';
 import Main from './Main';
-import Autosuggest from 'react-autosuggest';
-
-import school from '../data/schools';
-import major from '../data/majors';
 
 let DOMPurify = require('../dist/purify.js');
-
-const getSuggestions = value => {
-  const inputValue = value.trim().toLowerCase();
-  const inputLength = inputValue.length;
-
-  return inputLength === 0 ? [] : school.filter(lang =>
-    lang.name.toLowerCase().slice(0, inputLength) === inputValue
-  );
-};
-
-const getSuggestionValue = suggestion => suggestion.name;
-
-const renderSchoolSuggestion = suggestion => (
-  <div>
-    {suggestion.name}
-  </div>
-);
 
  class Signup extends React.Component {
    constructor(props){
      super(props);
      this.state = {
-      value:'',
-      suggestions: [],
+      // value:'',
       name:"",
       email: '',
       school: '',      
       major: '',
-      // year: '',      
-      // firsttime: '',
-      // gender: '',
-      // size: '',
+      year: 'Freshman',      
+      firsttime: 'Yes',
+      gender: 'Male',
+      size: '',
       // github: '',
       // resume: '',
       diet: '',     
@@ -45,37 +23,37 @@ const renderSchoolSuggestion = suggestion => (
      }
      this.signup = this.signup.bind(this);
      this.handleInputChange = this.handleInputChange.bind(this);
+     this.handleYearChange = this.handleYearChange.bind(this);
+     this.handleFirstTimeChange = this.handleFirstTimeChange.bind(this);
+     this.handleGenderChange = this.handleGenderChange.bind(this);
+     this.handleSizeChange = this.handleSizeChange.bind(this);
    }    
-   onChange = (event, { newValue }) => {
-    this.setState({
-      value: newValue,
-      school:newValue      
-    });
-  };
 
-  onSuggestionsFetchRequested = ({ value }) => {
+   handleYearChange(event) {
+    this.setState({year: event.target.value});
+  }
+  handleFirstTimeChange(event) {
+    this.setState({firsttime: event.target.value});
+  }
+  handleGenderChange(event) {
+    this.setState({gender: event.target.value});
+  }
+  handleSizeChange (event) {
     this.setState({
-      suggestions: getSuggestions(value),      
+      size: event.target.value
     });
-  };
-
-  onSuggestionsClearRequested = () => {
-    this.setState({
-      suggestions: [],
-    });
-  };
+  }
    signup(event) {
-  
-
     event.preventDefault();
+
     let cleanName = DOMPurify.sanitize(this.state.name);    
     let cleanEmail = DOMPurify.sanitize(this.state.email);
     let cleanSchool = DOMPurify.sanitize(this.state.school);
     let cleanMajor = DOMPurify.sanitize(this.state.major);
-    // let cleanYear = DOMPurify.sanitize(this.state.year);
-    // let cleanFirstTime = DOMPurify.sanitize(this.state.firsttime);
-    // let cleanGender = DOMPurify.sanitize(this.state.gender);
-    // let cleanSize = DOMPurify.sanitize(this.state.size);
+    let cleanYear = DOMPurify.sanitize(this.state.year);
+    let cleanFirstTime = DOMPurify.sanitize(this.state.firsttime);
+    let cleanGender = DOMPurify.sanitize(this.state.gender);
+    let cleanSize = DOMPurify.sanitize(this.state.size);
     // let cleanGithub = DOMPurify.sanitize(this.state.github);
     // let cleanResume = DOMPurify.sanitize(this.state.resume);    
     let cleanDiet = DOMPurify.sanitize(this.state.diet);
@@ -91,10 +69,10 @@ const renderSchoolSuggestion = suggestion => (
             email: cleanEmail,
             school: cleanSchool,      
             major: cleanMajor,
-            // year: cleanYear,      
-            // firsttime: cleanFirstTime,
-            // gender: cleanGender,
-            // size: cleanSize,
+            year: cleanYear,      
+            firsttime: cleanFirstTime,
+            gender: cleanGender,
+            size: cleanSize,
             // github: cleanGithub,
             // resume: cleanResume,
             diet: cleanDiet,     
@@ -104,6 +82,7 @@ const renderSchoolSuggestion = suggestion => (
     alert('Thanks for registering to MangoHacks')
     window.location.href = "http://localhost:3000/signup";
 }
+
 handleInputChange(event) {
   const target = event.target;
   const value = target.value;
@@ -111,10 +90,10 @@ handleInputChange(event) {
   let email = target.email;
   let school = target.school;
   let major = target.major;
-  // let year = target.year;
-  // let firsttime = target.firsttime;
-  // let gender = target.gender;
-  // let size = target.size;
+  let year = target.year;
+  let firsttime = target.firsttime;
+  let gender = target.gender;
+  let size = target.size;
   // let github= target.githubl;
   // let resume= target.resume;
   let diet= target.diet;
@@ -125,10 +104,10 @@ handleInputChange(event) {
       [email]: value,
       [school]: value,
       [major]: value,
-      // [year]: value,
-      // [firsttime]: value,
-      // [gender]: value,
-      // [size]: value,
+      [year]: value,
+      [firsttime]: value,
+      [gender]: value,
+      [size]: value,
       // [github]: value,
       // [resume]: value,
       [diet]: value,
@@ -137,14 +116,6 @@ handleInputChange(event) {
 }
 
   render() {
-    const { value, suggestions } = this.state;
-
-    const inputProps = {
-        placeholder: 'School',
-        value,
-        onChange: this.onChange
-        };
-
     return (
       <div className="signup">
         <h3>Signup</h3>
@@ -154,16 +125,12 @@ handleInputChange(event) {
           <br/>
           <input type="email" name="email" required value={this.state.email} onChange={this.handleInputChange} id="email" placeholder="Email"/>
           <br/>
-          <Autosuggest 
-            className="school"
-            suggestions={suggestions}
-            onSuggestionsFetchRequested={this.onSuggestionsFetchRequested}
-            onSuggestionsClearRequested={this.onSuggestionsClearRequested}
-            getSuggestionValue={getSuggestionValue}
-            renderSuggestion={renderSchoolSuggestion}
-            inputProps={inputProps}
-           />
-           
+
+          <input type="text" list="schools" name="school" required value={this.state.school} onChange={this.handleInputChange} id="school" placeholder="School"/>
+          <datalist id="schools">
+            <option value="Florida International University" />
+          </datalist>
+          <br/>
           <input type="text" list="majors" name="major" required value={this.state.major} onChange={this.handleInputChange} id="major" placeholder="Major"/>
           <datalist id="majors">
             <option value="Computer Science" />
@@ -172,6 +139,41 @@ handleInputChange(event) {
             <option value="Business" />
             <option value="Electrical Engineering" />
           </datalist>
+           <br/>
+           <select name="year" onChange={this.handleYearChange}>
+              <option value="Freshman" >Freshman</option>
+              <option value="Sophmore" >Sophmore</option>
+              <option value="Junior" >Junior</option>
+              <option value="Senior">Senior</option>
+           </select>
+           <br/>
+           <select name="firsttime" onChange={this.handleFirstTimeChange}>
+              <option value="Yes" >Yes</option>
+              <option value="No" >No</option>
+           </select>
+           <br/>
+           <select name="gender" onChange={this.handleGenderChange}>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+              <option value="Other">Other</option>
+           </select>
+           <br/>
+              <label htmlFor="">Shirt Sizes</label>
+              <br/>
+            <div className="size">
+              <label htmlFor="">Small</label>
+              <input type="radio" value="Small" checked={this.state.size === 'Small'}  onChange={this.handleSizeChange} />
+              <br/>
+              <label htmlFor="">Medium</label>              
+              <input type="radio" value="Medium" checked={this.state.size === 'Medium'} onChange={this.handleSizeChange} />
+              <br/>
+              <label htmlFor="">Large</label>
+              <input type="radio" value="Large" checked={this.state.size === 'Large'} onChange={this.handleSizeChange} />
+              <br/>
+              <label htmlFor="">X-Large</label>              
+              <input type="radio" value="X-Large" checked={this.state.size === 'X-Large'} onChange={this.handleSizeChange} />
+            </div>
+
 
            <br/>
           <input type="text" name="diet" id="diet" placeholder="diet" required value={this.state.diet} onChange={this.handleInputChange}/>
