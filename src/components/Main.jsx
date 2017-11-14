@@ -119,6 +119,7 @@ class Main extends React.Component {
         //  BG Picture
         $('.bg-hero').attr('src', macbook)
         $('.bg-hero').removeClass('bg-hero').addClass('macbook');
+
       }
 
       if (style == 'inspire') {
@@ -168,6 +169,8 @@ class Main extends React.Component {
         $('.bg-hero').removeClass('bg-hero').addClass('motherboard');
 
       }
+
+      
     });
 
     $(document).ready(function () { $("div").hide().fadeIn(1000); });
@@ -182,9 +185,9 @@ class Main extends React.Component {
         </div>
 
         <div className="pill-move top-pills">
-          {/* <div className="pill" id="pill-5"></div>
+          <div className="pill" id="pill-5"></div>
            <div className="pill" id="pill-6"></div>
-           <div className="pill" id="pill-7"></div>
+           {/* <div className="pill" id="pill-7"></div>
            <div className="pill" id="pill-8"></div>            */}
         </div>
 

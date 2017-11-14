@@ -13,9 +13,9 @@ class Signup extends React.Component {
       email: '',
       school: '',
       major: '',
-      year: '',
+      year: 'Freshman',
       firsttime: '',
-      gender: '',
+      gender: 'Male',
       size: '',
       github: '',
       resume: [],
@@ -136,79 +136,101 @@ class Signup extends React.Component {
       <div class="signup-bg-color">
         <div className="signup">
           <form action="/form" onSubmit={this.signup} encType="multipart/form-data">
+            <div className="container">
+              <div className="row">
+                <div className="col-6">
+                  <div className="form-group">
+                    <input type="name" name="name" className="name" placeholder="Name" required value={this.state.name} onChange={this.handleInputChange} />
+                  </div>
+                  <div className="form-group">
+                    <input type="email" name="email" className="email" required value={this.state.email} onChange={this.handleInputChange} id="email" placeholder="Email" />
+                  </div>
+                  <div className="form-group">
+                    <input type="text" list="schools" name="school" className="school" required value={this.state.school} onChange={this.handleInputChange} id="school" placeholder="School" />
+                  </div>
+                  <datalist id="schools">
+                    <option value="Florida International University" />
+                  </datalist>
 
-            <div className="form-group">
-              <input type="name" name="name" id="name" placeholder="Name" required value={this.state.name} onChange={this.handleInputChange} />
-            </div>
-            <div className="form-group">
-              <input type="email" name="email" required value={this.state.email} onChange={this.handleInputChange} id="email" placeholder="Email" />
-            </div>
-            <div className="form-group">
-              <input type="text" list="schools" name="school" required value={this.state.school} onChange={this.handleInputChange} id="school" placeholder="School" />
-            </div>
-            <datalist id="schools">
-              <option value="Florida International University" />
-            </datalist>
-            <div className="form-group">
-              <input type="text" list="majors" name="major" required value={this.state.major} onChange={this.handleInputChange} id="major" placeholder="Major" />
-            </div>
-            <datalist id="majors">
-              <option value="Computer Science" />
-              <option value="Computer Engineering" />
-              <option value="Information Technology" />
-              <option value="Business" />
-              <option value="Electrical Engineering" />
-            </datalist>
+                  <div className="form-group">
+                    <input type="text" list="majors" name="major" className="major" required value={this.state.major} onChange={this.handleInputChange} id="major" placeholder="Major" />
+                  </div>
+                  <datalist id="majors">
+                    <option value="Computer Science" />
+                    <option value="Computer Engineering" />
+                    <option value="Information Technology" />
+                    <option value="Business" />
+                    <option value="Electrical Engineering" />
+                  </datalist>
+                  {/* 
+                  <div className="form-group">
+                    <label htmlFor="">Freshman</label>
+                    <input type="checkbox" value="Freshman" checked={this.state.year === 'Freshman'} onChange={this.handleYearChange} />
+                    <label htmlFor="">Sophmore</label>
+                    <input type="checkbox" value="Sophmore" checked={this.state.year === 'Sophmore'} onChange={this.handleYearChange} />
+                    <label htmlFor="">Junior</label>
+                    <input type="checkbox" value="Junior" checked={this.state.year === 'Junior'} onChange={this.handleYearChange} />
+                    <label htmlFor="">Senior</label>
+                    <input type="checkbox" value="Senior" checked={this.state.year === 'Senior'} onChange={this.handleYearChange} />
+                  </div> */}
 
-            <div className="form-group">
-              <label htmlFor="">Freshman</label>
-              <input type="checkbox" value="Freshman" checked={this.state.year === 'Freshman'} onChange={this.handleYearChange} />
-              <label htmlFor="">Sophmore</label>
-              <input type="checkbox" value="Sophmore" checked={this.state.year === 'Sophmore'} onChange={this.handleYearChange} />
-              <label htmlFor="">Junior</label>
-              <input type="checkbox" value="Junior" checked={this.state.year === 'Junior'} onChange={this.handleYearChange} />
-              <label htmlFor="">Senior</label>
-              <input type="checkbox" value="Senior" checked={this.state.year === 'Senior'} onChange={this.handleYearChange} />
-            </div>
+                  <label htmlFor="">Grade Level</label>
+                  <div class="form-group">
+                    <select name="year" onChange={this.handleYearChange}>
+                      <option value="Freshman">Freshman</option>
+                      <option value="Sophmore">Sophmore</option>
+                      <option value="Junior">Junior</option>
+                      <option value="Senior">Senior</option>
+                      <option value="">Super Senior</option>
+                      <option value="">DAMN</option>
+                    </select>
+                  </div>
 
-            <label htmlFor="">First Time?</label>
-            <div className="form-group">
-              <label htmlFor="">Yes</label>
-              <input type="radio" value="Yes" checked={this.state.firsttime === 'Yes'} onChange={this.handleFirstTimeChange} />
-              <label htmlFor="">No</label>
-              <input type="radio" value="No" checked={this.state.firsttime === 'No'} onChange={this.handleFirstTimeChange} />
-            </div>
+                  <label htmlFor="">Dietary Restrictions</label>
+                  <div className="form-group">
+                    <input type="text" name="diet" className="diet" required placeholder="none" value={this.state.diet} onChange={this.handleInputChange} />
+                  </div>
 
-            <label htmlFor="">Gender</label>
-            <div className="form-group">
-              <label htmlFor="">Male</label>
-              <input type="radio" value="Male" checked={this.state.gender === 'Male'} onChange={this.handleGenderChange} />
-              <label htmlFor="">Female</label>
-              <input type="radio" value="Female" checked={this.state.gender === 'Female'} onChange={this.handleGenderChange} />
-              <label htmlFor="">Other</label>
-              <input type="radio" value="Other" checked={this.state.gender === 'Other'} onChange={this.handleGenderChange} />
-            </div>
+                  <label htmlFor="">First Time?</label>
+                  <div className="form-group">
+                    <label htmlFor="">Yes</label>
+                    <input type="checkbox" value="Yes" checked={this.state.firsttime === 'Yes'} onChange={this.handleFirstTimeChange} />
+                    <label htmlFor="">No</label>
+                    <input type="checkbox" value="No" checked={this.state.firsttime === 'No'} onChange={this.handleFirstTimeChange} />
+                  </div>
 
-            <label htmlFor="">Shirt Size</label>
-            <div className="form-group">
-              <label htmlFor="">Small</label>
-              <input type="checkbox" value="Small" checked={this.state.size === 'Small'} onChange={this.handleSizeChange} />
-              <label htmlFor="">Medium</label>
-              <input type="checkbox" value="Medium" checked={this.state.size === 'Medium'} onChange={this.handleSizeChange} />
-              <label htmlFor="">Large</label>
-              <input type="checkbox" value="Large" checked={this.state.size === 'Large'} onChange={this.handleSizeChange} />
-              <label htmlFor="">X-Large</label>
-              <input type="checkbox" value="X-Large" checked={this.state.size === 'X-Large'} onChange={this.handleSizeChange} />
-            </div>
-            <div className="github">
-              http://
+               
+                </div>
+
+                <div className="col-6">
+                  <label htmlFor="">Gender</label>
+                  <div className="form-group">
+                    <select value="gender" onChange={this.handleGenderChange}>
+                      <option value="Male">Male</option>
+                      <option value="Female">Female</option>
+                      <option value="Other">Other</option>
+                    </select>
+                  </div>
+
+                  <label htmlFor="">Shirt Size</label>
+                  <div class="form-group">
+                    <select name="size" onChange={this.handleSizeChange}>
+                      <option value="Small">Small</option>
+                      <option value="Medium">Medium</option>
+                      <option value="Large">Large</option>
+                      <option value="X-Large">X-Large</option>
+                    </select>
+                  </div>
+
+                  <div className="github">
+                    <span>http://</span> 
               <input type="url" name="github" required value={this.state.github} onChange={this.handleInputChange} id="github" placeholder="github.com/octocat" />
-            </div>
-            <br />
-            <div className="resume">
-              <input type="file" name="resume" value={this.state.resume} onChange={this.handleFileChange} />
-            </div>
-            {/* <section>
+                  </div>
+                  <br />
+                  <div className="resume">
+                    <input type="file" name="resume" value={this.state.resume} onChange={this.handleFileChange} />
+                  </div>
+                  {/* <section>
         <div className="dropzone">
           <Dropzone onDrop={this.onDrop.bind(this)}>
             <p>Try dropping some files here, or click to select files to upload.</p>
@@ -223,15 +245,19 @@ class Signup extends React.Component {
           </ul>
         </aside>
       </section> */}
-            <div className="form-group">
-              <input type="text" name="diet" placeholder="" required value={this.state.diet} onChange={this.handleInputChange} />
+                 
+
+                  <div className="form-group">
+                    <input type="checkbox" value="Agreed" required checked={this.state.mlh === 'Agreed'} onChange={this.handleMLHChange} />I agree to <a href=""> MLH Code of Conduct </a>
+                  </div>
+
+                  <button className="btn btn-default" type="submit">✓ Register</button>
+                </div>
+
+              </div>
             </div>
 
-            <div className="form-group">
-              <input type="checkbox" value="Agreed" required checked={this.state.mlh === 'Agreed'} onChange={this.handleMLHChange} />I agree to <a href=""> MLH Code of Conduct </a>
-            </div>
 
-            <button className="btn btn-default" type="submit">✓ Register</button>
           </form>
         </div>
       </div>
