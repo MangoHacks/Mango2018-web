@@ -311,6 +311,53 @@ i{
 /* End Sponsors info */
 
 
+/* SIGNUP  */
+.signup-bg-color{
+    background:linear-gradient(233deg, #6800ff, #f52376);
+    height: -webkit-fill-available;
+}
+.signup{
+    background:rgb(255, 255, 255);
+    height: 100%;
+    overflow: scroll;
+    width: 60%;
+    padding:50px;
+    position: absolute;
+    top:0px;
+    right:0;
+    margin: auto;
+    -webkit-box-shadow: 0px -1px 124px -22px rgba(0,0,0,0.47);
+    -moz-box-shadow: 0px -1px 124px -22px rgba(0,0,0,0.47);
+    box-shadow: 0px -1px 124px -22px rgba(0,0,0,0.47);
+}
+.signup .name, .email, .school, .major, .diet{
+    width: 50%;
+}
+.signup span{
+    color:rgb(0, 0, 0);
+    font-family: FuturaLT-Light;
+    font-weight: 600;
+}
+.signup a{
+    color:black;
+    font-family: FuturaLT-Light;
+    font-weight: 600;
+}
+.signup a:hover{
+    text-decoration: none;
+    color:rgb(0, 0, 0);
+}
+.signup input{
+    background: transparent;
+    color: rgb(0, 0, 0);
+    border: 0px;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    font-family: FuturaLT-Light;
+}
+.signup input::placeholder{
+    color:rgb(0, 0, 0);
+}
+/* END OF SIGNUP */
 
 /* PROSPECTUS PAGE */
 .prospectus-page{

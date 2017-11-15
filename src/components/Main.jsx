@@ -26,7 +26,6 @@ import Footer from './Footer';
 import Prospectus from './Prospectus';
 import Team from './Team';
 import Sponsors from './Sponsors';
-import SignupModal from './SignupModal';
 import WhatLike from './WhatLike';
 
 var mango;
@@ -120,6 +119,7 @@ class Main extends React.Component {
         //  BG Picture
         $('.bg-hero').attr('src', macbook)
         $('.bg-hero').removeClass('bg-hero').addClass('macbook');
+
       }
 
       if (style == 'inspire') {
@@ -169,6 +169,8 @@ class Main extends React.Component {
         $('.bg-hero').removeClass('bg-hero').addClass('motherboard');
 
       }
+
+      
     });
 
     $(document).ready(function () { $("div").hide().fadeIn(1000); });
@@ -183,9 +185,9 @@ class Main extends React.Component {
         </div>
 
         <div className="pill-move top-pills">
-          {/* <div className="pill" id="pill-5"></div>
+          <div className="pill" id="pill-5"></div>
            <div className="pill" id="pill-6"></div>
-           <div className="pill" id="pill-7"></div>
+           {/* <div className="pill" id="pill-7"></div>
            <div className="pill" id="pill-8"></div>            */}
         </div>
 
@@ -220,7 +222,6 @@ class Main extends React.Component {
             <p>Everyone is welcomed - from the most experienced hackers, designers, and builders to the thinkers and the curious who have never heard of a hackathon. Regardless of your experience, there is something for you at MangoHacks.</p>
             <p> We’d love for you to come learn something new, take the things you love (sports, art, traveling, dogs!) or care about (poverty, sea level rise, hunger) and combine them with techonology to make something different, something cool, or something to improve the world.</p>
             <p>It'll be sweet. We Promise.</p>
-            <SignupModal />
           </div>
         </div>
         {/* <img src={vr} className="vr" alt="Virtual Reality"/>    */}
@@ -246,7 +247,7 @@ class Main extends React.Component {
         </div>
 
         <Sponsors />
-        {/* <Team /> */}
+        <Team />
 
         <footer className="footer style">
           <div className="footer-link">
