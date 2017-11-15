@@ -11,6 +11,8 @@ class AdminDashboard extends Component {
     this.handleInputChange = this.handleInputChange.bind(this);
     this.deleteUser = this.deleteUser.bind(this);
     this.editUser = this.editUser.bind(this);
+    this.checkIn= this.checkIn.bind(this);
+    
     this.renderAdminDashboard = this.renderAdminDashboard.bind(this);
   }
   componentDidMount() {
@@ -25,6 +27,27 @@ class AdminDashboard extends Component {
       [name]: value,
     });
   }
+
+  checkIn(event){
+    event.preventDefault();
+    const target = event.target;
+    const id = target.id;
+    let checkin = 'Yes';
+    fetch('http://localhost:8050/users/' + id,
+    {
+      method: 'PUT',
+      "headers": {
+        "content-type": "application/json",
+    },
+    body: JSON.stringify({
+        checkin: checkin,
+      })
+    })
+    .then(response => {
+      this.renderAdminDashboard();
+    })
+  }
+
   deleteUser(event) {
     event.preventDefault();
     const target = event.target;
@@ -95,7 +118,7 @@ console.log('yay' + id)
                 <th>Name</th>
                 <th>Email</th>
                 <th>School</th>
-                  <th>Resume</th>
+                  <th>Check In</th>
                 <th>Edit</th>
                 <th></th>
               </tr>
@@ -109,11 +132,12 @@ console.log('yay' + id)
                         <td >{item.name}</td>
                         <td >{item.email}</td>
                         <td >{item.school}</td>
-                        <td >{item.size}</td>
+                        <td >{item.checkin}</td>
                         <td>
                         <button id={item._id} onClick={this.editUser} className="btn btn-primary">Edit User</button>
                         <button id={item._id} onClick={this.deleteUser} className="btn btn-danger">Delete User</button>
-                        <a href={"http://localhost:8050/dlresume/"+item.resume.filename}><button id={item._id} className="btn btn-success">Resume</button></a>
+                        <button id={item._id} onClick={this.checkIn} className="btn btn-default">Check In</button>
+                        {/* <a href={"http://localhost:8050/dlresume/"+item.resume.filename}><button id={item._id} className="btn btn-success">Resume</button></a> */}
                         </td>
                     </tr>
                     )}
