@@ -100,7 +100,7 @@ class Main extends React.Component {
 
       if (style == 'imagine') {
         // BG Styles
-        $('.style').css('background', 'linear-gradient(233deg, #ffc400, #c1f523');
+        $('.style').css('background', 'linear-gradient(to top right, #FE6BBE, #FAD865');
         $('.style').css('color', '#000');
         $('.modal-btn').css('color', '#000');
         $('.modal-btn').css('border', '1px solid #000');
@@ -123,7 +123,7 @@ class Main extends React.Component {
       }
 
       if (style == 'inspire') {
-        $('.style').css('background', 'linear-gradient(233deg, #efff92, #d2fcf9');
+        $('.style').css('background', 'linear-gradient(to top right, #0EDC96, #09F6F5');
         $('.style').css('color', '#000');
         $('.modal-btn').css('color', '#000');
         $('.modal-btn').css('border', '1px solid #000');
@@ -132,6 +132,28 @@ class Main extends React.Component {
           $(this).css('color', e.type === 'mouseenter' ? '#fff' : '#000');
         });
 
+
+        // Text Style
+        $(".title").text('Inspire.');
+        $('.title').css('color', '#23F5E9');
+
+        // Logo Style
+        $('.mango').attr('src', inspiremango);
+
+        //  BG Picture
+        $('.bg-hero').attr('src', submissions);
+        $('.bg-hero').removeClass('bg-hero').addClass('submissions');
+      }
+
+      if (style == 'innovate') {
+        $('.style').css('background', 'linear-gradient(to top right, #D183FE, #0AEDE1');
+        $('.style').css('color', '#fff');
+        $('.modal-btn').css('color', '#fff');
+        $('.modal-btn').css('border', '1px solid #fff');
+        $('.modal-btn').hover(function (e) {
+          $(this).css('background', e.type === 'mouseenter' ? "#fff" : 'transparent');
+          $(this).css('color', e.type === 'mouseenter' ? '#000' : 'white');
+        });
 
         // Text Style
         $(".title").text('Inspire.');
