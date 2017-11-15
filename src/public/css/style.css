@@ -828,7 +828,8 @@ footer div{
 }
 
 .dashboard-body {
-  background-color: #FCFCFF;
+  background-color: #ffffff;
+  /*background-color: #F5F0FB;*/
 }
 
 .dashboard-body table {
@@ -881,7 +882,6 @@ footer div{
 
 .dashboard-body button:hover {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-
 }
 
 .dashboard-body table tbody tr {
@@ -892,7 +892,20 @@ footer div{
   font-size: 2em;
 }*/
 
+.dashboard-modal button {
+  border: none;
+  background: #B24592;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #F15F79, #B24592);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #F15F79, #B24592); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  margin: 10px;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-family: FuturaLT-Book;
+  font-size: 12px;
+}
+
 .dashboard-header {
-  display: inline-flex;
+  /*display: inline-flex;*/
   width: 100%;
 }
