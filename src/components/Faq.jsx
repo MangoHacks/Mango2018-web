@@ -46,12 +46,16 @@ class Faq extends React.Component {
                   //       $(this).animate({ width: "220px", height: "250px", top: "0px", position: "absolute" }, 'medium')
                   // });
 
-                  $('.card').mouseenter(function () {
+
+                  $('.card').mouseover(function () {
+                        
                         $(this).css("cursor", "pointer");
-                        $(this).animate({ width: "250px", height: "300px", top: "-25px"}, 'medium');
+                        // $(this).animate({ width: "250px", height: "300px", top: "-25px"}, 'medium');
+                        $(this).animate({ width: "250px", height: "300px", top: "-25px"}, 'fast');
                   });
                   $('.card').mouseleave(function () {
-                        $(this).animate({ width: "220px", height: "250px", top: "0px", position: "absolute" }, 'slow')
+                        // $(this).animate({ width: "220px", height: "250px", top: "0px", position: "absolute" }, 'slow')
+                        $(this).animate({ width: "220px", height: "250px", top: "0px", position: "absolute" }, 'fast')
                   });
             })
             return (

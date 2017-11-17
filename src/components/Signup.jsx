@@ -53,8 +53,8 @@ class Signup extends React.Component {
     this.setState({ mlh: event.target.value });
   }
   handleFileChange(event) {
-    this.setState({
-      resume: event.target.value
+    this.state({
+      resume: event.target.file[0]
     });
   }
   signup(event) {
@@ -69,8 +69,8 @@ class Signup extends React.Component {
     let cleanGender = DOMPurify.sanitize(this.state.gender);
     let cleanSize = DOMPurify.sanitize(this.state.size);
     let cleanGithub = DOMPurify.sanitize(this.state.github);
-    // let cleanResume = DOMPurify.sanitize(this.state.resume);
-    let resume = (this.state.resume);
+    let cleanResume = DOMPurify.sanitize(this.state.resume);
+
 
     let cleanDiet = DOMPurify.sanitize(this.state.diet);
     let cleanMLH = DOMPurify.sanitize(this.state.mlh);
@@ -90,7 +90,7 @@ class Signup extends React.Component {
         gender: cleanGender,
         size: cleanSize,
         github: cleanGithub,
-        resume: resume,
+        resume: cleanResume,
         diet: cleanDiet,
         mlh: cleanMLH
       })
@@ -223,7 +223,7 @@ class Signup extends React.Component {
             </div>
             <br />
             <div className="resume">
-              <input type="file" name="resume" value={this.state.resume} onChange={this.handleFileChange} />
+              <input  type='file' name="resume" value={this.state.resume} onChange={this.handleFileChange} />
             </div>
             {/* <section>
         <div className="dropzone">

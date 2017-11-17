@@ -204,11 +204,18 @@ i{
     background: #fff;
 }
 .faq .content{
-    padding: 10% 5% 10% 10%;
+    padding: 10% 0% 10% 0%;
 
 }
 .class-row-wrapper{
     /* background: #fff; */
+}
+.faq .row{
+    flex-wrap:nowrap;
+    margin-right: 0px;
+    margin-left: 0px; 
+    width: fit-content;
+    margin: auto;
 }
 .card{
     height:250px;
