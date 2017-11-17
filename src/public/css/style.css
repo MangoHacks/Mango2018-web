@@ -133,9 +133,9 @@ i{
 
 /* MAIN PAGE */
 .orange-gradient{
-    background: linear-gradient(188deg, #ffbd17, #58f51d);}    
+    background: linear-gradient(188deg, #ffbd17, #58f51d);}
 .content{
-    padding: 5% 15% 0% 15%; 
+    padding: 5% 15% 0% 15%;
 }
 .content-sm{
     width: 50%;
@@ -155,7 +155,7 @@ i{
 }
 .hero .content{
     padding: 5% 15% 10% 15%;
-    background: #fff;    
+    background: #fff;
 }
 .mango{
     height:200px;
@@ -188,7 +188,7 @@ i{
 
 /* WHAT is a Hackathon section */
 .whatis .content{
-    padding: 5% 15% 5% 15%;  
+    padding: 5% 15% 5% 15%;
     -webkit-box-shadow: 0px 4px 131px -32px rgba(0,0,0,6);
     -moz-box-shadow: 0px 4px 131px -32px rgba(0,0,0,0.6);
     box-shadow: 0px 4px 131px -32px rgba(0,0,0,0.6);
@@ -259,7 +259,7 @@ i{
 
 }
 #mlh-video{
-    
+
 }
 
 /* END Whatlike section */
@@ -267,7 +267,7 @@ i{
 /* Sponsors Grid */
 .sponsors .content{
     background: #fff;
-    padding: 7% 15% 3% 15%;       
+    padding: 7% 15% 3% 15%;
 }
 .sponsors img{
     height: 80px;
@@ -285,14 +285,14 @@ i{
 
 .sponsors .row{
     padding-bottom: 5%;
-} 
+}
 
 /* END Sponsors Grid */
 
 
 /* TEAM GRID */
 .team .content{
-    padding: 0% 15% 5% 15%;   
+    padding: 0% 15% 5% 15%;
 }
 .team img{
     height: 150px;
@@ -307,7 +307,7 @@ i{
     text-align: center;
 }
 .team header{
-    text-align: center; 
+    text-align: center;
     font-size: 30px;
     padding-bottom: 1.8em;
 }
@@ -329,7 +329,7 @@ i{
     padding: 2% 0;
 }
 .sponsor-info-form input{
-    
+
 }
 /* End Sponsors info */
 
@@ -382,6 +382,50 @@ i{
 }
 /* END OF SIGNUP */
 
+/* VOLUNTEER SIGNUP  */
+.volunteersignup-bg-color{
+    background:linear-gradient(233deg, #6800ff, #f52376);
+    height: -webkit-fill-available;
+}
+.volunteersignup{
+    background:rgb(255, 255, 255);
+    height: 100%;
+    overflow: scroll;
+    width: 100%;
+    padding:50px;
+    top:0px;
+    right:0;
+    margin: auto;
+}
+.volunteersignup .name, .email, .school, .major, .diet{
+    width: 50%;
+}
+.volunteersignup span{
+    color:rgb(0, 0, 0);
+    font-family: FuturaLT-Light;
+    font-weight: 600;
+}
+.volunteersignup a{
+    color:black;
+    font-family: FuturaLT-Light;
+    font-weight: 600;
+}
+.volunteersignup a:hover{
+    text-decoration: none;
+    color:rgb(0, 0, 0);
+}
+.volunteersignup input{
+    background: transparent;
+    color: rgb(0, 0, 0);
+    border: 0px;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    font-family: FuturaLT-Light;
+}
+.volunteersignup input::placeholder{
+    color:rgb(0, 0, 0);
+}
+/* END OF SIGNUP */
+
 /* PROSPECTUS PAGE */
 .prospectus-page{
     background: rgb(202, 202, 202);
@@ -401,7 +445,7 @@ i{
     opacity: 1;
     -webkit-transition: opacity .15s linear;
     -o-transition: opacity .15s linear;
-    transition: opacity .15s linear !important; 
+    transition: opacity .15s linear !important;
 }
 .modal-dialog {
     position: relative;
@@ -450,7 +494,7 @@ i{
 }
 .modal-open .modal{
     background: rgba(255, 255, 255, 0.5);
-    transition: opacity .15s linear !important;    
+    transition: opacity .15s linear !important;
 }
 /* END Modal */
 
@@ -470,34 +514,34 @@ footer div{
 }
 .footer-text{
     color:white !important;
-    font-family: FuturaLT;    
+    font-family: FuturaLT;
     font-size: 15px;
 }
 .footer-link{
     margin: auto;
 }
 .fa-facebook {
-    color: white;    
+    color: white;
 }
 .fa-facebook:hover{
     text-decoration: none;
-    color:#3B5998;     
-} 
+    color:#3B5998;
+}
 .fa-twitter {
-    color: white;  
-    padding: 0 1.5%; 
+    color: white;
+    padding: 0 1.5%;
 }
 .fa-twitter:hover{
     text-decoration: none;
     color:#00aced;
-}  
+}
 .fa-slack {
-    color: white;    
-} 
+    color: white;
+}
 .fa-slack:hover{
     text-decoration: none;
-    color: #e6186d;     
-} 
+    color: #e6186d;
+}
 .fa-2x {
     font-size: 1.4em !important;
 }
@@ -535,7 +579,7 @@ footer div{
     .macbook{
         height:550px;
         margin: -330px auto;
-    
+
     }
 }
 
@@ -567,7 +611,7 @@ footer div{
     }
     .hero .content p {
         font-size: 20px;
-    
+
     }
     /* CELEBRATION */
     .slogan{
@@ -617,13 +661,13 @@ footer div{
     .sponsors .row{
         padding-bottom: 50px;
         text-align: -webkit-center;
-    
+
     }
     .sponsors img{
-        height: 50px;       
+        height: 50px;
     }
 
-   
+
     /* TEAM */
     .team img{
         height: 90px !important;
@@ -643,7 +687,7 @@ footer div{
         padding: 5% 5% 10% 10%;
     }
     h1{
-        font-size:70px; 
+        font-size:70px;
     }
     P{
         font-size: 1.2em;
@@ -690,7 +734,7 @@ footer div{
     .hero .content{
         padding: 5% 5% 10% 10%;
         background: #fff;
-        
+
     }
     .hero .content header {
         font-size: 35px;
@@ -773,15 +817,15 @@ footer div{
     padding: 10% 10% 0% 10% !important;
 }
 .sponsors header{
-    font-size: 19px !important;    
+    font-size: 19px !important;
     padding-bottom: 30px;
 }
 .sponsors .row{
     text-align: -webkit-center;
-    
-} 
 
-/* 
+}
+
+/*
 
 /* TEAM Grid */
 .team img{
@@ -834,5 +878,101 @@ footer div{
 }
 .fa-slack{
     font-size: 25px;
-    }   
+    }
+}
+
+.dashboard-menu {
+  background: #41295a;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #2F0743, #41295a);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #2F0743, #41295a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  width: 100%;
+}
+
+.dashboard-menu p {
+  padding: 20px;
+  color: white;
+}
+
+.dashboard-body {
+  background-color: #ffffff;
+  /*background-color: #F5F0FB;*/
+}
+
+.dashboard-body table {
+  width: 80%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  /*border: solid black 1px;*/
+  border-radius: 20px;
+}
+
+.dashboard-body table thead {
+
+  /*background: transparent;*/
+  padding: 20px;
+  color: #463F65;
+  border-radius: 20px;
+}
+
+.dashboard-body table thead tr {
+  background: #D9D4DE;
+}
+
+.dashboard-body table tbody {
+  background: transparent;
+  padding: 20px;
+  color: #463F65;
+}
+
+.dashboard-body table thead tr th p {
+  font-weight: 300;
+  margin: 20px;
+}
+
+.dashboard-body table tbody tr td p {
+  font-weight: 300;
+  margin: 20px;
+}
+
+.dashboard-body button {
+  border: none;
+  background: #B24592;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #F15F79, #B24592);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #F15F79, #B24592); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  margin: 10px;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-family: FuturaLT-Book;
+  font-size: 12px;
+}
+
+.dashboard-body button:hover {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.dashboard-body table tbody tr {
+  border-bottom: solid 1px #D9D4DE;
+}
+
+/*.dashboard-body h1 {
+  font-size: 2em;
+}*/
+
+.dashboard-modal button {
+  border: none;
+  background: #B24592;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #F15F79, #B24592);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #F15F79, #B24592); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  margin: 10px;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-family: FuturaLT-Book;
+  font-size: 12px;
+}
+
+.dashboard-header {
+  /*display: inline-flex;*/
+  width: 100%;
 }

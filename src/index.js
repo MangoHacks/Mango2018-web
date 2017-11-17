@@ -13,6 +13,7 @@ import Signup from './components/Signup';
 import Prospectus from './components/Prospectus';
 import AdminDashboard from './components/AdminDashboard';
 import SponsorInfo from './components/SponsorInfo';
+import VolunteerDashboard from './components/VolunteerDashboard'
 
 
 ReactDOM.render(
@@ -23,7 +24,6 @@ ReactDOM.render(
         <Route path='/admindashboard' component={AdminDashboard} />
         <Route path='/prospectus' component={Prospectus} />
         <Route path='/sponsors' component={SponsorInfo} />
-        
-        
+        <Route path='/volunteers' component={VolunteerDashboard} />
       </div>
     </BrowserRouter>, document.getElementById('root'));
