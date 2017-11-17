@@ -101,7 +101,6 @@ class Main extends React.Component {
       if (style == 'imagine') {
         // BG Styles
         $('.style').css('background', 'linear-gradient(to top right, #FE6BBE, #FAD865');
-        $('.style').css('color', '#000');
         $('.modal-btn').css('color', '#000');
         $('.modal-btn').css('border', '1px solid #000');
         $('.modal-btn').hover(function (e) {
@@ -123,8 +122,7 @@ class Main extends React.Component {
       }
 
       if (style == 'inspire') {
-        $('.style').css('background', 'linear-gradient(233deg, #efff92, #d2fcf9');
-        $('.style').css('color', '#000');
+        $('.style').css('background', 'linear-gradient(to top right, #0EDC96, #09F6F5');
         $('.modal-btn').css('color', '#000');
         $('.modal-btn').css('border', '1px solid #000');
         $('.modal-btn').hover(function (e) {
@@ -146,8 +144,7 @@ class Main extends React.Component {
       }
 
       if (style == 'innovate') {
-        $('.style').css('background', 'linear-gradient(233deg, #6800ff, #f52376');
-        $('.style').css('color', '#fff');
+        $('.style').css('background', 'linear-gradient(to top right, #D183FE, #0AEDE1');
         $('.modal-btn').css('color', '#fff');
         $('.modal-btn').css('border', '1px solid #fff');
         $('.modal-btn').hover(function (e) {
