@@ -6,27 +6,27 @@ import Modal from 'react-modal';
 let DOMPurify = require('../dist/purify.js');
 
 const modalStyle = {
-  overlay : {
-    position          : 'fixed',
-    top               : 0,
-    left              : 0,
-    right             : 0,
-    bottom            : 0,
-    backgroundColor   : 'rgba(255, 255, 255, 0.75)'
+  overlay: {
+    position: 'fixed',
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    backgroundColor: 'rgba(255, 255, 255, 0.75)'
   },
-  content : {
-    position                   : 'absolute',
-    top                        : '40px',
-    left                       : '20%',
-    right                      : '20%',
-    bottom                     : '40px',
-    border                     : '1px solid #ccc',
-    background                 : '#fff',
-    overflow                   : 'auto',
-    WebkitOverflowScrolling    : 'touch',
-    borderRadius               : '4px',
-    outline                    : 'none',
-    padding                    : '20px'
+  content: {
+    position: 'absolute',
+    top: '40px',
+    left: '20%',
+    right: '20%',
+    bottom: '40px',
+    border: '1px solid #ccc',
+    background: '#fff',
+    overflow: 'auto',
+    WebkitOverflowScrolling: 'touch',
+    borderRadius: '4px',
+    outline: 'none',
+    padding: '20px'
 
   }
 }
@@ -46,18 +46,19 @@ class VolunteerDashboard extends Component {
       year: 'Freshman',
       gender: 'Male',
       size: 'Small',
+      count:0
     };
     this.signup = this.signup.bind(this);
     this.handleInputChange = this.handleInputChange.bind(this);
     this.editUser = this.editUser.bind(this);
-    this.checkIn= this.checkIn.bind(this);
+    this.checkIn = this.checkIn.bind(this);
     this.renderVolunteerDashboard = this.renderVolunteerDashboard.bind(this);
     this.openModal = this.openModal.bind(this);
     this.afterOpenModal = this.afterOpenModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
-    this.handleYearChange = this.handleYearChange .bind(this);
-    this.handleGenderChange = this.handleGenderChange .bind(this);
-    this.handleSizeChange = this.handleSizeChange .bind(this);
+    this.handleYearChange = this.handleYearChange.bind(this);
+    this.handleGenderChange = this.handleGenderChange.bind(this);
+    this.handleSizeChange = this.handleSizeChange.bind(this);
   }
   handleYearChange(event) {
     this.setState({ year: event.target.value });
@@ -69,16 +70,16 @@ class VolunteerDashboard extends Component {
     this.setState({ size: event.target.value });
   }
   openModal() {
-    this.setState({modalIsOpen: true});
+    this.setState({ modalIsOpen: true });
   }
 
   afterOpenModal() {
-  // references are now sync'd and can be accessed.
+    // references are now sync'd and can be accessed.
 
   }
 
   closeModal() {
-    this.setState({modalIsOpen: false});
+    this.setState({ modalIsOpen: false });
   }
 
   signup(event) {
@@ -108,39 +109,22 @@ class VolunteerDashboard extends Component {
       })
 
     })
-    .then(response => {
-      this.renderVolunteerDashboard();
-      this.setState({
-        list: [],
-        name: "",
-        email: '',
-        school: '',
-        major: '',
-        year: 'Freshman',
-        gender: 'Male',
-        size: '',
-      });
-    })
+      .then(response => {
+        this.renderVolunteerDashboard();
+        this.setState({
+          list: [],
+          name: "",
+          email: '',
+          school: '',
+          major: '',
+          year: 'Freshman',
+          gender: 'Male',
+          size: '',
+        });
+      })
+    this.closeModal();
 
-    // window.location.href = "http://localhost:3000/signup";
-      this.closeModal();
-
-    }
-  // renderVolunteerDashboard() {
-  //   fetch('http://localhost:8050/users',
-  //     {
-  //       method: 'GET'
-  //     })
-  //     .then(results => { //results is a an object
-  //       results.json() //results.json is a Promise Object
-  //         .then((data) => {  //Once you get the Promise done you can extract the data
-  //           this.setState({
-  //             list: data
-  //           })
-  //           console.log(data)
-  //         })
-  //    })
-  // }
+  }
   componentDidMount() {
     this.renderVolunteerDashboard();
   }
@@ -154,24 +138,24 @@ class VolunteerDashboard extends Component {
     });
   }
 
-  checkIn(event){
+  checkIn(event) {
     event.preventDefault();
     const target = event.target;
     const id = target.id;
     let checkin = 'Yes';
     fetch('http://localhost:8050/users/' + id,
-    {
-      method: 'PUT',
-      "headers": {
-        "content-type": "application/json",
-    },
-    body: JSON.stringify({
-        checkin: checkin,
+      {
+        method: 'PUT',
+        "headers": {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify({
+          checkin: checkin,
+        })
       })
-    })
-    .then(response => {
-      this.renderVolunteerDashboard();
-    })
+      .then(response => {
+        this.renderVolunteerDashboard();
+      })
   }
   downloadResume(event) {
     event.preventDefault();
@@ -199,22 +183,22 @@ class VolunteerDashboard extends Component {
             })
             console.log(data)
           })
-     })
+      })
   }
   getInitialState() {
     return {
       editing: null
     };
   }
-toggleEditing( itemId ) {
-    this.setState( { editing: itemId } );
+  toggleEditing(itemId) {
+    this.setState({ editing: itemId });
   }
-editUser(event){
-  event.preventDefault();
-  const target = event.target;
-  const id = target.id;
-  console.log('yay' + id)
-}
+  editUser(event) {
+    event.preventDefault();
+    const target = event.target;
+    const id = target.id;
+    console.log('yay' + id)
+  }
   render() {
 
     return (
@@ -227,81 +211,81 @@ editUser(event){
             labelledby: "heading",
             describedby: "full_description"
           }}
-          style = {modalStyle}
+          style={modalStyle}
           className="dashboard-modal">
           <div align="center">
-          <h4 id="heading">Add Hacker</h4>
-          <div id="full_description" align="center">
-          </div>
-          <div className="volunteersignup">
-          <form action="/form" className="" onSubmit={this.signup} encType="multipart/form-data">
-            <div className="form-group">
-              <input type="name" name="name" className="name" placeholder="Name" required value={this.state.name} onChange={this.handleInputChange} />
+            <h4 id="heading">Add Hacker</h4>
+            <div id="full_description" align="center">
             </div>
-            <div className="form-group">
-              <input type="email" name="email" className="email" required value={this.state.email} onChange={this.handleInputChange} id="email" placeholder="Email" />
-            </div>
-            <div className="form-group">
-              <input type="text" list="schools" name="school" className="school" required value={this.state.school} onChange={this.handleInputChange} id="school" placeholder="School" />
-            </div>
-            <datalist id="schools">
-              <option value="Florida International University" />
-            </datalist>
+            <div className="volunteersignup">
+              <form action="/form" className="" onSubmit={this.signup} encType="multipart/form-data">
+                <div className="form-group">
+                  <input type="name" name="name" className="name" placeholder="Name" required value={this.state.name} onChange={this.handleInputChange} />
+                </div>
+                <div className="form-group">
+                  <input type="email" name="email" className="email" required value={this.state.email} onChange={this.handleInputChange} id="email" placeholder="Email" />
+                </div>
+                <div className="form-group">
+                  <input type="text" list="schools" name="school" className="school" required value={this.state.school} onChange={this.handleInputChange} id="school" placeholder="School" />
+                </div>
+                <datalist id="schools">
+                  <option value="Florida International University" />
+                </datalist>
 
-            <div className="form-group">
-              <input type="text" list="majors" name="major" className="major" required value={this.state.major} onChange={this.handleInputChange} id="major" placeholder="Major" />
-            </div>
-            <datalist id="majors">
-              <option value="Computer Science" />
-              <option value="Computer Engineering" />
-              <option value="Information Technology" />
-              <option value="Business" />
-              <option value="Electrical Engineering" />
-            </datalist>
-            <div className="row">
-                <div className="col">
-                  <label htmlFor="">Grade Level</label>
-                  <div class="form-group">
-                    <select name="year" onChange={this.handleYearChange}>
-                      <option value="Freshman">Freshman</option>
-                      <option value="Sophmore">Sophmore</option>
-                      <option value="Junior">Junior</option>
-                      <option value="Senior">Senior</option>
-                      <option value="">Super Senior</option>
-                      <option value="">DAMN</option>
-                    </select>
+                <div className="form-group">
+                  <input type="text" list="majors" name="major" className="major" required value={this.state.major} onChange={this.handleInputChange} id="major" placeholder="Major" />
+                </div>
+                <datalist id="majors">
+                  <option value="Computer Science" />
+                  <option value="Computer Engineering" />
+                  <option value="Information Technology" />
+                  <option value="Business" />
+                  <option value="Electrical Engineering" />
+                </datalist>
+                <div className="row">
+                  <div className="col">
+                    <label htmlFor="">Grade Level</label>
+                    <div class="form-group">
+                      <select name="year" onChange={this.handleYearChange}>
+                        <option value="Freshman">Freshman</option>
+                        <option value="Sophmore">Sophmore</option>
+                        <option value="Junior">Junior</option>
+                        <option value="Senior">Senior</option>
+                        <option value="">Super Senior</option>
+                        <option value="">DAMN</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div className="col">
+                    <label htmlFor="">Gender</label>
+                    <div className="form-group">
+                      <select value="gender" onChange={this.handleGenderChange}>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Other">Other</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div className="col">
+                    <label htmlFor="">Shirt Size</label>
+                    <div class="form-group">
+                      <select name="size" onChange={this.handleSizeChange}>
+                        <option value="Small">Small</option>
+                        <option value="Medium">Medium</option>
+                        <option value="Large">Large</option>
+                        <option value="X-Large">X-Large</option>
+                      </select>
+                    </div>
                   </div>
                 </div>
-                <div className="col">
-                  <label htmlFor="">Gender</label>
-                  <div className="form-group">
-                    <select value="gender" onChange={this.handleGenderChange}>
-                      <option value="Male">Male</option>
-                      <option value="Female">Female</option>
-                      <option value="Other">Other</option>
-                    </select>
-                  </div>
-                </div>
-
-                <div className="col">
-                  <label htmlFor="">Shirt Size</label>
-                  <div class="form-group">
-                    <select name="size" onChange={this.handleSizeChange}>
-                      <option value="Small">Small</option>
-                      <option value="Medium">Medium</option>
-                      <option value="Large">Large</option>
-                      <option value="X-Large">X-Large</option>
-                    </select>
-                  </div>
-                </div>
-                </div>
 
 
 
-            <br />
-            <button className="btn btn-default" type="submit" >✓ Register</button>
-          </form>
-          </div>
+                <br />
+                <button className="btn btn-default" type="submit" >✓ Register</button>
+              </form>
+            </div>
           </div>
         </Modal>
 
@@ -310,10 +294,18 @@ editUser(event){
           <p>MangoHacks Dashboard</p>
         </div>
         <div className="dashboard-header">
-        <p>Volunteer Dashboard</p>
-        <p></p>
-        <button onClick={this.openModal}>Add User</button>
+          <p>Volunteer Dashboard</p>
+            {
+                this.state.list.map((item, index) => {
+                  this.setState({ 
+                    count: index +1
+                  });
+                })
+              }
+            <h3>{this.state.count}</h3>
+          <button onClick={this.openModal}>Add User</button>
         </div>
+
         <table>
           <thead>
             <tr>
@@ -327,25 +319,25 @@ editUser(event){
             </tr>
           </thead>
           <tbody>
-              {
-                this.state.list.map((item,index) => {
-                  return(
+            {
+              this.state.list.map((item, index) => {
+                return (
                   <tr key={item._id}>
-                      <td><p>{index+1}</p></td>
-                      <td><p>{item.name}</p></td>
-                      <td><p>{item.email}</p></td>
-                      <td><p>{item.school}</p></td>
-                      <td><p>{item.size}</p></td>
-                      <td><p>{item.checkin}</p></td>
-
-                      <td>
+                    <td><p>{index + 1}</p></td>
+                    <td><p>{item.name}</p></td>
+                    <td><p>{item.email}</p></td>
+                    <td><p>{item.school}</p></td>
+                    <td><p>{item.size}</p></td>
+                    <td><p>{item.checkin}</p></td>
+                    <td>
                       <button id={item._id} onClick={this.checkIn} className="btn btn-default">Check In</button>
                       {/* <a href={"http://localhost:8050/dlresume/"+item.resume.filename}><button id={item._id} className="btn btn-success">Resume</button></a> */}
-                      </td>
+                    </td>
                   </tr>
-
-                  )}
-                )}
+                )
+              }
+              )}
+              
           </tbody>
         </table>
       </div>
