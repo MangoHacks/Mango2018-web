@@ -1,10 +1,97 @@
 import React, { Component } from 'react';
+import $ from 'jquery';
 
- class Faq extends React.Component {
-   
-  render() {
-    return (
-      <div class="faq-section">
+class Faq extends React.Component {
+
+      render() {
+            $(document).ready(function () {
+                  // Card One
+                  // $('#card-one').mouseenter(function () {
+                  //       $(this).css("cursor", "pointer");
+                  //       $(this).animate({ width: "250px", height: "300px", top: "-25px", position: "absolute" }, 'medium');
+                  // });
+                  // $('#card-one').mouseleave(function () {
+                  //       $(this).animate({ width: "220px", height: "250px", top: "0px", position: "absolute" }, 'medium')
+                  // });
+                  // // Card Two
+                  // $('#card-two').mouseenter(function () {
+                  //       $(this).css("cursor", "pointer");
+                  //       $(this).animate({ width: "250px", height: "300px", top: "-25px", position: "absolute" }, 'medium');
+                  // });
+                  // $('#card-two').mouseleave(function () {
+                  //       $(this).animate({ width: "220px", height: "250px", top: "0px", position: "absolute" }, 'medium')
+                  // });
+                  // // Card Three
+                  // $('#card-three').mouseenter(function () {
+                  //       $(this).css("cursor", "pointer");
+                  //       $(this).animate({ width: "250px", height: "300px", top: "-25px", position: "absolute" }, 'medium');
+                  // });
+                  // $('#card-three').mouseleave(function () {
+                  //       $(this).animate({ width: "220px", height: "250px", top: "0px", position: "absolute" }, 'medium')
+                  // });
+                  // // Card Four
+                  // $('#card-four').mouseenter(function () {
+                  //       $(this).css("cursor", "pointer");
+                  //       $(this).animate({ width: "250px", height: "300px", top: "-25px", position: "absolute" }, 'medium');
+                  // });
+                  // $('#card-four').mouseleave(function () {
+                  //       $(this).animate({ width: "220px", height: "250px", top: "0px", position: "absolute" }, 'medium')
+                  // });
+                  // // CardFive
+                  // $('#card-five').mouseenter(function () {
+                  //       $(this).css("cursor", "pointer");
+                  //       $(this).animate({ width: "250px", height: "300px", top: "-25px", position: "absolute" }, 'medium');
+                  // });
+                  // $('#card-five').mouseleave(function () {
+                  //       $(this).animate({ width: "220px", height: "250px", top: "0px", position: "absolute" }, 'medium')
+                  // });
+
+                  $('.card').mouseenter(function () {
+                        $(this).css("cursor", "pointer");
+                        $(this).animate({ width: "250px", height: "300px", top: "-25px"}, 'medium');
+                  });
+                  $('.card').mouseleave(function () {
+                        $(this).animate({ width: "220px", height: "250px", top: "0px", position: "absolute" }, 'slow')
+                  });
+            })
+            return (
+                  <div className="faq">
+                        <div className="content">
+                              <div className="class-row-wrapper">
+                                    <div className="row">
+                                          <div className="col">
+                                                <div className="card style" id="card-one">
+                                                </div>
+                                          </div>
+                                          <div className="col">
+                                                <div className="card style" id="card-two">
+                                                </div>
+                                          </div>
+                                          <div className="col">
+                                                <div className="card style" id="card-three">
+                                                </div>
+                                          </div>
+                                          <div className="col">
+                                                <div className="card style" id="card-four">
+                                                </div>
+                                          </div>
+                                          <div className="col">
+                                                <div className="card style" id="card-five">
+                                                </div>
+                                          </div>
+                                    </div>
+                              </div >
+                        </div >
+                  </div>
+            );
+      }
+}
+
+export default Faq;
+
+
+
+{/* <div class="faq-section">
               <div className="content">
                     <header>FAQ</header>
 
@@ -57,10 +144,62 @@ import React, { Component } from 'react';
                             </div>
                      </div>
                 </div>
-      </div>
-      
-    );
-  }
-}
+      </div> */}
 
-export default Faq;
+
+
+
+
+// CSS Boxes
+{/* <div className="row">
+                                    <div className="col">
+                                          <div className="card" >
+                                                <img className="card-img-top" src="" alt="Card image " />
+                                                <div className="card-body">
+                                                      <h4 className="card-title">John Doe</h4>
+                                                      <p className="card-text">Some example text.</p>
+                                                      <a href="#" className="btn btn-primary">See Profile</a>
+                                                </div>
+                                          </div>
+                                    </div>
+                                    <div className="col">
+                                          <div className="card" >
+                                                <img className="card-img-top" src="" alt="Card image " />
+                                                <div className="card-body">
+                                                      <h4 className="card-title">John Doe</h4>
+                                                      <p className="card-text">Some example text.</p>
+                                                      <a href="#" className="btn btn-primary">See Profile</a>
+                                                </div>
+                                          </div>
+                                    </div>
+                                    <div className="col">
+                                          <div className="card" >
+                                                <img className="card-img-top" src="" alt="Card image " />
+                                                <div className="card-body">
+                                                      <h4 className="card-title">John Doe</h4>
+                                                      <p className="card-text">Some example text.</p>
+                                                      <a href="#" className="btn btn-primary">See Profile</a>
+                                                </div>
+                                          </div>
+                                    </div>
+                                    <div className="col">
+                                          <div className="card" >
+                                                <img className="card-img-top" src="" alt="Card image " />
+                                                <div className="card-body">
+                                                      <h4 className="card-title">John Doe</h4>
+                                                      <p className="card-text">Some example text.</p>
+                                                      <a href="#" className="btn btn-primary">See Profile</a>
+                                                </div>
+                                          </div>
+                                    </div>
+                                    <div className="col">
+                                          <div className="card" >
+                                                <img className="card-img-top" src="" alt="Card image " />
+                                                <div className="card-body">
+                                                      <h4 className="card-title">John Doe</h4>
+                                                      <p className="card-text">Some example text.</p>
+                                                      <a href="#" className="btn btn-primary">See Profile</a>
+                                                </div>
+                                          </div>
+                                    </div>
+                              </div> */}

@@ -10,7 +10,7 @@ import inspiremango from "../public/img/mangos/inspire-mango.svg";
 
 // Hardware
 import macbook from "../public/img/misc/macbook.svg";
-import motherboard from "../public/img/misc/motherboard.svg";
+import motherboard from "../public/img/misc/motherboard.png";
 import submissions from "../public/img/misc/Submissions.svg";
 
 
@@ -100,7 +100,7 @@ class Main extends React.Component {
 
       if (style == 'imagine') {
         // BG Styles
-        $('.style').css('background', 'linear-gradient(233deg, #ffc400, #c1f523');
+        $('.style').css('background', 'linear-gradient(to top right, #FE6BBE, #FAD865');
         $('.style').css('color', '#000');
         $('.modal-btn').css('color', '#000');
         $('.modal-btn').css('border', '1px solid #000');
@@ -185,8 +185,8 @@ class Main extends React.Component {
         </div>
 
         <div className="pill-move top-pills">
-          <div className="pill" id="pill-5"></div>
-           <div className="pill" id="pill-6"></div>
+          {/* <div className="pill" id="pill-5"></div>
+           <div className="pill" id="pill-6"></div> */}
            {/* <div className="pill" id="pill-7"></div>
            <div className="pill" id="pill-8"></div>            */}
         </div>
@@ -247,7 +247,7 @@ class Main extends React.Component {
         </div>
 
         <Sponsors />
-        <Team />
+        {/* <Team /> */}
 
         <footer className="footer style">
           <div className="footer-link">

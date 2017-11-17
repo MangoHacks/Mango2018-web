@@ -196,8 +196,31 @@ i{
 
 /* END WHAT is a Hackathon section */
 
+
 /* FAQ Section */
+
 .faq{
+    height:600px;
+    background: #fff;
+}
+.faq .content{
+    padding: 10% 5% 10% 10%;
+
+}
+.class-row-wrapper{
+    /* background: #fff; */
+}
+.card{
+    height:250px;
+    width:220px;
+    border-radius:30px;
+    border: 0px;
+    -webkit-box-shadow: -1px 6px 51px -5px rgba(0,0,0,0.3);
+    -moz-box-shadow: -1px 6px 51px -5px rgba(0,0,0,0.3);
+    box-shadow: -1px 6px 51px -5px rgba(0,0,0,0.3);
+}
+
+/* .faq{
     display:flex;
     flex-wrap: wrap;
 }
@@ -209,7 +232,7 @@ i{
 }
 .faq h4{
     font-size: 20px;
-}
+} */
 /* END FAQ Section */
 
 
@@ -700,13 +723,13 @@ footer div{
     .content-sm{
         width: 100%;
     }
-    .faq p {
+    /* .faq p {
         font-size: 1em;
     }
     .faq h4 {
         font-size: 20px;
         padding: 0%;
-    }
+    } */
     .content header {
         font-size: 25px;
     }
