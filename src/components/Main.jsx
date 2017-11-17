@@ -25,6 +25,7 @@ import Faq from './Faq';
 import Footer from './Footer';
 import Prospectus from './Prospectus';
 import Team from './Team';
+import SignupModal from './SignupModal';
 import Sponsors from './Sponsors';
 import WhatLike from './WhatLike';
 
@@ -222,6 +223,7 @@ class Main extends React.Component {
             <p>Everyone is welcomed - from the most experienced hackers, designers, and builders to the thinkers and the curious who have never heard of a hackathon. Regardless of your experience, there is something for you at MangoHacks.</p>
             <p> We’d love for you to come learn something new, take the things you love (sports, art, traveling, dogs!) or care about (poverty, sea level rise, hunger) and combine them with techonology to make something different, something cool, or something to improve the world.</p>
             <p>It'll be sweet. We Promise.</p>
+            <SignupModal/>
           </div>
         </div>
         {/* <img src={vr} className="vr" alt="Virtual Reality"/>    */}
