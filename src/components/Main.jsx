@@ -46,13 +46,13 @@ class Main extends React.Component {
     // Cookies Functions
     function setCookie(name, value, expires, path, domain, secure) {
       var curCookie = name + "=" + escape(value) +
-          ((expires) ? "; expires=" + expires.toGMTString() : "") +
-          ((path) ? "; path=" + path : "") +
-          ((domain) ? "; domain=" + domain : "") +
-          ((secure) ? "; secure" : "");
+        ((expires) ? "; expires=" + expires.toGMTString() : "") +
+        ((path) ? "; path=" + path : "") +
+        ((domain) ? "; domain=" + domain : "") +
+        ((secure) ? "; secure" : "");
       document.cookie = curCookie;
     }
-    
+
     function getCookie(name) {
       var dc = document.cookie;
       var prefix = name + "=";
@@ -67,16 +67,16 @@ class Main extends React.Component {
         end = dc.length;
       return unescape(dc.substring(begin + prefix.length, end));
     }
-    
+
     function deleteCookie(name, path, domain) {
       if (getCookie(name)) {
         document.cookie = name + "=" +
-        ((path) ? "; path=" + path : "") +
-        ((domain) ? "; domain=" + domain : "") +
-        "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+          ((path) ? "; path=" + path : "") +
+          ((domain) ? "; domain=" + domain : "") +
+          "; expires=Thu, 01-Jan-70 00:00:01 GMT";
       }
     }
-    
+
     function fixDate(date) {
       var base = new Date(0);
       var skew = base.getTime();
@@ -94,13 +94,17 @@ class Main extends React.Component {
     setCookie("counter", visits);
 
     // Jquery
-    $(document).ready(function() {
-      var liststyle = ['inspire','imagine','innovate'];
+    $(document).ready(function () {
+      var liststyle = ['inspire', 'imagine', 'innovate'];
       var style = liststyle[(visits + 3) % 3];
 
       if (style == 'imagine') {
         // BG Styles
+<<<<<<< HEAD
         $('.style').css('background', 'linear-gradient(to top right, #FE6BBE, #FAD865');
+=======
+        $('.content-style').css('background', 'linear-gradient(to top right, #FE6BBE, #FAD865');
+>>>>>>> 134cbc3bfc15b34f6e995bbabcae3ea827d2505a
         $('.modal-btn').css('color', '#000');
         $('.modal-btn').css('border', '1px solid #000');
         $('.modal-btn').hover(function (e) {
@@ -110,7 +114,7 @@ class Main extends React.Component {
 
         // Text Style
         $('.title').text('Imagine.');
-        $('.title').css('color', '#C8F020')
+        $('.title').css('color', '#FE6BBE')
 
         // Logo Style
         $('.mango').attr('src', imaginemango)
@@ -122,7 +126,11 @@ class Main extends React.Component {
       }
 
       if (style == 'inspire') {
+<<<<<<< HEAD
         $('.style').css('background', 'linear-gradient(to top right, #0EDC96, #09F6F5');
+=======
+        $('.content-style').css('background', 'linear-gradient(to top right, #0EDC96, #09F6F5');
+>>>>>>> 134cbc3bfc15b34f6e995bbabcae3ea827d2505a
         $('.modal-btn').css('color', '#000');
         $('.modal-btn').css('border', '1px solid #000');
         $('.modal-btn').hover(function (e) {
@@ -144,7 +152,11 @@ class Main extends React.Component {
       }
 
       if (style == 'innovate') {
+<<<<<<< HEAD
         $('.style').css('background', 'linear-gradient(to top right, #D183FE, #0AEDE1');
+=======
+        $('.content-style').css('background', 'linear-gradient(to top right, #D183FE, #0AEDE1');
+>>>>>>> 134cbc3bfc15b34f6e995bbabcae3ea827d2505a
         $('.modal-btn').css('color', '#fff');
         $('.modal-btn').css('border', '1px solid #fff');
         $('.modal-btn').hover(function (e) {
@@ -152,68 +164,72 @@ class Main extends React.Component {
           $(this).css('color', e.type === 'mouseenter' ? '#000' : 'white');
         });
 
-
         // Text Style
-        $('.title').text('Innovate.');
-        $('.title').css('color', '#4652F7');
-
+        $(".title").text('Inspire.');
+        $('.title').css('color', '#D183FE');
 
         // Logo Style
-        $('.mango').attr('src', innovatemango);
+        $('.mango').attr('src', inspiremango);
 
         //  BG Picture
-        $('.bg-hero').attr('src', motherboard);
-        $('.bg-hero').removeClass('bg-hero').addClass('motherboard');
-
+        $('.bg-hero').attr('src', submissions);
+        $('.bg-hero').removeClass('bg-hero').addClass('submissions');
       }
-
-      
     });
-
     $(document).ready(function () { $("div").hide().fadeIn(1000); });
 
     return (
       <div class="">
-        <div className="pill-move">
+        {/* <div className="pill-move">
           {/* <div className="pill" id="pill-1"></div>
            <div className="pill" id="pill-2"></div>
            <div className="pill" id="pill-3"></div>
-           <div className="pill" id="pill-4"></div>            */}
+           <div className="pill" id="pill-4"></div>            
         </div>
 
         <div className="pill-move top-pills">
+<<<<<<< HEAD
           {/* <div className="pill" id="pill-5"></div>
            <div className="pill" id="pill-6"></div> */}
            {/* <div className="pill" id="pill-7"></div>
            <div className="pill" id="pill-8"></div>            */}
         </div>
+=======
+          <div className="pill" id="pill-5"></div>
+           <div className="pill" id="pill-6"></div>
+           <div className="pill" id="pill-7"></div>
+           <div className="pill" id="pill-8"></div>            
+        </div> */}
+>>>>>>> 134cbc3bfc15b34f6e995bbabcae3ea827d2505a
 
         <div className="page">
           <div className="hero">
             <div className="top-hero">
-            <img className="mango" src={imaginemango} alt="mangologo" />
-            <h1 className="title"></h1>
-            <img className="bg-hero" src={motherboard} alt="bg-picture" />
-            </div>      
+              <img className="mango" src={imaginemango} alt="mangologo" />
+              <h1 className="title"></h1>
+              <img className="bg-hero" src={motherboard} alt="bg-picture" />
+            </div>
           </div>
         </div>
-        <div className="hero">
-          <div className="content">
-            <h2>2018</h2>
-            <header>MangoHacks</header>
-            <p className="slogan">"A celebration with Hackathon elements"</p>
-            <div className="info-2">
-              <p>MangoHacks is a place for discovery.</p>
-              <p>Its a 36 hour hackathon that encourages learning, collaboration, growth, innovation, and fun.<br></br>
-                We will welcome 250+ students from Florida and accross the country<br></br>
-                with amazing mentors, and wonderful sponsors to create amazing things.</p>
-              <p><i>MangoHacks is organized by students for students.</i></p>
+        <div className="celebration">
+          <div className="hero">
+            <div className="content">
+              <h2>2018</h2>
+              <header>MangoHacks</header>
+              <p className="slogan">"A celebration with Hackathon elements"</p>
+              <div className="info-2">
+                <p>MangoHacks is a place for discovery.</p>
+                <p>Its a 36 hour hackathon that encourages learning, collaboration, growth, innovation, and fun.<br></br>
+                  We will welcome 250+ students from Florida and accross the country<br></br>
+                  with amazing mentors, and wonderful sponsors to create amazing things.</p>
+                <p><i>MangoHacks is organized by students for students.</i></p>
+              </div>
             </div>
           </div>
         </div>
 
         <div className="whatis">
-          <div className="content style">
+          <div className="content-style" id="one">
             <header> What is <br></br>a Hackathon?</header>
             <p>MangoHacks is a chance to meet new people, learn something, make something, dream along, and have fun.</p>
             <p>Everyone is welcomed - from the most experienced hackers, designers, and builders to the thinkers and the curious who have never heard of a hackathon. Regardless of your experience, there is something for you at MangoHacks.</p>
@@ -225,7 +241,7 @@ class Main extends React.Component {
         <Faq />
 
         <div className="whatlike">
-          <div className="content style">
+          <div className="content-style">
             <header> What is it like?</header>
             <iframe id="mango-video" width="720" height="510" src="https://www.youtube.com/embed/iuPGCi9VEco" frameborder="0" gesture="media" allowfullscreen></iframe>
             <div className="video-wrapper">
@@ -257,7 +273,7 @@ class Main extends React.Component {
       </div>
 
     );
-    }
   }
+}
 
 export default Main;
