@@ -69,7 +69,7 @@ class Signup extends React.Component {
     let cleanGender = DOMPurify.sanitize(this.state.gender);
     let cleanSize = DOMPurify.sanitize(this.state.size);
     let cleanGithub = DOMPurify.sanitize(this.state.github);
-    // let cleanResume = DOMPurify.sanitize(this.state.resume);    
+    // let cleanResume = DOMPurify.sanitize(this.state.resume);
     let resume = (this.state.resume);
 
     let cleanDiet = DOMPurify.sanitize(this.state.diet);
@@ -159,7 +159,7 @@ class Signup extends React.Component {
               <option value="Business" />
               <option value="Electrical Engineering" />
             </datalist>
-            {/* 
+            {/*
                   <div className="form-group">
                     <label htmlFor="">Freshman</label>
                     <input type="checkbox" value="Freshman" checked={this.state.year === 'Freshman'} onChange={this.handleYearChange} />

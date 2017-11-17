@@ -359,6 +359,50 @@ i{
 }
 /* END OF SIGNUP */
 
+/* VOLUNTEER SIGNUP  */
+.volunteersignup-bg-color{
+    background:linear-gradient(233deg, #6800ff, #f52376);
+    height: -webkit-fill-available;
+}
+.volunteersignup{
+    background:rgb(255, 255, 255);
+    height: 100%;
+    overflow: scroll;
+    width: 100%;
+    padding:50px;
+    top:0px;
+    right:0;
+    margin: auto;
+}
+.volunteersignup .name, .email, .school, .major, .diet{
+    width: 50%;
+}
+.volunteersignup span{
+    color:rgb(0, 0, 0);
+    font-family: FuturaLT-Light;
+    font-weight: 600;
+}
+.volunteersignup a{
+    color:black;
+    font-family: FuturaLT-Light;
+    font-weight: 600;
+}
+.volunteersignup a:hover{
+    text-decoration: none;
+    color:rgb(0, 0, 0);
+}
+.volunteersignup input{
+    background: transparent;
+    color: rgb(0, 0, 0);
+    border: 0px;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    font-family: FuturaLT-Light;
+}
+.volunteersignup input::placeholder{
+    color:rgb(0, 0, 0);
+}
+/* END OF SIGNUP */
+
 /* PROSPECTUS PAGE */
 .prospectus-page{
     background: rgb(202, 202, 202);

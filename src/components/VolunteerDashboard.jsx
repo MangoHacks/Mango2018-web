@@ -2,6 +2,7 @@
 import React, { Component } from 'react';
 import Modal from 'react-modal';
 
+
 let DOMPurify = require('../dist/purify.js');
 
 const modalStyle = {
@@ -16,8 +17,8 @@ const modalStyle = {
   content : {
     position                   : 'absolute',
     top                        : '40px',
-    left                       : '40px',
-    right                      : '40px',
+    left                       : '20%',
+    right                      : '20%',
     bottom                     : '40px',
     border                     : '1px solid #ccc',
     background                 : '#fff',
@@ -30,6 +31,8 @@ const modalStyle = {
   }
 }
 
+let modalIsOpen = false;
+
 class VolunteerDashboard extends Component {
 
   constructor(props) {
@@ -41,20 +44,41 @@ class VolunteerDashboard extends Component {
       school: '',
       major: '',
       year: 'Freshman',
-      firsttime: '',
       gender: 'Male',
-      size: '',
-      github: '',
-      resume: [],
-      diet: '',
-      mlh: ''
+      size: 'Small',
     };
     this.signup = this.signup.bind(this);
     this.handleInputChange = this.handleInputChange.bind(this);
     this.editUser = this.editUser.bind(this);
     this.checkIn= this.checkIn.bind(this);
-
     this.renderVolunteerDashboard = this.renderVolunteerDashboard.bind(this);
+    this.openModal = this.openModal.bind(this);
+    this.afterOpenModal = this.afterOpenModal.bind(this);
+    this.closeModal = this.closeModal.bind(this);
+    this.handleYearChange = this.handleYearChange .bind(this);
+    this.handleGenderChange = this.handleGenderChange .bind(this);
+    this.handleSizeChange = this.handleSizeChange .bind(this);
+  }
+  handleYearChange(event) {
+    this.setState({ year: event.target.value });
+  }
+  handleGenderChange(event) {
+    this.setState({ gender: event.target.value });
+  }
+  handleSizeChange(event) {
+    this.setState({ size: event.target.value });
+  }
+  openModal() {
+    this.setState({modalIsOpen: true});
+  }
+
+  afterOpenModal() {
+  // references are now sync'd and can be accessed.
+
+  }
+
+  closeModal() {
+    this.setState({modalIsOpen: false});
   }
 
   signup(event) {
@@ -65,15 +89,8 @@ class VolunteerDashboard extends Component {
     let cleanSchool = DOMPurify.sanitize(this.state.school);
     let cleanMajor = DOMPurify.sanitize(this.state.major);
     let cleanYear = DOMPurify.sanitize(this.state.year);
-    let cleanFirstTime = DOMPurify.sanitize(this.state.firsttime);
     let cleanGender = DOMPurify.sanitize(this.state.gender);
     let cleanSize = DOMPurify.sanitize(this.state.size);
-    let cleanGithub = DOMPurify.sanitize(this.state.github);
-    // let cleanResume = DOMPurify.sanitize(this.state.resume);
-    let resume = (this.state.resume);
-
-    let cleanDiet = DOMPurify.sanitize(this.state.diet);
-    let cleanMLH = DOMPurify.sanitize(this.state.mlh);
 
     fetch('http://localhost:8050/form/', {
       method: 'POST',
@@ -86,18 +103,44 @@ class VolunteerDashboard extends Component {
         school: cleanSchool,
         major: cleanMajor,
         year: cleanYear,
-        firsttime: cleanFirstTime,
         gender: cleanGender,
         size: cleanSize,
-        github: cleanGithub,
-        resume: resume,
-        diet: cleanDiet,
-        mlh: cleanMLH
       })
-    });
-    alert('Thanks for registering to MangoHacks')
-    window.location.href = "http://localhost:3000/signup";
-  }
+
+    })
+    .then(response => {
+      this.renderVolunteerDashboard();
+      this.setState({
+        list: [],
+        name: "",
+        email: '',
+        school: '',
+        major: '',
+        year: 'Freshman',
+        gender: 'Male',
+        size: '',
+      });
+    })
+
+    // window.location.href = "http://localhost:3000/signup";
+      this.closeModal();
+
+    }
+  // renderVolunteerDashboard() {
+  //   fetch('http://localhost:8050/users',
+  //     {
+  //       method: 'GET'
+  //     })
+  //     .then(results => { //results is a an object
+  //       results.json() //results.json is a Promise Object
+  //         .then((data) => {  //Once you get the Promise done you can extract the data
+  //           this.setState({
+  //             list: data
+  //           })
+  //           console.log(data)
+  //         })
+  //    })
+  // }
   componentDidMount() {
     this.renderVolunteerDashboard();
   }
@@ -170,16 +213,16 @@ editUser(event){
   event.preventDefault();
   const target = event.target;
   const id = target.id;
-console.log('yay' + id)
+  console.log('yay' + id)
 }
   render() {
 
     return (
-
       <div className="dashboard-body" align="center">
-
         <Modal
-          isOpen={true}
+          isOpen={this.state.modalIsOpen}
+          onAfterOpen={this.afterOpenModal}
+          onRequestClose={this.closeModal}
           aria={{
             labelledby: "heading",
             describedby: "full_description"
@@ -187,11 +230,10 @@ console.log('yay' + id)
           style = {modalStyle}
           className="dashboard-modal">
           <div align="center">
-          <h1 id="heading">Add Hacker</h1>
+          <h4 id="heading">Add Hacker</h4>
           <div id="full_description" align="center">
-            <p>Last minute sign up</p>
           </div>
-
+          <div className="volunteersignup">
           <form action="/form" className="" onSubmit={this.signup} encType="multipart/form-data">
             <div className="form-group">
               <input type="name" name="name" className="name" placeholder="Name" required value={this.state.name} onChange={this.handleInputChange} />
@@ -216,106 +258,61 @@ console.log('yay' + id)
               <option value="Business" />
               <option value="Electrical Engineering" />
             </datalist>
-            {/*
+            <div className="row">
+                <div className="col">
+                  <label htmlFor="">Grade Level</label>
+                  <div class="form-group">
+                    <select name="year" onChange={this.handleYearChange}>
+                      <option value="Freshman">Freshman</option>
+                      <option value="Sophmore">Sophmore</option>
+                      <option value="Junior">Junior</option>
+                      <option value="Senior">Senior</option>
+                      <option value="">Super Senior</option>
+                      <option value="">DAMN</option>
+                    </select>
+                  </div>
+                </div>
+                <div className="col">
+                  <label htmlFor="">Gender</label>
                   <div className="form-group">
-                    <label htmlFor="">Freshman</label>
-                    <input type="checkbox" value="Freshman" checked={this.state.year === 'Freshman'} onChange={this.handleYearChange} />
-                    <label htmlFor="">Sophmore</label>
-                    <input type="checkbox" value="Sophmore" checked={this.state.year === 'Sophmore'} onChange={this.handleYearChange} />
-                    <label htmlFor="">Junior</label>
-                    <input type="checkbox" value="Junior" checked={this.state.year === 'Junior'} onChange={this.handleYearChange} />
-                    <label htmlFor="">Senior</label>
-                    <input type="checkbox" value="Senior" checked={this.state.year === 'Senior'} onChange={this.handleYearChange} />
-                  </div> */}
+                    <select value="gender" onChange={this.handleGenderChange}>
+                      <option value="Male">Male</option>
+                      <option value="Female">Female</option>
+                      <option value="Other">Other</option>
+                    </select>
+                  </div>
+                </div>
 
-            <label htmlFor="">Grade Level</label>
-            <div class="form-group">
-              <select name="year" onChange={this.handleYearChange}>
-                <option value="Freshman">Freshman</option>
-                <option value="Sophmore">Sophmore</option>
-                <option value="Junior">Junior</option>
-                <option value="Senior">Senior</option>
-                <option value="">Super Senior</option>
-                <option value="">DAMN</option>
-              </select>
-            </div>
-
-            <label htmlFor="">Dietary Restrictions</label>
-            <div className="form-group">
-              <input type="text" name="diet" className="diet" required placeholder="none" value={this.state.diet} onChange={this.handleInputChange} />
-            </div>
-
-            <label htmlFor="">First Time?</label>
-            <div className="form-group">
-              <label htmlFor="">Yes</label>
-              <input type="checkbox" value="Yes" checked={this.state.firsttime === 'Yes'} onChange={this.handleFirstTimeChange} />
-              <label htmlFor="">No</label>
-              <input type="checkbox" value="No" checked={this.state.firsttime === 'No'} onChange={this.handleFirstTimeChange} />
-            </div>
+                <div className="col">
+                  <label htmlFor="">Shirt Size</label>
+                  <div class="form-group">
+                    <select name="size" onChange={this.handleSizeChange}>
+                      <option value="Small">Small</option>
+                      <option value="Medium">Medium</option>
+                      <option value="Large">Large</option>
+                      <option value="X-Large">X-Large</option>
+                    </select>
+                  </div>
+                </div>
+                </div>
 
 
 
-            <label htmlFor="">Gender</label>
-            <div className="form-group">
-              <select value="gender" onChange={this.handleGenderChange}>
-                <option value="Male">Male</option>
-                <option value="Female">Female</option>
-                <option value="Other">Other</option>
-              </select>
-            </div>
-
-            <label htmlFor="">Shirt Size</label>
-            <div class="form-group">
-              <select name="size" onChange={this.handleSizeChange}>
-                <option value="Small">Small</option>
-                <option value="Medium">Medium</option>
-                <option value="Large">Large</option>
-                <option value="X-Large">X-Large</option>
-              </select>
-            </div>
-
-            <div className="github">
-              <span>http://</span>
-              <input type="url" name="github" required value={this.state.github} onChange={this.handleInputChange} id="github" placeholder="github.com/octocat" />
-            </div>
             <br />
-            <div className="resume">
-              <input type="file" name="resume" value={this.state.resume} onChange={this.handleFileChange} />
-            </div>
-            {/* <section>
-        <div className="dropzone">
-          <Dropzone onDrop={this.onDrop.bind(this)}>
-            <p>Try dropping some files here, or click to select files to upload.</p>
-          </Dropzone>
-        </div>
-        <aside>
-          <h2>Dropped files</h2>
-          <ul>
-            {
-              this.state.resume.map(f => <li key={f.name}>{f.name} - {f.size} bytes</li>)
-            }
-          </ul>
-        </aside>
-      </section> */}
-
-            <div className="form-group">
-              <input type="checkbox" value="Agreed" required checked={this.state.mlh === 'Agreed'} onChange={this.handleMLHChange} />I agree to <a href=""> MLH Code of Conduct </a>
-            </div>
-
-            <button className="btn btn-default" type="submit">✓ Register</button>
+            <button className="btn btn-default" type="submit" >✓ Register</button>
           </form>
-
-
+          </div>
           </div>
         </Modal>
 
 
         <div className="dashboard-menu" align="left">
-          <p>MangoHacks</p>
+          <p>MangoHacks Dashboard</p>
         </div>
         <div className="dashboard-header">
         <p>Volunteer Dashboard</p>
-        <button>Add User</button>
+        <p></p>
+        <button onClick={this.openModal}>Add User</button>
         </div>
         <table>
           <thead>
@@ -324,9 +321,9 @@ console.log('yay' + id)
               <th><p>Name</p></th>
               <th><p>Email</p></th>
               <th><p>School</p></th>
-              <th><p>Check In</p></th>
-              <th><p>Edit</p></th>
-              <th></th>
+              <th><p>Shirt Size</p></th>
+              <th><p>Checked In</p></th>
+              <th><p>Options</p></th>
             </tr>
           </thead>
           <tbody>
@@ -338,13 +335,15 @@ console.log('yay' + id)
                       <td><p>{item.name}</p></td>
                       <td><p>{item.email}</p></td>
                       <td><p>{item.school}</p></td>
+                      <td><p>{item.size}</p></td>
                       <td><p>{item.checkin}</p></td>
+
                       <td>
-                      <button id={item._id} onClick={this.editUser} className="btn btn-primary">Edit User</button>
                       <button id={item._id} onClick={this.checkIn} className="btn btn-default">Check In</button>
                       {/* <a href={"http://localhost:8050/dlresume/"+item.resume.filename}><button id={item._id} className="btn btn-success">Resume</button></a> */}
                       </td>
                   </tr>
+
                   )}
                 )}
           </tbody>
