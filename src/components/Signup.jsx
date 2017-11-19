@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Main from './Main';
-import Dropzone from 'react-dropzone'
+import Files from 'react-files'
+
+
 
 
 let DOMPurify = require('../dist/purify.js');
@@ -29,14 +31,7 @@ class Signup extends React.Component {
     this.handleGenderChange = this.handleGenderChange.bind(this);
     this.handleSizeChange = this.handleSizeChange.bind(this);
     this.handleMLHChange = this.handleMLHChange.bind(this);
-    this.handleFileChange = this.handleFileChange.bind(this);
   }
-  onDrop(resume) {
-    this.setState({
-      resume
-    });
-  }
-
   handleYearChange(event) {
     this.setState({ year: event.target.value });
   }
@@ -52,11 +47,11 @@ class Signup extends React.Component {
   handleMLHChange(event) {
     this.setState({ mlh: event.target.value });
   }
-  handleFileChange(event) {
-    this.state({
-      resume: event.target.file[0]
-    });
+  onFilesChange(files){
+    this.setState({ resume: files });
+    console.log(files)   
   }
+
   signup(event) {
     event.preventDefault();
 
@@ -69,11 +64,11 @@ class Signup extends React.Component {
     let cleanGender = DOMPurify.sanitize(this.state.gender);
     let cleanSize = DOMPurify.sanitize(this.state.size);
     let cleanGithub = DOMPurify.sanitize(this.state.github);
-    let cleanResume = DOMPurify.sanitize(this.state.resume);
-
-
+    let cleanResume = this.state.resume;
     let cleanDiet = DOMPurify.sanitize(this.state.diet);
     let cleanMLH = DOMPurify.sanitize(this.state.mlh);
+
+
 
     fetch('http://localhost:8050/form/', {
       method: 'POST',
@@ -148,7 +143,6 @@ class Signup extends React.Component {
             <datalist id="schools">
               <option value="Florida International University" />
             </datalist>
-
             <div className="form-group">
               <input type="text" list="majors" name="major" className="major" required value={this.state.major} onChange={this.handleInputChange} id="major" placeholder="Major" />
             </div>
@@ -159,18 +153,6 @@ class Signup extends React.Component {
               <option value="Business" />
               <option value="Electrical Engineering" />
             </datalist>
-            {/*
-                  <div className="form-group">
-                    <label htmlFor="">Freshman</label>
-                    <input type="checkbox" value="Freshman" checked={this.state.year === 'Freshman'} onChange={this.handleYearChange} />
-                    <label htmlFor="">Sophmore</label>
-                    <input type="checkbox" value="Sophmore" checked={this.state.year === 'Sophmore'} onChange={this.handleYearChange} />
-                    <label htmlFor="">Junior</label>
-                    <input type="checkbox" value="Junior" checked={this.state.year === 'Junior'} onChange={this.handleYearChange} />
-                    <label htmlFor="">Senior</label>
-                    <input type="checkbox" value="Senior" checked={this.state.year === 'Senior'} onChange={this.handleYearChange} />
-                  </div> */}
-
             <label htmlFor="">Grade Level</label>
             <div class="form-group">
               <select name="year" onChange={this.handleYearChange}>
@@ -182,12 +164,10 @@ class Signup extends React.Component {
                 <option value="">DAMN</option>
               </select>
             </div>
-
             <label htmlFor="">Dietary Restrictions</label>
             <div className="form-group">
               <input type="text" name="diet" className="diet" required placeholder="none" value={this.state.diet} onChange={this.handleInputChange} />
             </div>
-
             <label htmlFor="">First Time?</label>
             <div className="form-group">
               <label htmlFor="">Yes</label>
@@ -195,9 +175,6 @@ class Signup extends React.Component {
               <label htmlFor="">No</label>
               <input type="checkbox" value="No" checked={this.state.firsttime === 'No'} onChange={this.handleFirstTimeChange} />
             </div>
-
-
-
             <label htmlFor="">Gender</label>
             <div className="form-group">
               <select value="gender" onChange={this.handleGenderChange}>
@@ -206,7 +183,6 @@ class Signup extends React.Component {
                 <option value="Other">Other</option>
               </select>
             </div>
-
             <label htmlFor="">Shirt Size</label>
             <div class="form-group">
               <select name="size" onChange={this.handleSizeChange}>
@@ -216,31 +192,27 @@ class Signup extends React.Component {
                 <option value="X-Large">X-Large</option>
               </select>
             </div>
-
             <div className="github">
               <span>http://</span>
               <input type="url" name="github" required value={this.state.github} onChange={this.handleInputChange} id="github" placeholder="github.com/octocat" />
             </div>
             <br />
             <div className="resume">
-              <input  type='file' name="resume" value={this.state.resume} onChange={this.handleFileChange} />
+            <Files
+            name="resume"
+            type="file"
+          className='files-dropzone'
+          onChange={this.onFilesChange}
+          accepts={['pdf','image/png', 'text/plain', 'audio/*']}
+          maxFiles={1}
+          maxFileSize={10000000}
+          minFileSize={0}
+          clickable
+        >
+          Drop files here or click to upload
+        </Files>
+              {/* <input type='file' ref="file" name="file" fileTypes={'.pdf'} value={this.state.resume} /> */}
             </div>
-            {/* <section>
-        <div className="dropzone">
-          <Dropzone onDrop={this.onDrop.bind(this)}>
-            <p>Try dropping some files here, or click to select files to upload.</p>
-          </Dropzone>
-        </div>
-        <aside>
-          <h2>Dropped files</h2>
-          <ul>
-            {
-              this.state.resume.map(f => <li key={f.name}>{f.name} - {f.size} bytes</li>)
-            }
-          </ul>
-        </aside>
-      </section> */}
-
             <div className="form-group">
               <input type="checkbox" value="Agreed" required checked={this.state.mlh === 'Agreed'} onChange={this.handleMLHChange} />I agree to <a href=""> MLH Code of Conduct </a>
             </div>
