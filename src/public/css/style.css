@@ -348,21 +348,23 @@ i{
 }
 .signup{
     background:rgb(255, 255, 255);
+ 
     height: 100%;
-    overflow: scroll;
-    width: 60%;
-    padding:50px;
+    border-radius: 50px;
+    width: 750px;
+    height: 700px;
+    padding:50px 0px;
     position: absolute;
-    top:0px;
+    top:0;
+    bottom:0;
     right:0;
+    left:0;
     margin: auto;
-    -webkit-box-shadow: 0px -1px 124px -22px rgba(0,0,0,0.47);
-    -moz-box-shadow: 0px -1px 124px -22px rgba(0,0,0,0.47);
-    box-shadow: 0px -1px 124px -22px rgba(0,0,0,0.47);
+    -webkit-box-shadow: -1px 25px 91px -9px rgba(0,0,0,0.56);
+    -moz-box-shadow: -1px 25px 91px -9px rgba(0,0,0,0.56);
+    box-shadow: -1px 25px 91px -9px rgba(0,0,0,0.56);
 }
-.signup .name, .email, .school, .major, .diet{
-    width: 50%;
-}
+
 .signup span{
     color:rgb(0, 0, 0);
     font-family: FuturaLT-Light;
@@ -384,8 +386,38 @@ i{
     border-bottom: 1px solid rgb(0, 0, 0);
     font-family: FuturaLT-Light;
 }
+.signup-btn{
+    border-radius: 50px;
+    position: absolute;
+    left:0;
+    right:0;
+}
+.signup .col{
+    padding: 0 60px;
+}
+.signup .name, .email, .school, .major, .diet, .github{
+    width: 230px;
+}
+
 .signup input::placeholder{
     color:rgb(0, 0, 0);
+}
+form{
+    position: absolute;
+    /* padding-right: 100px; */
+    right: 0;
+}
+.form-group{
+    width:fit-content;
+    padding: 15px 0px;
+}
+#signup-mango{
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 1700px;
+    top: 0;
+    bottom: 0;
 }
 /* END OF SIGNUP */
 
@@ -404,9 +436,9 @@ i{
     right:0;
     margin: auto;
 }
-.volunteersignup .name, .email, .school, .major, .diet{
+/* .volunteersignup .name, .email, .school, .major, .diet{
     width: 50%;
-}
+} */
 .volunteersignup span{
     color:rgb(0, 0, 0);
     font-family: FuturaLT-Light;
