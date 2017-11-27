@@ -145,6 +145,8 @@ class Signup extends React.Component {
       var $majorlabel = $('#major-label');
       var $dietinput = $('#diet');
       var $dietlabel = $('#diet-label');
+      var $githubinput = $('#github');
+      var $githublabel = $('#github-label');
 
       $emailinput.on('focus', function (event) {
         $emaillabel.addClass('active');
@@ -190,11 +192,23 @@ class Signup extends React.Component {
         }
       });
 
+      $githubinput.on('focus', function (event) {
+        $githublabel.addClass('active');
+      });
+      $githubinput.on('blur', function (event) {
+        if ($githubinput.val().trim() == "") {
+          $githublabel.removeClass('active');
+        }
+      });
     });
-    
+
     return (
-      <div>
+      <div className="signup-bg-color">
+        <img src={imaginemango} id="signup-mango"alt=""/>
         <div className="signup">
+          <h1>MANGOHACKS</h1>
+          <h2>Register for Florida's sweetest Hackathon</h2>
+
           <form action="/form" onSubmit={this.signup} encType="multipart/form-data">
 
             <div className="form-group">
@@ -240,16 +254,14 @@ class Signup extends React.Component {
 
             <MuiThemeProvider>
               <div class="input-field inline col s12" type="text" tabindex="-1" >
-               
-              <SelectField
-              id="label-gender"
-                floatingLabelText="Grade Level"
-                onChange={this.handleYearChange}>
-                <MenuItem value="Frehsman" primaryText="Freshman" />
-                <MenuItem value="Sophmore" primaryText="Sophmore" />
-                <MenuItem value="Junior" primaryText="Junior" />
-                <MenuItem value="Senior" primaryText="Senior" />
-              </SelectField>
+                <SelectField
+                  floatingLabelText="Grade Level"
+                  onChange={this.handleYearChange}>
+                  <MenuItem value="Frehsman" primaryText="Freshman" />
+                  <MenuItem value="Sophmore" primaryText="Sophmore" />
+                  <MenuItem value="Junior" primaryText="Junior" />
+                  <MenuItem value="Senior" primaryText="Senior" />
+                </SelectField>
               </div>
             </MuiThemeProvider>
 
@@ -259,59 +271,72 @@ class Signup extends React.Component {
                 <input type="text" name="major" className="diet" required value={this.state.diet} onChange={this.handleInputChange} id="diet" />
               </div>
             </div>
-            {/* <label htmlFor="">Gender</label>
-                  <div className="form-group">
-                    <select value="gender" onChange={this.handleGenderChange}>
-                      <option value="Male">Male</option>
-                      <option value="Female">Female</option>
-                      <option value="Other">Other</option>
-                    </select>
-                  </div>
-                  <label htmlFor="">First Time?</label>
-                  <div className="form-group">
-                    <label htmlFor="">Yes</label>
-                    <input type="checkbox" value="Yes" checked={this.state.firsttime === 'Yes'} onChange={this.handleFirstTimeChange} />
-                    <label htmlFor="">No</label>
-                    <input type="checkbox" value="No" checked={this.state.firsttime === 'No'} onChange={this.handleFirstTimeChange} />
-                  </div>
 
-                  <label htmlFor="">Shirt Size</label>
-                  <div class="form-group">
-                    <select name="size" onChange={this.handleSizeChange}>
-                      <option value="Small">Small</option>
-                      <option value="Medium">Medium</option>
-                      <option value="Large">Large</option>
-                      <option value="X-Large">X-Large</option>
-                    </select>
-                  </div>
-                  <div className="github">
-                    <span>http://</span>
-                    <input type="url" name="github" required value={this.state.github} onChange={this.handleInputChange} id="github" placeholder="github.com/octocat" />
-                  </div>
-                  <br />
-                  <div className="resume">
-                    <Files
-                      name="resume"
-                      type="file"
-                      className='files-dropzone'
-                      onChange={this.onFilesChange}
-                      accepts={['pdf', 'image/png', 'text/plain', 'audio/*']}
-                      maxFiles={1}
-                      maxFileSize={10000000}
-                      minFileSize={0}
-                      clickable
-                    >
-                      <button>Upload Resume</button>
-                    </Files>
-                 <input type='file' ref="file" name="file" fileTypes={'.pdf'} value={this.state.resume} />
-                  </div>
-                  <div className="form-group">
-                    <input type="checkbox" value="Agreed" required checked={this.state.mlh === 'Agreed'} onChange={this.handleMLHChange} />I agree to <a href=""> MLH Code of Conduct </a>
-                  </div>
-              <div className="">
+            <MuiThemeProvider>
+              <div class="input-field inline col s12" type="text" tabindex="-1" >
+                <SelectField
+                  floatingLabelText="Gender"
+                  onChange={this.handleGenderChange}>
+                  <MenuItem value="Male" primaryText="Male" />
+                  <MenuItem value="Female" primaryText="Female" />
+                  <MenuItem value="Other" primaryText="Other" />
+                </SelectField>
+              </div>
+            </MuiThemeProvider>
 
-              </div> */}
-            <button className="btn btn-default" className="btn signup-btn" type="submit">✓ Register</button>
+
+            {/* <label htmlFor="">First Time?</label>
+            <div className="form-group">
+              <label htmlFor="">Yes</label>
+              <input type="checkbox" value="Yes" checked={this.state.firsttime === 'Yes'} onChange={this.handleFirstTimeChange} />
+              <label htmlFor="">No</label>
+              <input type="checkbox" value="No" checked={this.state.firsttime === 'No'} onChange={this.handleFirstTimeChange} />
+            </div> */}
+
+            <MuiThemeProvider>
+              <div class="input-field inline col s12" type="text" tabindex="-1" >
+                <SelectField
+                  floatingLabelText="Shirt Size"
+                  onChange={this.handleSizeChange}>
+                  <MenuItem value="Small" primaryText="Small" />
+                  <MenuItem value="Medium" primaryText="Medium" />
+                  <MenuItem value="Large" primaryText="Large" />
+                  <MenuItem value="X-Large" primaryText="X-Large" />
+                </SelectField>
+              </div>
+            </MuiThemeProvider>
+
+
+            <div className="form-group">
+              <div class="input-field inline col s12" type="text" tabindex="-1" >
+                <label id="github-label" for="github">GitHub Link</label>
+                <input type="url" name="github" className="github" required value={this.state.github} onChange={this.handleInputChange} id="github" />
+              </div>
+            </div>
+            
+            {/* <div className="resume">
+              <Files
+                name="resume"
+                type="file"
+                className='files-dropzone'
+                onChange={this.onFilesChange}
+                accepts={['pdf', 'image/png', 'text/plain', 'audio/*']}
+                maxFiles={1}
+                maxFileSize={10000000}
+                minFileSize={0}
+                clickable
+              >
+                <button>Upload Resume</button>
+              </Files>
+              <input type='file' ref="file" name="file" fileTypes={'.pdf'} value={this.state.resume} />
+            </div>
+            <div className="form-group">
+              <input type="checkbox" value="Agreed" required checked={this.state.mlh === 'Agreed'} onChange={this.handleMLHChange} />I agree to <a href=""> MLH Code of Conduct </a>
+            </div>
+            <div className="">
+
+            </div> */}
+            <button className="btn btn-default" className="btn signup-btn" type="submit">Register</button>
 
           </form>
         </div>

@@ -342,26 +342,43 @@ i{
 
 
 /* SIGNUP  */
+
 .signup-bg-color{
     background:linear-gradient(233deg, #6800ff, #f52376);
-    height: -webkit-fill-available;
+    height: 1280px;
+    width: 100%;
 }
 .signup{
-    /* background:rgb(255, 255, 255); */
-    /* height: 100%; */
-    /* border-radius: 50px; */
-    /* width: 750px;
-    height: 700px;
-    padding:50px 0px; */
-    /* position: absolute; */
-    /* top:0;
-    bottom:0;
+    overflow-x: hidden;
+    padding: 50px 00px 50px 0px;
+    background:rgba(255, 255, 255,0.1);
+    border-radius: 50px;
+    width: 700px;
+    height: fit-content;
+    position: absolute;
+    margin-top: 50px;
+    top:70px;
     right:0;
     left:0;
-    margin: auto; */
-    /* -webkit-box-shadow: -1px 25px 91px -9px rgba(0,0,0,0.56);
+    margin: auto;
+    -webkit-box-shadow: -1px 25px 91px -9px rgba(0,0,0,0.56);
     -moz-box-shadow: -1px 25px 91px -9px rgba(0,0,0,0.56);
-    box-shadow: -1px 25px 91px -9px rgba(0,0,0,0.56); */
+    box-shadow: -1px 25px 91px -9px rgba(0,0,0,0.56);
+    
+}
+.signup h1{
+    color:white;
+    text-align: center;
+    padding: 0px 0 0px 0;
+    font-size: 60px;
+}
+.signup h2{
+    color:rgba(255,255,255,0.6);
+    text-align: center;
+    font-size: 25px;
+    padding: 10px 0 20px 0;
+    font-family: FuturaLT-Book;
+    
 }
 
 /* .signup span{
@@ -423,60 +440,98 @@ form{
     top: 0;
     bottom: 0;
 }  */
-
-form{
-    /* padding-right: 100px;  */
+#signup-mango{
+    position: fixed;
+    left: -90px;
+    right: 0;
+    height: 1700px;
+    top: -100px;
+    bottom: 0;    
+} 
+.signup-btn{
+    border-radius: 50px;
+    position: absolute;
     left: 0;
     right: 0;
     margin: auto;
-    width: fit-content;
-    padding-top: 3%;
+    width: 350px;
+    background: transparent;
+    color:rgb(255, 255, 255);
+    font-family: FuturaLT-Light;
+}
+
+form{
+    margin: auto;
+    width: -moz-fit-content;
+    width: min-content;
 }
 
 #email-label{
-    color: rgb(0, 0, 0) !important;
+    color: rgb(255, 255, 255) !important;
+    font-family: FuturaLT-Light;
+    
 }
 #name-label{
-    color: rgb(0, 0, 0) !important;
+    color: rgb(255, 255, 255) !important;
+    font-family: FuturaLT-Light;
+    
 }
 #major-label{
-    color: rgb(0, 0, 0) !important;
+    color: rgb(255, 255, 255) !important;
+    font-family: FuturaLT-Light;
+    
 }
 #school-label{
-    color: rgb(0, 0, 0) !important;
+    color: rgb(255, 255, 255) !important;
+    font-family: FuturaLT-Light;
+    
 }
 #diet-label{
-    color: rgb(0, 0, 0) !important;
+    color: rgb(255, 255, 255) !important;
+    font-family: FuturaLT-Light;
+    
+}
+#github-label{
+    color: rgb(255, 255, 255) !important;
+    font-family: FuturaLT-Light;
+    
 }
 #email{
-    border-color: rgb(0, 0, 0) !important;
-    color:rgb(0, 0, 0) !important;
+    border-color: rgb(255, 255, 255) !important;
+    color:rgb(255, 255, 255) !important;
     width:22em;
+    font-family: FuturaLT-Book;
 }
 #name{
-    border-color: rgb(0, 0, 0) !important;
-    color:rgb(0, 0, 0) !important;
+    border-color: rgb(255, 255, 255) !important;
+    color:rgb(255, 255, 255) !important;
     width:22em;
+    font-family: FuturaLT-Book;
 }
 #school{
-    border-color: rgb(0, 0, 0) !important;
-    color:rgb(0, 0, 0) !important;
+    border-color: rgb(255, 255, 255) !important;
+    color:rgb(255, 255, 255) !important;
     width:22em;
+    font-family: FuturaLT-Book;
 }
 #major{
-    border-color: rgb(0, 0, 0) !important;
-    color:rgb(0, 0, 0) !important;
+    border-color: rgb(255, 255, 255) !important;
+    color:rgb(255, 255, 255) !important;
     width:22em;
+    font-family: FuturaLT-Book;
 }
 #diet{
-    border-color: rgb(0, 0, 0) !important;
-    color:rgb(0, 0, 0) !important;
+    border-color: rgb(255, 255, 255) !important;
+    color:rgb(255, 255, 255) !important;
     width:22em;
+    font-family: FuturaLT-Book;
 }
-#label-gender{
-    color: rgba(0, 0, 0, 1) !important;
+#github{
+    border-color: rgb(255, 255, 255) !important;
+    color:rgb(255, 255, 255) !important;
+    width:22em;
+    font-family: FuturaLT-Book;
 }
-
 
 
 /* END OF SIGNUP */
@@ -781,7 +836,12 @@ footer div{
 }
 
 /* PHONES */
-@media only screen and (max-width:575px){x
+@media only screen and (max-width:575px){
+
+  /* SIGNUP */
+  .signup{
+    width:fit-content
+}
     .content{
         padding: 5% 5% 10% 10%;
     }
