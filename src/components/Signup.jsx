@@ -2,12 +2,18 @@ import React, { Component } from 'react';
 import Main from './Main';
 import Files from 'react-files'
 import imaginemango from "../public/img/mangos/signup-mango.svg";
+import SelectField from 'material-ui/SelectField';
+import MenuItem from 'material-ui/MenuItem';
+import getMuiTheme from 'material-ui/styles/getMuiTheme';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
+import $ from 'jquery'
 
 let DOMPurify = require('../dist/purify.js');
 
 class Signup extends React.Component {
   constructor(props) {
     super(props);
+
     this.state = {
       name: "",
       email: '',
@@ -22,6 +28,7 @@ class Signup extends React.Component {
       diet: '',
       mlh: ''
     }
+
     this.signup = this.signup.bind(this);
     this.handleInputChange = this.handleInputChange.bind(this);
     this.handleYearChange = this.handleYearChange.bind(this);
@@ -29,6 +36,7 @@ class Signup extends React.Component {
     this.handleGenderChange = this.handleGenderChange.bind(this);
     this.handleSizeChange = this.handleSizeChange.bind(this);
     this.handleMLHChange = this.handleMLHChange.bind(this);
+
   }
   handleYearChange(event) {
     this.setState({ year: event.target.value });
@@ -125,56 +133,133 @@ class Signup extends React.Component {
   }
 
   render() {
+
+    $(document).ready(function () {
+      var $emailinput = $('#email');
+      var $emaillabel = $('#email-label');
+      var $nameinput = $('#name');
+      var $namelabel = $('#name-label');
+      var $schoolinput = $('#school');
+      var $schoollabel = $('#school-label');
+      var $majorinput = $('#major');
+      var $majorlabel = $('#major-label');
+      var $dietinput = $('#diet');
+      var $dietlabel = $('#diet-label');
+
+      $emailinput.on('focus', function (event) {
+        $emaillabel.addClass('active');
+      });
+      $emailinput.on('blur', function (event) {
+        if ($emailinput.val().trim() == "") {
+          $emaillabel.removeClass('active');
+        }
+      });
+      $nameinput.on('focus', function (event) {
+        $namelabel.addClass('active');
+      });
+      $nameinput.on('blur', function (event) {
+        if ($nameinput.val().trim() == "") {
+          $namelabel.removeClass('active');
+        }
+      });
+
+      $schoolinput.on('focus', function (event) {
+        $schoollabel.addClass('active');
+      });
+      $schoolinput.on('blur', function (event) {
+        if ($schoolinput.val().trim() == "") {
+          $schoollabel.removeClass('active');
+        }
+      });
+
+      $majorinput.on('focus', function (event) {
+        $majorlabel.addClass('active');
+      });
+      $majorinput.on('blur', function (event) {
+        if ($majorinput.val().trim() == "") {
+          $majorlabel.removeClass('active');
+        }
+      });
+
+      $dietinput.on('focus', function (event) {
+        $dietlabel.addClass('active');
+      });
+      $dietinput.on('blur', function (event) {
+        if ($dietinput.val().trim() == "") {
+          $dietlabel.removeClass('active');
+        }
+      });
+
+    });
+    
     return (
       <div>
-        <div class="signup-bg-color">
-          <img className="mango" id="signup-mango" src={imaginemango} alt="mangologo" />
+        <div className="signup">
+          <form action="/form" onSubmit={this.signup} encType="multipart/form-data">
 
-          <div className="signup">
-            <form action="/form" className="" onSubmit={this.signup} encType="multipart/form-data">
-              <div className="row">
-                <div className="col">
-                  <div className="form-group">
-                    <input type="name" name="name" className="name" placeholder="Name" required value={this.state.name} onChange={this.handleInputChange} />
-                  </div>
-                  <div className="form-group">
-                    <input type="email" name="email" className="email" required value={this.state.email} onChange={this.handleInputChange} id="email" placeholder="Email" />
-                  </div>
-                  <div className="form-group">
-                    <input type="text" list="schools" name="school" className="school" required value={this.state.school} onChange={this.handleInputChange} id="school" placeholder="School" />
-                  </div>
-                  <datalist id="schools">
-                    <option value="Florida International University" />
-                  </datalist>
-                  <div className="form-group">
-                    <input type="text" list="majors" name="major" className="major" required value={this.state.major} onChange={this.handleInputChange} id="major" placeholder="Major" />
-                  </div>
-                  <datalist id="majors">
-                    <option value="Computer Science" />
-                    <option value="Computer Engineering" />
-                    <option value="Information Technology" />
-                    <option value="Business" />
-                    <option value="Electrical Engineering" />
-                  </datalist>
-                  <label htmlFor="">Grade Level</label>
-                  <div class="form-group">
-                    <select name="year" onChange={this.handleYearChange}>
-                      <option value="Freshman">Freshman</option>
-                      <option value="Sophmore">Sophmore</option>
-                      <option value="Junior">Junior</option>
-                      <option value="Senior">Senior</option>
-                      <option value="">Super Senior</option>
-                      <option value="">DAMN</option>
-                    </select>
-                  </div>
-                  <label htmlFor="">Dietary Restrictions</label>
-                  <div className="form-group">
-                    <input type="text" name="diet" className="diet" required placeholder="none" value={this.state.diet} onChange={this.handleInputChange} />
-                  </div>
-                </div>
+            <div className="form-group">
+              <div class="input-field inline col s12" type="text" tabindex="-1" >
+                <label id="name-label" for="name">Name</label>
+                <input type="text" name="name" id="name" className="name" required value={this.state.name} onChange={this.handleInputChange} />
+              </div>
+            </div>
 
-                <div className="col">
-                  <label htmlFor="">Gender</label>
+            <div className="form-group">
+              <div class="input-field inline col s12" type="text" tabindex="-1" >
+                <label id="email-label" for="email">Email</label>
+                <input type="email" id="email" name="email" className="email" required value={this.state.email} onChange={this.handleInputChange} />
+              </div>
+            </div>
+
+            <div className="form-group">
+              <div class="input-field inline col s12" type="text" tabindex="-1" >
+                <label id="school-label" for="school">School</label>
+                <input type="text" list="schools" name="school" className="school" required value={this.state.school} onChange={this.handleInputChange} id="school" />
+              </div>
+            </div>
+
+            <datalist id="schools">
+              <option value="Florida International University" />
+            </datalist>
+
+            <div className="form-group">
+              <div class="input-field inline col s12" type="text" tabindex="-1" >
+                <label id="major-label" for="major">Major</label>
+                <input type="text" list="majors" name="major" className="major" required value={this.state.major} onChange={this.handleInputChange} id="major" />
+              </div>
+            </div>
+
+            <datalist id="majors">
+              <option value="Computer Science" />
+              <option value="Computer Engineering" />
+              <option value="Information Technology" />
+              <option value="Business" />
+              <option value="Electrical Engineering" />
+            </datalist>
+
+
+            <MuiThemeProvider>
+              <div class="input-field inline col s12" type="text" tabindex="-1" >
+               
+              <SelectField
+              id="label-gender"
+                floatingLabelText="Grade Level"
+                onChange={this.handleYearChange}>
+                <MenuItem value="Frehsman" primaryText="Freshman" />
+                <MenuItem value="Sophmore" primaryText="Sophmore" />
+                <MenuItem value="Junior" primaryText="Junior" />
+                <MenuItem value="Senior" primaryText="Senior" />
+              </SelectField>
+              </div>
+            </MuiThemeProvider>
+
+            <div className="form-group">
+              <div class="input-field inline col s12" type="text" tabindex="-1" >
+                <label id="diet-label" for="diet">Dietary Restrictions</label>
+                <input type="text" name="major" className="diet" required value={this.state.diet} onChange={this.handleInputChange} id="diet" />
+              </div>
+            </div>
+            {/* <label htmlFor="">Gender</label>
                   <div className="form-group">
                     <select value="gender" onChange={this.handleGenderChange}>
                       <option value="Male">Male</option>
@@ -218,23 +303,20 @@ class Signup extends React.Component {
                     >
                       <button>Upload Resume</button>
                     </Files>
-                    {/* <input type='file' ref="file" name="file" fileTypes={'.pdf'} value={this.state.resume} /> */}
+                 <input type='file' ref="file" name="file" fileTypes={'.pdf'} value={this.state.resume} />
                   </div>
                   <div className="form-group">
                     <input type="checkbox" value="Agreed" required checked={this.state.mlh === 'Agreed'} onChange={this.handleMLHChange} />I agree to <a href=""> MLH Code of Conduct </a>
                   </div>
-                </div>
-              </div>
               <div className="">
 
-              </div>
-     
-              <button className="btn btn-default" className="btn signup-btn" type="submit">✓ Register</button>
+              </div> */}
+            <button className="btn btn-default" className="btn signup-btn" type="submit">✓ Register</button>
 
-            </form>
-          </div>
+          </form>
         </div>
       </div>
+      // </div>
 
     );
   }

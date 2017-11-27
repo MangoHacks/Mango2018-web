@@ -347,25 +347,24 @@ i{
     height: -webkit-fill-available;
 }
 .signup{
-    background:rgb(255, 255, 255);
- 
-    height: 100%;
-    border-radius: 50px;
-    width: 750px;
+    /* background:rgb(255, 255, 255); */
+    /* height: 100%; */
+    /* border-radius: 50px; */
+    /* width: 750px;
     height: 700px;
-    padding:50px 0px;
-    position: absolute;
-    top:0;
+    padding:50px 0px; */
+    /* position: absolute; */
+    /* top:0;
     bottom:0;
     right:0;
     left:0;
-    margin: auto;
-    -webkit-box-shadow: -1px 25px 91px -9px rgba(0,0,0,0.56);
+    margin: auto; */
+    /* -webkit-box-shadow: -1px 25px 91px -9px rgba(0,0,0,0.56);
     -moz-box-shadow: -1px 25px 91px -9px rgba(0,0,0,0.56);
-    box-shadow: -1px 25px 91px -9px rgba(0,0,0,0.56);
+    box-shadow: -1px 25px 91px -9px rgba(0,0,0,0.56); */
 }
 
-.signup span{
+/* .signup span{
     color:rgb(0, 0, 0);
     font-family: FuturaLT-Light;
     font-weight: 600;
@@ -396,8 +395,9 @@ i{
     padding: 0 60px;
 }
 .signup .name, .email, .school, .major, .diet, .github{
-    width: 230px;
+    width: 300px;
 }
+
 
 .signup input::placeholder{
     color:rgb(0, 0, 0);
@@ -405,9 +405,13 @@ i{
 form{
     position: absolute;
     /* padding-right: 100px; */
+    /* left: 0;
     right: 0;
-}
-.form-group{
+    margin: auto;
+    width: fit-content;
+    padding-top: 5%;
+} */
+/* .form-group{
     width:fit-content;
     padding: 15px 0px;
 }
@@ -418,7 +422,63 @@ form{
     height: 1700px;
     top: 0;
     bottom: 0;
+}  */
+
+form{
+    /* padding-right: 100px;  */
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: fit-content;
+    padding-top: 3%;
 }
+
+#email-label{
+    color: rgb(0, 0, 0) !important;
+}
+#name-label{
+    color: rgb(0, 0, 0) !important;
+}
+#major-label{
+    color: rgb(0, 0, 0) !important;
+}
+#school-label{
+    color: rgb(0, 0, 0) !important;
+}
+#diet-label{
+    color: rgb(0, 0, 0) !important;
+}
+#email{
+    border-color: rgb(0, 0, 0) !important;
+    color:rgb(0, 0, 0) !important;
+    width:22em;
+}
+#name{
+    border-color: rgb(0, 0, 0) !important;
+    color:rgb(0, 0, 0) !important;
+    width:22em;
+}
+#school{
+    border-color: rgb(0, 0, 0) !important;
+    color:rgb(0, 0, 0) !important;
+    width:22em;
+}
+#major{
+    border-color: rgb(0, 0, 0) !important;
+    color:rgb(0, 0, 0) !important;
+    width:22em;
+}
+#diet{
+    border-color: rgb(0, 0, 0) !important;
+    color:rgb(0, 0, 0) !important;
+    width:22em;
+}
+#label-gender{
+    color: rgba(0, 0, 0, 1) !important;
+}
+
+
+
 /* END OF SIGNUP */
 
 /* VOLUNTEER SIGNUP  */

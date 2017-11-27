@@ -5,6 +5,7 @@
   "dependencies": {
     "history": "^4.7.2",
     "jquery": "^3.2.1",
+    "material-ui": "^0.19.4",
     "react": "^16.0.0",
     "react-autosuggest": "^9.3.2",
     "react-bootstrap": "^0.31.3",
