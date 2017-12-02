@@ -48,7 +48,7 @@ class Faq extends React.Component {
 
 
                   $('.card').mouseover(function () {
-                        
+
                         $(this).css("cursor", "pointer");
                         // $(this).animate({ width: "250px", height: "300px", top: "-25px"}, 'medium');
                         $(this).animate({ width: "250px", height: "300px", top: "-25px"}, 'fast');
@@ -65,22 +65,27 @@ class Faq extends React.Component {
                                     <div className="row">
                                           <div className="col">
                                                 <div className="card style" id="card-one">
+                                                    <h2 className="cardContainer">Where Is The Hackathon?</h2>
                                                 </div>
                                           </div>
                                           <div className="col">
                                                 <div className="card style" id="card-two">
+                                                  <h2 className="cardContainer">Is It Free To Join?</h2>
                                                 </div>
                                           </div>
                                           <div className="col">
                                                 <div className="card style" id="card-three">
+                                                  <h2 className="cardContainer">Do You Need Coding Experience?</h2>
                                                 </div>
                                           </div>
                                           <div className="col">
                                                 <div className="card style" id="card-four">
+                                                  <h2 className="cardContainer">What Should I Bring?</h2>
                                                 </div>
                                           </div>
                                           <div className="col">
                                                 <div className="card style" id="card-five">
+                                                  <h2 className="cardContainer">What If I Don't Have A Team?</h2>
                                                 </div>
                                           </div>
                                     </div>
@@ -115,7 +120,7 @@ export default Faq;
 
                             <div className="content-sm">
                                   <h4>Who can come?</h4>
-                                  <p>Anyone who is currently a college student or who graduated in the past year is welcome to participate. If it has been a while since you were a student you can 
+                                  <p>Anyone who is currently a college student or who graduated in the past year is welcome to participate. If it has been a while since you were a student you can
                                     still participate as a mentor for the attendees. Sign up to be a mentor</p>
                             </div>
                             <div className="content-sm">
@@ -125,12 +130,12 @@ export default Faq;
                             </div>
                             <div className="content-sm">
                                   <h4>How much experience do I need?</h4>
-                                  <p>Don’t be afraid if you don’t think you have enough experience, a team or an idea. A hackathon is a great place for learning. We’ll have great mentors and tools to help you with development, 
+                                  <p>Don’t be afraid if you don’t think you have enough experience, a team or an idea. A hackathon is a great place for learning. We’ll have great mentors and tools to help you with development,
                                     ideas, and everything in between as well as tons of workshops where you can pick up all kinds of skills.</p>
                             </div>
                             <div className="content-sm">
                                   <h4>What do I need to bring?</h4>
-                                  <p>You’ll need an ID and the stuff you’ll need throughout the weekend. Laptop, chargers, phone, the basics. You’ll probably also want to bring some basic hygiene products (toothbrush/toothpase, 
+                                  <p>You’ll need an ID and the stuff you’ll need throughout the weekend. Laptop, chargers, phone, the basics. You’ll probably also want to bring some basic hygiene products (toothbrush/toothpase,
                                     deodorant, a change of clothes) and anything to keep you fresh through the weekend. A sleeping bag might be cool, too, if you plan on getting some sleep.</p>
                             </div>
                             <div className="content-sm">

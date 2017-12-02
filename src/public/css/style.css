@@ -200,22 +200,29 @@ i{
 /* FAQ Section */
 
 .faq{
-    height:600px;
     background: #fff;
+    width: 100%;
 }
 .faq .content{
-    padding: 10% 0% 10% 0%;
+    padding: 0% 0% 0% 0%;
 
 }
 .class-row-wrapper{
     /* background: #fff; */
+    padding: 100px;
+    overflow-y: scroll;
 }
 .faq .row{
     flex-wrap:nowrap;
     margin-right: 0px;
-    margin-left: 0px; 
-    width: fit-content;
+    margin-left: 0px;
+    width: 100%;
     margin: auto;
+
+}
+.faq .row .col {
+  display: inline-block;
+  margin: 10px;
 }
 .card{
     height:250px;
@@ -226,6 +233,7 @@ i{
     -moz-box-shadow: -1px 6px 51px -5px rgba(0,0,0,0.3);
     box-shadow: -1px 6px 51px -5px rgba(0,0,0,0.3);
 }
+
 
 /* .faq{
     display:flex;
@@ -364,7 +372,7 @@ i{
     -webkit-box-shadow: -1px 25px 91px -9px rgba(0,0,0,0.56);
     -moz-box-shadow: -1px 25px 91px -9px rgba(0,0,0,0.56);
     box-shadow: -1px 25px 91px -9px rgba(0,0,0,0.56);
-    
+
 }
 .signup h1{
     color:white;
@@ -378,7 +386,7 @@ i{
     font-size: 25px;
     padding: 10px 0 20px 0;
     font-family: FuturaLT-Book;
-    
+
 }
 
 /* .signup span{
@@ -446,8 +454,8 @@ form{
     right: 0;
     height: 1700px;
     top: -100px;
-    bottom: 0;    
-} 
+    bottom: 0;
+}
 .signup-btn{
     border-radius: 50px;
     position: absolute;
@@ -469,32 +477,32 @@ form{
 #email-label{
     color: rgb(255, 255, 255) !important;
     font-family: FuturaLT-Light;
-    
+
 }
 #name-label{
     color: rgb(255, 255, 255) !important;
     font-family: FuturaLT-Light;
-    
+
 }
 #major-label{
     color: rgb(255, 255, 255) !important;
     font-family: FuturaLT-Light;
-    
+
 }
 #school-label{
     color: rgb(255, 255, 255) !important;
     font-family: FuturaLT-Light;
-    
+
 }
 #diet-label{
     color: rgb(255, 255, 255) !important;
     font-family: FuturaLT-Light;
-    
+
 }
 #github-label{
     color: rgb(255, 255, 255) !important;
     font-family: FuturaLT-Light;
-    
+
 }
 #email{
     border-color: rgb(255, 255, 255) !important;
@@ -1134,4 +1142,10 @@ footer div{
 .dashboard-header {
   /*display: inline-flex;*/
   width: 100%;
+}
+
+.cardContainer {
+  position: absolute;
+  top: 25%;
+  text-align: center;
 }
