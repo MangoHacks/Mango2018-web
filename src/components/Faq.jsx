@@ -1,9 +1,65 @@
 import React, { Component } from 'react';
 import $ from 'jquery';
+import Modal from 'react-modal';
+
+const modalStyle = {
+      overlay: {
+        position: 'fixed',
+        top: 0,
+        left: 0,
+        right: 0,
+        bottom: 0,
+        backgroundColor: 'rgba(255, 255, 255, 0.75)'
+      },
+      content: {
+        position: 'absolute',
+        top: '30%',
+        left: '15%',
+        right: '15%',
+        bottom: '30%',
+        border: '1px solid #ccc',
+        background: '#fff',
+        overflow: 'auto',
+        WebkitOverflowScrolling: 'touch',
+        borderRadius: '4px',
+        outline: 'none',
+        padding: '20px'
+    
+      }
+    }
+    
+    let modalIsOpen = false;
+
+
 
 class Faq extends React.Component {
+      constructor(props) {
+            super(props);
+            this.state = {
+              list: [],
+              full_description: "",
+            };
+
+            this.openModal = this.openModal.bind(this);
+            this.afterOpenModal = this.afterOpenModal.bind(this);
+            this.closeModal = this.closeModal.bind(this);
+
+          }
+      openModal() {
+            this.setState({ modalIsOpen: true });
+          }
+        
+          afterOpenModal() {
+            // references are now sync'd and can be accessed.
+        
+          }
+        
+          closeModal() {
+            this.setState({ modalIsOpen: false });
+          }
 
       render() {
+            
             $(document).ready(function () {
                   // Card One
                   // $('#card-one').mouseenter(function () {
@@ -47,46 +103,57 @@ class Faq extends React.Component {
                   // });
 
 
-                  $('.card').mouseover(function () {
+                  // $('.card').mouseover(function () {
 
-                        $(this).css("cursor", "pointer");
-                        // $(this).animate({ width: "250px", height: "300px", top: "-25px"}, 'medium');
-                        $(this).animate({ width: "250px", height: "300px", top: "-25px"}, 'fast');
-                  });
-                  $('.card').mouseleave(function () {
-                        // $(this).animate({ width: "220px", height: "250px", top: "0px", position: "absolute" }, 'slow')
-                        $(this).animate({ width: "220px", height: "250px", top: "0px", position: "absolute" }, 'fast')
-                  });
+                  //       $(this).css("cursor", "pointer");
+                  //       // $(this).animate({ width: "250px", height: "300px", top: "-25px"}, 'medium');
+                  //       $(this).animate({ transform: scale(1.5) }, 'fast');
+                  // });
+                  // $('.card').mouseleave(function () {
+                  //       // $(this).animate({ width: "220px", height: "250px", top: "0px", position: "absolute" }, 'slow')
+                  //       $(this).animate({ width: "220px", height: "250px", top: "0px", position: "absolute" }, 'fast')
+                  // });
             })
             return (
                   <div className="faq">
+                  <Modal
+                  isOpen={this.state.modalIsOpen}
+                  onAfterOpen={this.afterOpenModal}
+                  onRequestClose={this.closeModal}
+                  aria={{
+                    labelledby: "heading",
+                    describedby: "full_description"
+                  }}
+                  style={modalStyle}
+                  className="dashboard-modal">
+                  </Modal>
                         <div className="content">
                               <div className="class-row-wrapper">
                                     <div className="row">
                                           <div className="col">
-                                                <div className="card style" id="card-one">
-                                                    <h2 className="cardContainer">Where Is The Hackathon?</h2>
-                                                </div>
+                                                <button className="card style" id="card-one" onClick={this.openModal}>
+                                                    <h3 className="cardContainer">Where Is The Hackathon?</h3>
+                                                </button>
                                           </div>
                                           <div className="col">
-                                                <div className="card style" id="card-two">
-                                                  <h2 className="cardContainer">Is It Free To Join?</h2>
-                                                </div>
+                                                <button className="card style" id="card-two" onClick={this.openModal}>
+                                                  <h3 className="cardContainer">Is It Free To Join?</h3>
+                                                </button>
                                           </div>
                                           <div className="col">
-                                                <div className="card style" id="card-three">
-                                                  <h2 className="cardContainer">Do You Need Coding Experience?</h2>
-                                                </div>
+                                                <button className="card style" id="card-three" onClick={this.openModal}>
+                                                  <h3 className="cardContainer">Do You Need Coding Experience?</h3>
+                                                </button>
                                           </div>
                                           <div className="col">
-                                                <div className="card style" id="card-four">
-                                                  <h2 className="cardContainer">What Should I Bring?</h2>
-                                                </div>
+                                                <button className="card style" id="card-four" onClick={this.openModal}>
+                                                  <h3 className="cardContainer">What Should I Bring?</h3>
+                                                </button>
                                           </div>
                                           <div className="col">
-                                                <div className="card style" id="card-five">
-                                                  <h2 className="cardContainer">What If I Don't Have A Team?</h2>
-                                                </div>
+                                                <button className="card style" id="card-five" onClick={this.openModal}>
+                                                  <h3 className="cardContainer">What If I Don't Have A Team?</h3>
+                                                </button>
                                           </div>
                                     </div>
                               </div >

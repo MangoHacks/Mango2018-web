@@ -47,7 +47,7 @@ h3{
     align-items: center;
     justify-content: center;
     display: flex;
-    font-size: 115px;
+    font-size: 25px;
 }
 h4{
     font-size:35px;
@@ -209,7 +209,7 @@ i{
 }
 .class-row-wrapper{
     /* background: #fff; */
-    padding: 100px;
+    padding: 50px;
     overflow-y: scroll;
 }
 .faq .row{
@@ -232,7 +232,35 @@ i{
     -webkit-box-shadow: -1px 6px 51px -5px rgba(0,0,0,0.3);
     -moz-box-shadow: -1px 6px 51px -5px rgba(0,0,0,0.3);
     box-shadow: -1px 6px 51px -5px rgba(0,0,0,0.3);
+    -webkit-transition: 0.5s ease-in-out;
+    -moz-transition: 0.5s ease-in-out;
+    -o-transition: 0.5s ease-in-out;
 }
+
+.card:hover{
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    border-radius:30px;
+    border: 0px;
+    -webkit-box-shadow: -1px 6px 51px -5px rgba(0,0,0,0.3);
+    -moz-box-shadow: -1px 6px 51px -5px rgba(0,0,0,0.3);
+    box-shadow: -1px 6px 51px -5px rgba(0,0,0,0.3);
+}
+
+/* .card:active{
+    -webkit-transform: scale(2);
+    -moz-transform: scale(2);
+    -o-transform: scale(2);
+    -ms-transform: scale(2);
+    border-radius:30px;
+    border: 0px;
+    -webkit-box-shadow: -1px 6px 51px -5px rgba(0,0,0,0.3);
+    -moz-box-shadow: -1px 6px 51px -5px rgba(0,0,0,0.3);
+    box-shadow: -1px 6px 51px -5px rgba(0,0,0,0.3);
+} */
+
 
 
 /* .faq{
@@ -1146,6 +1174,6 @@ footer div{
 
 .cardContainer {
   position: absolute;
-  top: 25%;
+  top: 35%;
   text-align: center;
 }
