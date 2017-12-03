@@ -199,6 +199,10 @@ i{
 
 /* FAQ Section */
 
+.faq header{
+    padding-left: 12%;
+}
+
 .faq{
     background: #fff;
     width: 100%;
@@ -227,7 +231,7 @@ i{
 .card{
     height:250px;
     width:220px;
-    border-radius:30px;
+    border-radius:20px;
     border: 0px;
     -webkit-box-shadow: -1px 6px 51px -5px rgba(0,0,0,0.3);
     -moz-box-shadow: -1px 6px 51px -5px rgba(0,0,0,0.3);

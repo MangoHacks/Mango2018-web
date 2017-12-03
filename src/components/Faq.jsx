@@ -26,6 +26,8 @@ const modalStyle = {
         padding: '20px'
     
       }
+
+
     }
     
     let modalIsOpen = false;
@@ -130,7 +132,7 @@ class Faq extends React.Component {
                         <div className="content">
 
                               <div className="class-row-wrapper">
-                              <header className="header"> FAQ</header>
+                              <header>FAQ</header>
                                     <div className="row">
                                           <div className="col">
                                                 <button className="card style" id="card-one" onClick={this.openModal}>
