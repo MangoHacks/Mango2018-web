@@ -36,7 +36,7 @@ p{
     font-family: FuturaLT;
 }
 h1{
-    width: -webkit-fill-available;
+    width: stretch;
     text-align: center;
     font-size: 120px;
 }
@@ -330,6 +330,11 @@ i{
     padding-bottom: 5%;
 }
 
+.sponsors .col{
+    display: flex;
+    justify-content: center;
+}
+
 /* END Sponsors Grid */
 
 
@@ -575,7 +580,7 @@ form{
 /* VOLUNTEER SIGNUP  */
 .volunteersignup-bg-color{
     background:linear-gradient(233deg, #6800ff, #f52376);
-    height: -webkit-fill-available;
+    height: stretch;
 }
 .volunteersignup{
     background:rgb(255, 255, 255);
@@ -660,7 +665,7 @@ form{
     width: 100%;
 }
 .modal-close{
-    width: -webkit-fill-available;
+    width: stretch;
     background: transparent;
     outline: 0 !important;
 }
@@ -749,7 +754,7 @@ footer div{
     display: none;
     }
 #mango-video{
-    width: -webkit-fill-available;
+    width: stretch;
     }
     .page .hero{
         padding-top: 200px;
@@ -1011,13 +1016,16 @@ footer div{
 .sponsors .content {
     padding: 10% 10% 0% 10% !important;
 }
-.sponsors header{
+.sponsors header {
     font-size: 19px !important;
     padding-bottom: 30px;
 }
-.sponsors .row{
-    text-align: -webkit-center;
-
+.sponsors .row {
+    text-align: center;
+}
+.sponsors .col{
+    display: flex;
+    justify-content: center;
 }
 
 /*

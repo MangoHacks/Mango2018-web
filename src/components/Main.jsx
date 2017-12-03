@@ -27,6 +27,7 @@ import Prospectus from './Prospectus';
 import Team from './Team';
 import Sponsors from './Sponsors';
 import WhatLike from './WhatLike';
+import style from '../public/css/style.css';
 
 var mango;
 
