@@ -703,7 +703,7 @@ footer div{
     padding: 15px 0;
 }
 .footer-text{
-    color:white !important;
+    color:white;
     font-family: FuturaLT;
     font-size: 15px;
 }

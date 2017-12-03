@@ -102,6 +102,10 @@ class Main extends React.Component {
         // BG Styles
         $('.style').css('background', 'linear-gradient(to top right, #FE6BBE, #FAD865');
         $('.style').css('color', '#000');
+        $('.footer-text').css('color', '#000');
+        $('.fa-facebook').css('color', '#000');
+        $('.fa-twitter').css('color', '#000');
+        $('.fa-slack').css('color', '#000');
         $('.modal-btn').css('color', '#000');
         $('.modal-btn').css('border', '1px solid #000');
         $('.modal-btn').hover(function (e) {
@@ -125,6 +129,10 @@ class Main extends React.Component {
       if (style == 'inspire') {
         $('.style').css('background', 'linear-gradient(233deg, #efff92, #d2fcf9');
         $('.style').css('color', '#000');
+        $('.footer-text').css('color', '#000');
+        $('.fa-facebook').css('color', '#000');
+        $('.fa-twitter').css('color', '#000');
+        $('.fa-slack').css('color', '#000');
         $('.modal-btn').css('color', '#000');
         $('.modal-btn').css('border', '1px solid #000');
         $('.modal-btn').hover(function (e) {
@@ -208,7 +216,7 @@ class Main extends React.Component {
             <div className="info-2">
               <p>MangoHacks is a place for discovery.</p>
               <p>Its a 36 hour hackathon that encourages learning, collaboration, growth, innovation, and fun.<br></br>
-                We will welcome 250+ students from Florida and accross the country<br></br>
+                We will welcome 350+ students from Florida and accross the country<br></br>
                 with amazing mentors, and wonderful sponsors to create amazing things.</p>
               <p><i>MangoHacks is organized by students for students.</i></p>
             </div>
