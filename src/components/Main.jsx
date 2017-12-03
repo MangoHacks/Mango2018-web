@@ -19,6 +19,7 @@ import pill from '../public/css/pill.css';
 
 // Images
 import vr from '../public/img/misc/vr2.png';
+import play from '../public/img/placeholder.jpg';
 
 // Components
 import Faq from './Faq';
@@ -179,7 +180,17 @@ class Main extends React.Component {
 
       }
 
-      
+      $('.video__placeholder, .video__button').on('click', function() {
+        if ( !$('#video-player').length ) {
+          var video = '<iframe id="video-player" src="' + $('.video__placeholder').attr('data-video') + '" frameborder="0" allowfullscreen wmode="opaque"></iframe>';
+          $(video).insertAfter( $('.video__placeholder') );
+          $('.video__button').addClass('is-playing');
+        } else {
+          $('.video__button').removeClass('is-playing');
+          $('#video-player').remove();
+        }
+      });
+
     });
 
     $(document).ready(function () { $("div").hide().fadeIn(1000); });
@@ -239,19 +250,10 @@ class Main extends React.Component {
         <div className="whatlike">
           <div className="content style">
             <header> What is it like?</header>
-            <iframe id="mango-video" width="720" height="510" src="https://www.youtube.com/embed/iuPGCi9VEco" frameborder="0" gesture="media" allowfullscreen></iframe>
-            <div className="video-wrapper">
-              <div className="row">
-                <div className="col">
-                  <iframe id="hackathon-video" width="420" height="250" src="https://www.youtube.com/embed/qj4DQfYx2Hg" frameborder="0" gesture="media" allowfullscreen></iframe>
-                </div>
-              </div>
-              <div className="row">
-                <div className="col">
-                  <iframe id="mlh-video" width="420" height="250" src="https://www.youtube.com/embed/fcsugf8I0ms" frameborder="0" gesture="media" allowfullscreen></iframe>
-                </div>
-              </div>
-            </div>
+            <section class="video">
+            <img src={play} data-video="https://www.youtube.com/embed/iuPGCi9VEco?autoplay=1" title="Play Video" class="video__placeholder" />
+            <button class="video__button"></button>
+            </section>
           </div>
         </div>
 

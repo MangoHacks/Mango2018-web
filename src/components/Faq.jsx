@@ -128,7 +128,9 @@ class Faq extends React.Component {
                   className="dashboard-modal">
                   </Modal>
                         <div className="content">
+
                               <div className="class-row-wrapper">
+                              <header className="header"> FAQ</header>
                                     <div className="row">
                                           <div className="col">
                                                 <button className="card style" id="card-one" onClick={this.openModal}>
