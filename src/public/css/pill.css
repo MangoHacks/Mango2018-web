@@ -14,7 +14,7 @@ height: 150px; width: 75px; */
 }
 .pill-move{
     animation-name:pill;
-    animation-duration: 300s;
+    animation-duration: 100s;
     /* animation-duration: 300s; */
     animation-iteration-count: infinite;
     animation-delay: 0s;
