@@ -30,6 +30,9 @@ import Sponsors from './Sponsors';
 import WhatLike from './WhatLike';
 import style from '../public/css/style.css';
 
+//Anime
+import Anime from 'react-anime'
+
 var mango;
 
 class Main extends React.Component {
@@ -54,7 +57,7 @@ class Main extends React.Component {
           ((secure) ? "; secure" : "");
       document.cookie = curCookie;
     }
-    
+
     function getCookie(name) {
       var dc = document.cookie;
       var prefix = name + "=";
@@ -69,7 +72,7 @@ class Main extends React.Component {
         end = dc.length;
       return unescape(dc.substring(begin + prefix.length, end));
     }
-    
+
     function deleteCookie(name, path, domain) {
       if (getCookie(name)) {
         document.cookie = name + "=" +
@@ -78,7 +81,7 @@ class Main extends React.Component {
         "; expires=Thu, 01-Jan-70 00:00:01 GMT";
       }
     }
-    
+
     function fixDate(date) {
       var base = new Date(0);
       var skew = base.getTime();
@@ -201,25 +204,29 @@ class Main extends React.Component {
           <div className="pill" id="pill-1"></div>
            <div className="pill" id="pill-2"></div>
            <div className="pill" id="pill-3"></div>
-           <div className="pill" id="pill-4"></div>            
+           <div className="pill" id="pill-4"></div>
         </div>
 
         <div className="pill-move top-pills">
            <div className="pill" id="pill-5"></div>
-           <div className="pill" id="pill-6"></div> 
+           <div className="pill" id="pill-6"></div>
            <div className="pill" id="pill-7"></div>
-           <div className="pill" id="pill-8"></div>           
+           <div className="pill" id="pill-8"></div>
         </div>
 
+        <Anime opacity={[0,1]}>
         <div className="page">
           <div className="hero">
             <div className="top-hero">
             <img className="mango" src={imaginemango} alt="mangologo" />
             <h1 className="title"></h1>
             <img className="bg-hero" src={motherboard} alt="bg-picture" />
-            </div>      
+            </div>
           </div>
         </div>
+        </Anime>
+
+
         <div className="hero">
           <div className="content">
             <h2>2018</h2>
@@ -273,5 +280,15 @@ class Main extends React.Component {
     );
     }
   }
+
+  // <Anime easing="easeOutElastic"
+  //        duration={1000}
+  //        direction="alternate"
+  //        loop={true}
+  //        delay={(el, index) => index * 240}
+  //        translateX='13rem'
+  //        scale={[.75, .9]}>
+
+  // </Anime>
 
 export default Main;
