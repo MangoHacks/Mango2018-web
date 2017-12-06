@@ -281,14 +281,14 @@ class Main extends React.Component {
     }
   }
 
-  // <Anime easing="easeOutElastic"
-  //        duration={1000}
-  //        direction="alternate"
-  //        loop={true}
-  //        delay={(el, index) => index * 240}
-  //        translateX='13rem'
-  //        scale={[.75, .9]}>
+  <Anime easing="easeOutElastic"
+         duration={1000}
+         direction="alternate"
+         loop={true}
+         delay={(el, index) => index * 240}
+         translateX='13rem'
+         scale={[.75, .9]}>
 
-  // </Anime>
+  </Anime>
 
 export default Main;
