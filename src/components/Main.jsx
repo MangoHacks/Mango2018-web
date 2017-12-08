@@ -129,6 +129,20 @@ class Main extends React.Component {
         $('.bg-hero').attr('src', macbook)
         $('.bg-hero').removeClass('bg-hero').addClass('macbook');
 
+        // Pills
+        $('#pill-1').css('background', 'linear-gradient(to top right, #FE6BBE, #FAD865');
+        // $('#pill-2').css('background', 'linear-gradient(233deg, #6800ff, #f52376');
+        $('#pill-3').css('background', 'linear-gradient(to top right, #FE6BBE, #FAD865');
+        $('#pill-4').css('border', '2px solid #FE6BBE');
+        $('#pill-5').css('background', 'linear-gradient(to top right, #FE6BBE, #FAD865');
+        $('#pill-6').css('background', 'linear-gradient(to top right, #FE6BBE, #FAD865');
+        $('#pill-7').css('background', 'linear-gradient(to top right, #FE6BBE, #FAD865');
+        $('#pill-8').css('border', '2px solid #FE6BBE');
+
+        //Sign Up button
+        $('.signupbutton').css('border', '2px solid #C8F020');
+        $('.signupbutton').css('color', '#C8F020');
+
       }
 
       if (style == 'inspire') {
@@ -156,6 +170,20 @@ class Main extends React.Component {
         //  BG Picture
         $('.bg-hero').attr('src', submissions);
         $('.bg-hero').removeClass('bg-hero').addClass('submissions');
+
+        // Pills
+        $('#pill-1').css('background', 'linear-gradient(233deg, #efff92, #d2fcf9');
+        // $('#pill-2').css('background', 'linear-gradient(233deg, #6800ff, #f52376');
+        $('#pill-3').css('background', 'linear-gradient(233deg, #efff92, #d2fcf9');
+        $('#pill-4').css('border', '2px solid #efff92');
+        $('#pill-5').css('background', 'linear-gradient(233deg, #efff92, #d2fcf9');
+        $('#pill-6').css('background', 'linear-gradient(233deg, #efff92, #d2fcf9');
+        $('#pill-7').css('background', 'linear-gradient(233deg, #efff92, #d2fcf9');
+        $('#pill-8').css('border', '2px solid #efff92');
+
+        //Sign Up button
+        $('.signupbutton').css('border', '2px solid #23F5E9');
+        $('.signupbutton').css('color', '#23F5E9');
       }
 
       if (style == 'innovate') {
@@ -181,6 +209,19 @@ class Main extends React.Component {
         $('.bg-hero').attr('src', motherboard);
         $('.bg-hero').removeClass('bg-hero').addClass('motherboard');
 
+        // Pills
+        $('#pill-1').css('background', 'linear-gradient(233deg, #6800ff, #f52376');
+        // $('#pill-2').css('background', 'linear-gradient(233deg, #6800ff, #f52376');
+        $('#pill-3').css('background', 'linear-gradient(233deg, #6800ff, #f52376');
+        $('#pill-4').css('border', '2px solid #6800ff');
+        $('#pill-5').css('background', 'linear-gradient(233deg, #6800ff, #f52376');
+        $('#pill-6').css('background', 'linear-gradient(233deg, #6800ff, #f52376');
+        $('#pill-7').css('background', 'linear-gradient(233deg, #6800ff, #f52376');
+        $('#pill-8').css('border', '2px solid #6800ff');
+
+        //Sign Up button
+        $('.signupbutton').css('border', '2px solid #4652F7');
+        $('.signupbutton').css('color', '#4652F7');
       }
 
       $('.video__placeholder, .video__button').on('click', function() {
@@ -214,12 +255,15 @@ class Main extends React.Component {
            <div className="pill" id="pill-8"></div>
         </div>
 
-        <Anime opacity={[0,1]}>
+        <Anime>
         <div className="page">
           <div className="hero">
             <div className="top-hero">
             <img className="mango" src={imaginemango} alt="mangologo" />
             <h1 className="title"></h1>
+            <div align="center">
+              <button className="signupbutton">Sign Up!</button>
+            </div>
             <img className="bg-hero" src={motherboard} alt="bg-picture" />
             </div>
           </div>

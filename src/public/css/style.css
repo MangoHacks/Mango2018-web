@@ -322,12 +322,12 @@ i{
     height: 550px;
     width: 720px;
 }
-  
+
   .video__placeholder {
     min-width: 100%;
     display: block;
   }
-  
+
   .video__button {
     background: transparent;
     width: 60px;
@@ -374,14 +374,14 @@ i{
   .video__button.is-playing:after {
     transform: translateY(0) rotate(-45deg);
   }
-  
+
   .video:hover .video__button {
     border-color: #ffffff;
   }
   .video:hover .video__button:before, .video:hover .video__button:after {
     background-color: #ffffff;
   }
-  
+
   #video-player {
     width: 100%;
     height: 100%;
@@ -1268,4 +1268,17 @@ footer div{
   position: absolute;
   top: 35%;
   text-align: center;
+}
+
+.signupbutton {
+  margin: 20px;
+  color: black;
+  padding: 8px 50px;
+  border: 2px solid black;
+  border-radius: 100px;
+  background: transparent;
+  text-decoration: none;
+  -webkit-animation-duration: .3s;
+  animation-duration: .3s;
+  outline: none !important;
 }
