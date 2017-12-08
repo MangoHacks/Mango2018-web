@@ -255,16 +255,18 @@ class Main extends React.Component {
            <div className="pill" id="pill-8"></div>
         </div>
 
-        <Anime>
+        <Anime opacity={[0, 1]} translateY={'1em'} delay={(e, i) => i * 1000}>
         <div className="page">
           <div className="hero">
             <div className="top-hero">
+            
             <img className="mango" src={imaginemango} alt="mangologo" />
             <h1 className="title"></h1>
             <div align="center">
               <button className="signupbutton">Sign Up!</button>
             </div>
             <img className="bg-hero" src={motherboard} alt="bg-picture" />
+
             </div>
           </div>
         </div>
