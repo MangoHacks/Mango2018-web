@@ -12,7 +12,7 @@
     "react-bootstrap": "^0.31.3",
     "react-bootstrap-autosuggest": "^0.5.0",
     "react-dom": "^16.0.0",
-    "react-dropzone": "^4.2.1",
+    "react-dropzone": "^4.2.3",
     "react-file-input": "^0.2.5",
     "react-files": "^2.4.3",
     "react-modal": "^3.1.2",

@@ -5,16 +5,21 @@ import imaginemango from "../public/img/mangos/signup-mango.svg";
 import SelectField from 'material-ui/SelectField';
 import MenuItem from 'material-ui/MenuItem';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
-import $ from 'jquery'
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import Dropzone from 'react-dropzone';
+import $ from 'jquery';
+
 
 let DOMPurify = require('../dist/purify.js');
+let dropzoneRef;
 
 class Signup extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
+      accepted: [],
+      rejected: [],
       name: "",
       email: '',
       school: '',
@@ -252,6 +257,36 @@ class Signup extends React.Component {
             </datalist>
 
 
+            <div className="form-group">
+              <div class="input-field inline col s12" type="text" tabindex="-1" >
+                <label id="github-label" for="github">GitHub Profile Link</label>
+                <input type="url" name="github" className="github" required value={this.state.github} onChange={this.handleInputChange} id="github" />
+              </div>
+            </div>
+            
+
+            <div className="form-group">
+              <div class="input-field inline col s12" type="text" tabindex="-1" >
+                <label id="diet-label" for="diet">Dietary Restrictions</label>
+                <input type="text" name="major" className="diet" required value={this.state.diet} onChange={this.handleInputChange} id="diet" />
+              </div>
+              </div>
+
+              <div className="form-group">
+              <MuiThemeProvider>
+              <div class="input-field inline col s12" type="text" tabindex="-1" >
+                <SelectField
+                  floatingLabelText="Gender"
+                  onChange={this.handleGenderChange}>
+                  <MenuItem value="Male" primaryText="Male" />
+                  <MenuItem value="Female" primaryText="Female" />
+                  <MenuItem value="Other" primaryText="Non-Binary" />
+                </SelectField>
+              </div>
+            </MuiThemeProvider>
+            </div>
+
+            <div className="form-group">
             <MuiThemeProvider>
               <div class="input-field inline col s12" type="text" tabindex="-1" >
                 <SelectField
@@ -264,25 +299,7 @@ class Signup extends React.Component {
                 </SelectField>
               </div>
             </MuiThemeProvider>
-
-            <div className="form-group">
-              <div class="input-field inline col s12" type="text" tabindex="-1" >
-                <label id="diet-label" for="diet">Dietary Restrictions</label>
-                <input type="text" name="major" className="diet" required value={this.state.diet} onChange={this.handleInputChange} id="diet" />
-              </div>
             </div>
-
-            <MuiThemeProvider>
-              <div class="input-field inline col s12" type="text" tabindex="-1" >
-                <SelectField
-                  floatingLabelText="Gender"
-                  onChange={this.handleGenderChange}>
-                  <MenuItem value="Male" primaryText="Male" />
-                  <MenuItem value="Female" primaryText="Female" />
-                  <MenuItem value="Other" primaryText="Other" />
-                </SelectField>
-              </div>
-            </MuiThemeProvider>
 
 
             {/* <label htmlFor="">First Time?</label>
@@ -292,7 +309,7 @@ class Signup extends React.Component {
               <label htmlFor="">No</label>
               <input type="checkbox" value="No" checked={this.state.firsttime === 'No'} onChange={this.handleFirstTimeChange} />
             </div> */}
-
+            <div className="form-group">
             <MuiThemeProvider>
               <div class="input-field inline col s12" type="text" tabindex="-1" >
                 <SelectField
@@ -305,38 +322,33 @@ class Signup extends React.Component {
                 </SelectField>
               </div>
             </MuiThemeProvider>
-
-
-            <div className="form-group">
-              <div class="input-field inline col s12" type="text" tabindex="-1" >
-                <label id="github-label" for="github">GitHub Link</label>
-                <input type="url" name="github" className="github" required value={this.state.github} onChange={this.handleInputChange} id="github" />
-              </div>
             </div>
             
-            {/* <div className="resume">
-              <Files
-                name="resume"
-                type="file"
-                className='files-dropzone'
-                onChange={this.onFilesChange}
-                accepts={['pdf', 'image/png', 'text/plain', 'audio/*']}
-                maxFiles={1}
-                maxFileSize={10000000}
-                minFileSize={0}
-                clickable
-              >
-                <button>Upload Resume</button>
-              </Files>
-              <input type='file' ref="file" name="file" fileTypes={'.pdf'} value={this.state.resume} />
-            </div>
+
+
+
+
+            <Dropzone ref={(node) => { dropzoneRef = node; }} onDrop={(accepted, rejected) => { alert(accepted) }}>
+            <p> Drag and drop your resume here.
+                Only .pdf, .doc(x) and .txt files please 
+            </p>
+            </Dropzone>
+            <button className="signupbutton" type="button" onClick={() => { dropzoneRef.open() }}>
+            Or you can click this to pick your resume.
+            </button>
+
+
+            <MuiThemeProvider>
             <div className="form-group">
-              <input type="checkbox" value="Agreed" required checked={this.state.mlh === 'Agreed'} onChange={this.handleMLHChange} />I agree to <a href=""> MLH Code of Conduct </a>
+              <input type="checkbox" value="Agreed"/>By registering you agree to the <a href=""> MLH Code of Conduct </a>
             </div>
+
             <div className="">
 
-            </div> */}
-            <button className="btn btn-default" className="btn signup-btn" type="submit">Register</button>
+            </div>
+            </MuiThemeProvider>
+
+            <button className="signupbutton" type="submit">Register</button>
 
           </form>
         </div>

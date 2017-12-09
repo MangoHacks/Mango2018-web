@@ -9,9 +9,9 @@ import innovatemango from "../public/img/mangos/innovate-mango.svg";
 import inspiremango from "../public/img/mangos/inspire-mango.svg";
 
 // Hardware
-import macbook from "../public/img/misc/macbook.svg";
+import macbook from "../public/img/misc/macbook.png";
 import motherboard from "../public/img/misc/motherboard.png";
-import submissions from "../public/img/misc/Submissions.svg";
+import submissions from "../public/img/misc/Submissions.png";
 
 
 // CSS
@@ -263,13 +263,15 @@ class Main extends React.Component {
             <img className="mango" src={imaginemango} alt="mangologo" />
             <h1 className="title"></h1>
             <div align="center">
-              <a href="/signup"><button className="signupbutton">Sign Up!</button></a>
+              <button className="signupbutton">Sign Up!</button>
             </div>
             <img className="bg-hero" src={motherboard} alt="bg-picture" />
 
             </div>
+            
           </div>
         </div>
+
 
 
         <div className="hero">
