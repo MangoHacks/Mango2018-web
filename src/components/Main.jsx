@@ -11,7 +11,7 @@ import inspiremango from "../public/img/mangos/inspire-mango.svg";
 // Hardware
 import macbook from "../public/img/misc/macbook.png";
 import motherboard from "../public/img/misc/motherboard.png";
-import submissions from "../public/img/misc/Submissions.png";
+import submissions from "../public/img/misc/submissions.png";
 
 
 // CSS
