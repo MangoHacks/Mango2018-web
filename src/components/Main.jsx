@@ -9,9 +9,9 @@ import innovatemango from "../public/img/mangos/innovate-mango.svg";
 import inspiremango from "../public/img/mangos/inspire-mango.svg";
 
 // Hardware
-import macbook from "../public/img/misc/macbook.png";
+import macbook from "../public/img/misc/macbookpro.png";
 import motherboard from "../public/img/misc/motherboard.png";
-import submissions from "../public/img/misc/submissions.png";
+import submissions from "../public/img/misc/Submissions.svg";
 
 
 // CSS
