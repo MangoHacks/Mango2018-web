@@ -319,8 +319,8 @@ i{
     cursor: pointer;
   }
 .video img{
-    height: 550px;
-    width: 720px;
+    height: 100%;
+    width: 100%;
 }
 
   .video__placeholder {
@@ -399,11 +399,9 @@ i{
 .sponsors img{
     height: 80px;
     padding-bottom: 5%;
-    opacity: 0.7;
-}
-.sponsors img:hover{
     opacity: 1;
 }
+
 .sponsors header{
     font-size: 30px;
     padding-bottom: 7%;

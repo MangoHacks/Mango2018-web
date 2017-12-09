@@ -177,7 +177,7 @@ class Faq extends React.Component {
                   }}
                   style={modalStyle}
                   className="dashboard-modal">
-                  <h1>{this.state.modalTitle}</h1>
+                  <h2>{this.state.modalTitle}</h2>
                   <p align="center">{this.state.modalDesc}</p>
                   </Modal>
                         <div className="content">
