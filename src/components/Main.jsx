@@ -268,7 +268,7 @@ class Main extends React.Component {
             <img className="bg-hero" src={motherboard} alt="bg-picture" />
 
             </div>
-            
+
           </div>
         </div>
 

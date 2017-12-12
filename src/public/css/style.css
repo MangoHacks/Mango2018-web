@@ -694,7 +694,7 @@ i{
       transform: scale(1); } }
   .dropzone, .dropzone * {
     box-sizing: border-box; }
-  
+
   .dropzone {
     min-height: 150px;
     border: 2px solid rgba(0, 0, 0, 0.3);
@@ -908,7 +908,7 @@ i{
           border-left: 6px solid transparent;
           border-right: 6px solid transparent;
           border-bottom: 6px solid #be2626; }
-  
+
 /*
 
 /* .signup span{
@@ -1676,9 +1676,24 @@ footer div{
 }
 
 .signupbutton {
-  margin: 20px;
+  margin: 30px;
   color: black;
-  padding: 8px 50px;
+  padding: 8px 52px;
+  border: 2px solid black;
+  border-radius: 100px;
+  background: transparent;
+  text-decoration: none;
+  -webkit-animation-duration: .3s;
+  animation-duration: .3s;
+  outline: none !important;
+}
+.signupbutton:hover {
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  color: black;
+  padding: 8px 52px;
   border: 2px solid black;
   border-radius: 100px;
   background: transparent;
@@ -1699,4 +1714,20 @@ footer div{
     animation-duration: .3s;
     outline: none !important;
   }
-  
+.resumedrop {
+  width: 200px;
+    height: 200px;
+    margin: auto;
+}
+.resumedrop p{
+text-align: center;
+padding-top: 25%;
+}
+.registerbutton {
+  margin: auto;
+  padding: 8px 64px;
+  text-decoration: none;
+  -webkit-animation-duration: .3s;
+  animation-duration: .3s;
+  outline: none !important;
+}
