@@ -13,20 +13,20 @@ const modalStyle = {
       },
       content: {
         position: 'absolute',
-        top: '20%',
+        top: '15%',
         left: '15%',
         right: '15%',
-        bottom: '20%',
+        bottom: '15%',
         border: '1px solid #ccc',
         background: '#fff',
         overflow: 'auto',
         WebkitOverflowScrolling: 'touch',
         borderRadius: '20px',
         outline: 'none',
-        padding: '20px'
+        padding: '7%',
+        textalign: 'center',
 
       }
-
 
     }
 
@@ -187,7 +187,7 @@ class Faq extends React.Component {
                                     <div className="row">
                                           <div className="col">
                                                 <button className="card style" id="card-one" onClick={this.faqone}>
-                                                    <h3 className="cardContainer">Where Is The Hackathon?</h3>
+                                                  <h3 className="cardContainer">Where Is The Hackathon?</h3>
                                                 </button>
                                           </div>
                                           <div className="col">

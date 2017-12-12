@@ -263,7 +263,7 @@ class Main extends React.Component {
             <img className="mango" src={imaginemango} alt="mangologo" />
             <h1 className="title"></h1>
             <div align="center">
-              <button className="signupbutton">Sign Up!</button>
+              <button className="signupbutton" href="/signup">Sign Up!</button>
             </div>
             <img className="bg-hero" src={motherboard} alt="bg-picture" />
 

@@ -467,9 +467,7 @@ i{
 /* SIGNUP  */
 
 .signup-bg-color{
-    background:linear-gradient(233deg, #6800ff, #f52376);
-    height: 1vh;
-    width: 100%;
+    width: auto;
     text-decoration-color: #000000;
     color: #000000;
 }
@@ -478,9 +476,9 @@ i{
     padding: 50px 00px 50px 0px;
     background:rgba(255, 255, 255,0.6);
     border-radius: 50px;
-    width: 700px;
+    width: 70%;
     height: fit-content;
-    position: absolute;
+    position: relative;
     margin-top: 50px;
     margin-bottom: 50px !important;
     top:70px;
@@ -497,6 +495,9 @@ i{
     text-align: center;
     padding: 0px 0 0px 0;
     font-size: 60px;
+}
+.signup img{
+  width: auto;
 }
 .signup h2{
     color:rgba(17, 17, 17, 0.6);
@@ -1367,11 +1368,30 @@ footer div{
 
 /* PHONES */
 @media only screen and (max-width:575px){
-
+  .signup h1{
+      color:rgb(0, 0, 0);
+      text-align: center;
+      padding: 0px 0 0px 0;
+      font-size: 40px;
+  }
+  .signup img{
+    width: auto;
+  }
+  .signup h2{
+      color:rgba(17, 17, 17, 0.6);
+      text-align: center;
+      font-size: 15px;
+      padding: 10px 0 20px 0;
+      font-family: FuturaLT-Book;
+  }
+  .signup .form-group{
+    text-align: center;
+    font-size: 13px;
+  }
   /* SIGNUP */
   .signup{
     width:fit-content
-}
+   }
     .content{
         padding: 5% 5% 10% 10%;
     }
@@ -1662,6 +1682,10 @@ footer div{
   border-radius: 30px;
   font-family: FuturaLT-Book;
   font-size: 12px;
+}
+.dashboard-modal h2{
+  text-align: center;
+  margin-bottom: 5%;
 }
 
 .dashboard-header {
