@@ -263,7 +263,7 @@ class Signup extends React.Component {
                 <input type="url" name="github" className="github" required value={this.state.github} onChange={this.handleInputChange} id="github" />
               </div>
             </div>
-            
+
 
             <div className="form-group">
               <div class="input-field inline col s12" type="text" tabindex="-1" >
@@ -323,16 +323,17 @@ class Signup extends React.Component {
               </div>
             </MuiThemeProvider>
             </div>
-            
 
 
 
+<div className="resumedrop">
 
             <Dropzone ref={(node) => { dropzoneRef = node; }} onDrop={(accepted, rejected) => { alert(accepted) }}>
             <p> Drag and drop your resume here.
-                Only .pdf, .doc(x) and .txt files please 
+                Only .pdf, .doc(x) and .txt files please
             </p>
             </Dropzone>
+          </div>
             <button className="signupbutton" type="button" onClick={() => { dropzoneRef.open() }}>
             Or you can click this to pick your resume.
             </button>
@@ -347,8 +348,9 @@ class Signup extends React.Component {
 
             </div>
             </MuiThemeProvider>
-
+<div className="registerbutton">
             <button className="signupbutton" type="submit">Register</button>
+          </div>
 
           </form>
         </div>
