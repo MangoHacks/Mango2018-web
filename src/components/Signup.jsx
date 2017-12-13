@@ -268,7 +268,7 @@ class Signup extends React.Component {
             <div className="form-group">
               <div class="input-field inline col s12" type="text" tabindex="-1" >
                 <label id="diet-label" for="diet">Dietary Restrictions</label>
-                <input type="text" name="major" className="diet" required value={this.state.diet} onChange={this.handleInputChange} id="diet" />
+                <input type="text" name="diet" className="diet" required value={this.state.diet} onChange={this.handleInputChange} id="diet" />
               </div>
               </div>
 
