@@ -24,9 +24,9 @@ class Signup extends React.Component {
       email: '',
       school: '',
       major: '',
-      year: 'Freshman',
+      year: '',
       firsttime: '',
-      gender: 'Male',
+      gender: '',
       size: '',
       github: '',
       resume: [],
@@ -43,17 +43,17 @@ class Signup extends React.Component {
     this.handleMLHChange = this.handleMLHChange.bind(this);
 
   }
-  handleYearChange(event) {
-    this.setState({ year: event.target.value });
+  handleYearChange(event, index, value) {
+    this.setState({ year: value });
   }
   handleFirstTimeChange(event) {
     this.setState({ firsttime: event.target.value });
   }
-  handleGenderChange(event) {
-    this.setState({ gender: event.target.value });
+  handleGenderChange(event, index, value) {
+    this.setState({ gender: value });
   }
-  handleSizeChange(event) {
-    this.setState({ size: event.target.value });
+  handleSizeChange(event, index, value) {
+    this.setState({ size: value });
   }
   handleMLHChange(event) {
     this.setState({ mlh: event.target.value });
@@ -277,7 +277,8 @@ class Signup extends React.Component {
               <div class="input-field inline col s12" type="text" tabindex="-1" >
                 <SelectField
                   floatingLabelText="Gender"
-                  onChange={this.handleGenderChange}>
+                  onChange={this.handleGenderChange}
+                  value={this.state.gender}>
                   <MenuItem value="Male" primaryText="Male" />
                   <MenuItem value="Female" primaryText="Female" />
                   <MenuItem value="Other" primaryText="Non-Binary" />
@@ -291,11 +292,13 @@ class Signup extends React.Component {
               <div class="input-field inline col s12" type="text" tabindex="-1" >
                 <SelectField
                   floatingLabelText="Grade Level"
-                  onChange={this.handleYearChange}>
-                  <MenuItem value="Frehsman" primaryText="Freshman" />
+                  onChange={this.handleYearChange}
+                  value={this.state.year}>
+                  <MenuItem value="Freshman" primaryText="Freshman" />
                   <MenuItem value="Sophmore" primaryText="Sophmore" />
                   <MenuItem value="Junior" primaryText="Junior" />
                   <MenuItem value="Senior" primaryText="Senior" />
+                  <MenuItem value="New Grad" primaryText="New Grad" />
                 </SelectField>
               </div>
             </MuiThemeProvider>
@@ -314,7 +317,8 @@ class Signup extends React.Component {
               <div class="input-field inline col s12" type="text" tabindex="-1" >
                 <SelectField
                   floatingLabelText="Shirt Size"
-                  onChange={this.handleSizeChange}>
+                  onChange={this.handleSizeChange}
+                  value={this.state.size}>
                   <MenuItem value="Small" primaryText="Small" />
                   <MenuItem value="Medium" primaryText="Medium" />
                   <MenuItem value="Large" primaryText="Large" />
