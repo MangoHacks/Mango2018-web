@@ -118,7 +118,7 @@ console.log('yay' + id)
                 <th>Name</th>
                 <th>Email</th>
                 <th>School</th>
-                  <th>Check In</th>
+                <th>Check In</th>
                 <th>Edit</th>
                 <th></th>
               </tr>
