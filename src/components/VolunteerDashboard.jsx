@@ -331,7 +331,6 @@ class VolunteerDashboard extends Component {
                     <td><p>{item.checkin}</p></td>
                     <td>
                       <button id={item._id} onClick={this.checkIn} className="btn btn-default">Check In</button>
-                      {/* <a href={"http://localhost:8050/dlresume/"+item.resume.filename}><button id={item._id} className="btn btn-success">Resume</button></a> */}
                     </td>
                   </tr>
                 )
@@ -346,37 +345,3 @@ class VolunteerDashboard extends Component {
 }
 
 export default VolunteerDashboard;
-// <div className="table-responsive dash">
-// <table className="table table-striped table-responsive">
-//   <thead className="thead-inverse">
-//     <tr>
-//       <th>#</th>
-//       <th>Name</th>
-//       <th>Email</th>
-//       <th>School</th>
-//         <th>Check In</th>
-//       <th>Edit</th>
-//       <th></th>
-//     </tr>
-//   </thead>
-//   <tbody>
-//       {
-//         this.state.list.map((item,index) => {
-//           return(
-//           <tr key={item._id}>
-//               <td >{index+1}</td>
-//               <td >{item.name}</td>
-//               <td >{item.email}</td>
-//               <td >{item.school}</td>
-//               <td >{item.checkin}</td>
-//               <td>
-//               <button id={item._id} onClick={this.editUser} className="btn btn-primary">Edit User</button>
-//               <button id={item._id} onClick={this.checkIn} className="btn btn-default">Check In</button>
-//               {/* <a href={"http://localhost:8050/dlresume/"+item.resume.filename}><button id={item._id} className="btn btn-success">Resume</button></a> */}
-//               </td>
-//           </tr>
-//           )}
-//         )}
-//   </tbody>
-// </table>
-// </div>

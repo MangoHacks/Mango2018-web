@@ -137,7 +137,6 @@ console.log('yay' + id)
                         <button id={item._id} onClick={this.editUser} className="btn btn-primary">Edit User</button>
                         <button id={item._id} onClick={this.deleteUser} className="btn btn-danger">Delete User</button>
                         <button id={item._id} onClick={this.checkIn} className="btn btn-default">Check In</button>
-                        {/* <a href={"http://localhost:8050/dlresume/"+item.resume.filename}><button id={item._id} className="btn btn-success">Resume</button></a> */}
                         </td>
                     </tr>
                     )}

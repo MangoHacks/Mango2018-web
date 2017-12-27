@@ -178,8 +178,6 @@ signup(event) {
                         <td >{item.amount}</td>
                         <td >{item.confirmed}</td>
                         <td>                         
-                        {/* <button id={item._id} onClick={this.updateConfirmation} className="btn btn-success">Confirm</button>           */}
-                        {/* <button id={item._id} onClick={this.updateContacted} className="btn btn-primary">Contacted</button>                                                                   */}
                         <button id={item._id} onClick={this.deleteUser} className="btn btn-danger">Delete Sponsor</button>
                         </td>
                     </tr>    

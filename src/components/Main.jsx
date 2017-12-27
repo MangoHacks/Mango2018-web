@@ -131,7 +131,6 @@ class Main extends React.Component {
 
         // Pills
         $('#pill-1').css('background', 'linear-gradient(to top right, #FE6BBE, #FAD865');
-        // $('#pill-2').css('background', 'linear-gradient(233deg, #6800ff, #f52376');
         $('#pill-3').css('background', 'linear-gradient(to top right, #FE6BBE, #FAD865');
         $('#pill-4').css('border', '2px solid #FE6BBE');
         $('#pill-5').css('background', 'linear-gradient(to top right, #FE6BBE, #FAD865');
@@ -173,7 +172,6 @@ class Main extends React.Component {
 
         // Pills
         $('#pill-1').css('background', 'linear-gradient(233deg, #efff92, #d2fcf9');
-        // $('#pill-2').css('background', 'linear-gradient(233deg, #6800ff, #f52376');
         $('#pill-3').css('background', 'linear-gradient(233deg, #efff92, #d2fcf9');
         $('#pill-4').css('border', '2px solid #efff92');
         $('#pill-5').css('background', 'linear-gradient(233deg, #efff92, #d2fcf9');
@@ -211,7 +209,6 @@ class Main extends React.Component {
 
         // Pills
         $('#pill-1').css('background', 'linear-gradient(233deg, #6800ff, #f52376');
-        // $('#pill-2').css('background', 'linear-gradient(233deg, #6800ff, #f52376');
         $('#pill-3').css('background', 'linear-gradient(233deg, #6800ff, #f52376');
         $('#pill-4').css('border', '2px solid #6800ff');
         $('#pill-5').css('background', 'linear-gradient(233deg, #6800ff, #f52376');
@@ -298,7 +295,7 @@ class Main extends React.Component {
             <p>It'll be sweet. We Promise.</p>
           </div>
         </div>
-        {/* <img src={vr} className="vr" alt="Virtual Reality"/>    */}
+        
         <Faq />
 
         <div className="whatlike">
@@ -328,14 +325,6 @@ class Main extends React.Component {
     }
   }
 
-  // <Anime easing="easeOutElastic"
-  //        duration={1000}
-  //        direction="alternate"
-  //        loop={true}
-  //        delay={(el, index) => index * 240}
-  //        translateX='13rem'
-  //        scale={[.75, .9]}>
-  //
-  // </Anime>
+
 
 export default Main;
