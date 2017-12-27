@@ -37,6 +37,7 @@ class AdminDashboard extends Component {
     {
       method: 'PUT',
       "headers": {
+        "Authorization": "Bearer " + token,
         "content-type": "application/json",
     },
     body: JSON.stringify({
@@ -55,7 +56,10 @@ class AdminDashboard extends Component {
 
     fetch('http://localhost:8050/users/' + id,
       {
-        method: 'DELETE'
+        method: 'DELETE',
+        "headers": {
+          "Authorization": "Bearer " + token,
+        }
       })
       .then(response => {
         this.renderAdminDashboard();
