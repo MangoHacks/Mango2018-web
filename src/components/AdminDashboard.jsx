@@ -37,6 +37,7 @@ class AdminDashboard extends Component {
     {
       method: 'PUT',
       "headers": {
+        "Authorization": "Bearer " + token,
         "content-type": "application/json",
     },
     body: JSON.stringify({
@@ -55,7 +56,10 @@ class AdminDashboard extends Component {
 
     fetch('http://localhost:8050/users/' + id,
       {
-        method: 'DELETE'
+        method: 'DELETE',
+        "headers": {
+          "Authorization": "Bearer " + token,
+        }
       })
       .then(response => {
         this.renderAdminDashboard();
@@ -137,7 +141,6 @@ console.log('yay' + id)
                         <button id={item._id} onClick={this.editUser} className="btn btn-primary">Edit User</button>
                         <button id={item._id} onClick={this.deleteUser} className="btn btn-danger">Delete User</button>
                         <button id={item._id} onClick={this.checkIn} className="btn btn-default">Check In</button>
-                        {/* <a href={"http://localhost:8050/dlresume/"+item.resume.filename}><button id={item._id} className="btn btn-success">Resume</button></a> */}
                         </td>
                     </tr>
                     )}

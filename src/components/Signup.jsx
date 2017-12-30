@@ -305,13 +305,7 @@ class Signup extends React.Component {
             </div>
 
 
-            {/* <label htmlFor="">First Time?</label>
-            <div className="form-group">
-              <label htmlFor="">Yes</label>
-              <input type="checkbox" value="Yes" checked={this.state.firsttime === 'Yes'} onChange={this.handleFirstTimeChange} />
-              <label htmlFor="">No</label>
-              <input type="checkbox" value="No" checked={this.state.firsttime === 'No'} onChange={this.handleFirstTimeChange} />
-            </div> */}
+          
             <div className="form-group">
             <MuiThemeProvider>
               <div class="input-field inline col s12" type="text" tabindex="-1" >
