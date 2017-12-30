@@ -1,46 +1,46 @@
 class Service {
     constructor() {
-            this.endpoint = "http://localhost:8050/users/"
-            this.token = config.GetToken()
+            let endpoint = "http://localhost:8050/users/"
+            let token = config.GetToken()
     }
 
 
     GetUsers() {
-        return fetch(this.endpoint,
+        return fetch(endpoint,
             {
                 method: 'GET',
                 headers: {
-                    "Authorization": "Bearer " + this.token,
+                    "Authorization": "Bearer " + token,
                 }
             });
     }
 
     DeleteUser(id) {
-        return fetch(this.endpoint+id,
+        return fetch(endpoint+id,
             {
                 method: 'DELETE',
                 headers: {
-                    "Authorization": "Bearer " + this.token,
+                    "Authorization": "Bearer " + token,
                 }
             });
     }
 
     DownloadResumeForUser(id) {
-        return fetch(this.endpoint+id,
+        return fetch(endpoint+id,
             {
                 method: 'GET',
                 headers: {
-                    "Authorization": "Bearer " + this.token,
+                    "Authorization": "Bearer " + token,
                 }
             });
     }
 
     CheckinUser(id, bool) {
-        return fetch(this.endpoint+id,
+        return fetch(endpoint+id,
             {
                 method: 'PUT',
                 headers: {
-                    "Authorization": "Bearer " + this.token,
+                    "Authorization": "Bearer " + token,
                     "content-type": "application/json",
                 },
                 body: JSON.stringify({
