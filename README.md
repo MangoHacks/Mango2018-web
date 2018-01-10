@@ -25,3 +25,4 @@ Angelo: From Dec 3rd onward- no more pushing directly to master. We will be havi
 
 If you have a repo/branch that is behind please read this (https://help.github.com/articles/syncing-a-fork/) on how to sync your branch.
 
+Update: Prod branch no longer connected to this repo
