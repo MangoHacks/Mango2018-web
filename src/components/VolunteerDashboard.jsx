@@ -291,13 +291,13 @@ class VolunteerDashboard extends Component {
 
 
         <div className="dashboard-menu" align="left">
-          <p>MangoHacks Dashboard</p>
+          <p>MangoHacks Volunteer</p>
         </div>
         <div className="dashboard-header">
           <p>Volunteer Dashboard</p>
             {
                 this.state.list.map((item, index) => {
-                  this.setState({ 
+                  this.setState({
                     count: index +1
                   });
                 })
@@ -336,7 +336,7 @@ class VolunteerDashboard extends Component {
                 )
               }
               )}
-              
+
           </tbody>
         </table>
       </div>
