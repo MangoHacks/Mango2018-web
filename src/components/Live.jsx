@@ -53,7 +53,7 @@ countdown.DEFAULTS =
 //countdown parameters
 
 function loadDate(){
-  var endDate = countdown( new Date(2018, 1, 4, 17, 0, 0) );
+  var endDate = countdown( new Date(2018, 1, 2, 18, 0, 0) );
   var daysLeft = endDate.days;
   var hoursLeft = endDate.hours;
   var minutesLeft = endDate.minutes;
@@ -120,7 +120,7 @@ class Live extends Component {
   <br/>
   <br/>
 	<div>
-	<h1 align="center" className="time" style={{fontSize: '5em'}}><span id='todaysDate' style={{fontFamily: 'FuturaLT'}}></span><br/><span style={{fontSize: '0.5em', fontFamily: 'FuturaLT'}}>Time Remaining</span>
+	<h1 align="center" className="time" style={{fontSize: '5em'}}><span id='todaysDate' style={{fontFamily: 'FuturaLT'}}></span><br/><span style={{fontSize: '0.5em', fontFamily: 'FuturaLT'}}>Hacking Starts!</span>
 	</h1>
 	</div>
   <br />
@@ -137,10 +137,29 @@ class Live extends Component {
 			<div className="timeline">
         {
           schedule.map((i, index) => {
+            function formatDate(date) {
+              var monthNames = [
+                "Jan", "Feb", "Mar",
+                "Apr", "May", "Jun", "Jul",
+                "Aug", "Sep", "Oct",
+                "Nov", "Dec"
+              ];
+
+              var day = date.getDate();
+              var monthIndex = date.getMonth();
+              var year = date.getFullYear();
+
+              return monthNames[monthIndex] + ' ' + day + ' ' + year;
+            }
             return(
             <div className="container right" key={index}>
                 <div className="content">
-                  <h2>{i.title}<br/><span style={{color: 'gray', fontSize: '0.6em', fontFamily: 'FuturaLT'}}>{i.description}<br/><a style={{fontFamily: 'FuturaLT', color: '#FF4E50'}}>Details</a></span></h2>
+                  <h2>{i.title}<span className="tags">{i.tags}</span><br/><p style={{color: 'gray'}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p></h2>
+                  <p>Starts:<span style={{fontFamily: 'FuturaLT', color: '#FF4E50'}}>{" " + formatDate(i.startTime)}</span><br/>
+                  Ends:<span style={{fontFamily: 'FuturaLT', color: '#FF4E50'}}>{" " + formatDate(i.endTime)}</span><br/>
+                Location:<span style={{fontFamily: 'FuturaLT', color: '#FF4E50'}}>{" " + i.location}</span>
+                  </p>
+
                 </div>
             </div>
           )

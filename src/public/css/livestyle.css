@@ -29,6 +29,11 @@ p, h1, h2, h3 {
 	color: black;
 }
 
+h3 {
+	align-items: left;
+	justify-content: left;
+}
+
 .card {
 	background: white;
 	color: black;
@@ -218,7 +223,7 @@ p, h1, h2, h3 {
   box-shadow: 0px 0px 10px -3px #BDBDBD;
 }
 
-@media all and (max-width: 600px) {
+@media all and (max-width: 800px) {
 	.schedule, .tweets {
 	display: list-item;
 	vertical-align: top;
@@ -228,4 +233,18 @@ p, h1, h2, h3 {
   .content {
     width: 95%;
   }
+}
+
+.tags {
+	background: white;
+	color: #FF4E50;
+	/* padding: 10px; */
+	font-size: 15px;
+	border: none;
+	/* border-radius: 20px; */
+	transition: 0.3s;
+	margin: 10px;
+	font-family: 'FuturaLT';
+
+	/* border: solid 2px #FF4E50; */
 }
