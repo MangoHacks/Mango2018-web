@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "dependencies": {
+    "countdown": "^2.6.0",
     "history": "^4.7.2",
     "jquery": "^3.2.1",
     "material-ui": "^0.19.4",
@@ -19,6 +20,7 @@
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",
     "react-scripts": "1.0.14",
+    "react-twitter-widgets": "^1.7.1",
     "redux": "^3.7.2",
     "webpack": "^3.6.0"
   },
