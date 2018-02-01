@@ -134,7 +134,7 @@ class Live extends Component {
 	<div className="tables">
 		<div className="schedule">
 			<h2 align="center" style={{fontSize: '2em'}}>Schedule</h2>
-			<div className="timeline">
+			<div className="timeline" style={{overflowY: 'scroll', height:'500px'}}>
         {
           schedule.map((i, index) => {
             function formatDate(date) {
@@ -176,7 +176,7 @@ class Live extends Component {
       }}
       options={{
         username: 'fiumangohacks',
-        height: '400'
+        height: '500'
       }}
       onLoad={() => console.log('Timeline is loaded!')}
     />
