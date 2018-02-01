@@ -126,8 +126,8 @@ class Live extends Component {
   <br />
 		<div className="buttons" align="center">
 		<a href="https://mangohacks2018.slack.com/" target="_blank"><button>Request Slack Invite</button></a>
-		<button>Devpost</button>
-		<a href="https://www.facebook.com/mangohacks" target="_blank"><button>Facebook Group</button></a>
+		<a href="https://mangohacks2018.devpost.com" target="_blank"><button>Devpost</button></a>
+		<a href="https://www.facebook.com/groups/106690973468947/" target="_blank"><button>Facebook Group</button></a>
 		<a href="https://hardware.mlh.io/" target="_blank"><button>MLH Hardware Request</button></a>
 	</div>
   <br />
