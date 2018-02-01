@@ -155,7 +155,7 @@ class Live extends Component {
             <div className="container right" key={index}>
                 <div className="content">
                   <h2>{i.title}<span className="tags">{i.tags}</span><br/><p style={{color: 'gray'}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p></h2>
-                  <p>Starts:<span style={{fontFamily: 'FuturaLT', color: '#FF4E50'}}>{" " + formatDate(i.startTime)}</span><br/>
+                  <p>Starts:<span style={{fontFamily: 'FuturaLT', color: '#FF4E50'}}>{" " + formatDate(i.startTime) + '@' + i.startTime.getTime().toString()}</span><br/>
                   Ends:<span style={{fontFamily: 'FuturaLT', color: '#FF4E50'}}>{" " + formatDate(i.endTime)}</span><br/>
                 Location:<span style={{fontFamily: 'FuturaLT', color: '#FF4E50'}}>{" " + i.location}</span>
                   </p>
@@ -182,6 +182,10 @@ class Live extends Component {
     />
 		</div>
 	</div>
+  <div className="topmenu">
+    <div align="center" style={{fontFamily: 'FuturaLT', color: 'white', padding: '40px'}}>Made With <span style={{color: 'red'}}>&#9829;</span> By MangoHacks</div>
+  </div>
+
       </div>
     )
   }
