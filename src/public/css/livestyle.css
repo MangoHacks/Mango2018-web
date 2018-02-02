@@ -257,6 +257,9 @@ h3 {
 }
 
 @media all and (max-width: 700px) {
+    h1{
+        font-size: 1rem;
+    }
     .schedule,
     .tweets {
         display: list-item;
