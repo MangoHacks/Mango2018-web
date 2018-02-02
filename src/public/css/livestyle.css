@@ -283,3 +283,9 @@ h3 {
     font-family: 'FuturaLT';
     /* border: solid 2px #FF4E50; */
 }
+
+@media only screen and (max-width:575px){
+    h2{
+        font-size: 1rem;
+    }
+}
