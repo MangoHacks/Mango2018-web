@@ -45,7 +45,7 @@ class VolunteerDashboard extends Component {
       year: 'Freshman',
       gender: 'Male',
       size: 'Small',
-      count:0
+      count: 0
     };
     this.signup = this.signup.bind(this);
     this.handleInputChange = this.handleInputChange.bind(this);
@@ -87,12 +87,8 @@ class VolunteerDashboard extends Component {
     let cleanName = DOMPurify.sanitize(this.state.name);
     let cleanEmail = DOMPurify.sanitize(this.state.email);
     let cleanSchool = DOMPurify.sanitize(this.state.school);
-    let cleanMajor = DOMPurify.sanitize(this.state.major);
-    let cleanYear = DOMPurify.sanitize(this.state.year);
-    let cleanGender = DOMPurify.sanitize(this.state.gender);
-    let cleanSize = DOMPurify.sanitize(this.state.size);
 
-    fetch('http://localhost:8050/form/', {
+    fetch('http://mangohacks.com:8050/form/', {
       method: 'POST',
       "headers": {
         "content-type": "application/json",
@@ -101,28 +97,21 @@ class VolunteerDashboard extends Component {
         name: cleanName,
         email: cleanEmail,
         school: cleanSchool,
-        major: cleanMajor,
-        year: cleanYear,
-        gender: cleanGender,
-        size: cleanSize,
       })
 
     })
       .then(response => {
-        this.renderVolunteerDashboard();
+        // this.renderVolunteerDashboard();
         this.setState({
           list: [],
           name: "",
           email: '',
           school: '',
-          major: '',
-          year: 'Freshman',
-          gender: 'Male',
-          size: '',
+          count: this.state.count + 1
         });
       })
-    this.closeModal();
-
+      this.closeModal();
+      // this.renderVolunteerDashboard();
   }
   componentDidMount() {
     this.renderVolunteerDashboard();
@@ -154,8 +143,10 @@ class VolunteerDashboard extends Component {
       })
       .then(response => {
         this.renderVolunteerDashboard();
+        // this.state.checkin = this.state.checkin + 1;
       })
   }
+
   downloadResume(event) {
     event.preventDefault();
     const target = event.target;
@@ -177,10 +168,16 @@ class VolunteerDashboard extends Component {
       .then(results => { //results is a an object
         results.json() //results.json is a Promise Object
           .then((data) => {  //Once you get the Promise done you can extract the data
+            let count = this.state.count;
+            console.log(count);
+            for(var i = 0; i < data.length; i++){
+                if(data[i].checkin == 'Yes')
+                    count = count + 1;
+            }
             this.setState({
-              list: data
+              list: data,
+              count: count
             })
-            console.log(data)
           })
       })
   }
@@ -234,53 +231,6 @@ class VolunteerDashboard extends Component {
                 <div className="form-group">
                   <input type="text" list="majors" name="major" className="major" required value={this.state.major} onChange={this.handleInputChange} id="major" placeholder="Major" />
                 </div>
-                <datalist id="majors">
-                  <option value="Computer Science" />
-                  <option value="Computer Engineering" />
-                  <option value="Information Technology" />
-                  <option value="Business" />
-                  <option value="Electrical Engineering" />
-                </datalist>
-                <div className="row">
-                  <div className="col">
-                    <label htmlFor="">Grade Level</label>
-                    <div class="form-group">
-                      <select name="year" onChange={this.handleYearChange}>
-                        <option value="Freshman">Freshman</option>
-                        <option value="Sophmore">Sophmore</option>
-                        <option value="Junior">Junior</option>
-                        <option value="Senior">Senior</option>
-                        <option value="">Super Senior</option>
-                        <option value="">DAMN</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div className="col">
-                    <label htmlFor="">Gender</label>
-                    <div className="form-group">
-                      <select value="gender" onChange={this.handleGenderChange}>
-                        <option value="Male">Male</option>
-                        <option value="Female">Female</option>
-                        <option value="Other">Other</option>
-                      </select>
-                    </div>
-                  </div>
-
-                  <div className="col">
-                    <label htmlFor="">Shirt Size</label>
-                    <div class="form-group">
-                      <select name="size" onChange={this.handleSizeChange}>
-                        <option value="Small">Small</option>
-                        <option value="Medium">Medium</option>
-                        <option value="Large">Large</option>
-                        <option value="X-Large">X-Large</option>
-                      </select>
-                    </div>
-                  </div>
-                </div>
-
-
-
                 <br />
                 <button className="btn btn-default" type="submit" >✓ Register</button>
               </form>
@@ -294,15 +244,10 @@ class VolunteerDashboard extends Component {
         </div>
         <div className="dashboard-header">
           <p>Volunteer Dashboard</p>
-            {
-                // this.state.list.map((item, index) => {
-                //   this.setState({
-                //     count: index +1
-                //   });
-                // })
-                
-              }
-            <h3>{this.state.list.length}</h3>
+            <h3>
+              {this.state.count}/
+              {this.state.list.length}
+            </h3>
           <button onClick={this.openModal}>Add User</button>
         </div>
 
