@@ -134,18 +134,17 @@ class VolunteerDashboard extends Component {
 
     })
       .then(response => {
-        // this.renderVolunteerDashboard();
         this.setState({
-          list: [],
-          name: "",
+          name: '',
           email: '',
           school: '',
-          count: this.state.count + 1
-        });
-      })
-    this.closeModal();
-    // this.renderVolunteerDashboard();
+          major:''
+        })
+        this.renderVolunteerDashboard();
+        this.closeModal();
+      });
   }
+
   componentDidMount() {
     this.renderVolunteerDashboard();
   }
@@ -346,7 +345,7 @@ class VolunteerDashboard extends Component {
             <form onSubmit={this.handlelogin}>
               <input type="password" style={{ width: 400, margin: "auto", color: '#fff' }} className="login " placeholder="Password" onChange={this.handleChange} />
             </form>
-            <p style={{marginTop:110, opacity: 0.95}} ><b>Volunteer dashboard</b></p>
+            <p style={{ marginTop: 110, opacity: 0.95 }} ><b>Volunteer dashboard</b></p>
 
           </div>
           <div className="phone-message">
