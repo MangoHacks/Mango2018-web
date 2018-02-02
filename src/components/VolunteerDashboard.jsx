@@ -251,7 +251,7 @@ class VolunteerDashboard extends Component {
           <button onClick={this.openModal}>Add User</button>
         </div>
 
-        <table>
+        <table >
           <thead>
             <tr>
               <th><p>#</p></th>

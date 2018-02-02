@@ -1,256 +1,268 @@
 const schedule = [
   {
     title: 'Dinner',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-    startTime: new Date(),
-    endTime: new Date(),
-    tags: ['Food']
+    description: '',
+    startTime: 'Fri, 7:00 PM',
+    endTime: 'Fri, 8:30 PM',
+    location: 'PG6 Halfmoon',
+    tags: 'Food'
   },
   {
     title: 'Registration',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-    startTime: new Date(),
-    endTime: new Date(),
-    tags: []
+    description: '',
+    startTime: 'Fri, 6:00 PM',
+    endTime: 'Fri, 7:00 PM',
+    location: 'PG6 Atrium',
+    tags: 'Activity'
   },
   {
     title: 'Opening Ceremony',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-    startTime: new Date(),
-    endTime: new Date(),
-    tags: []
+    description: '',
+    startTime: 'Fri, 8:30 PM',
+    endTime: 'Fri, 9:30 PM',
+    location: 'Sippa 125',
+    tags: 'Activity'
   },
   {
     title: 'Onsite Interviews',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-    startTime: new Date(),
-    endTime: new Date(),
-    tags: []
+    description: '',
+    startTime: 'Fri, 9:30 PM',
+    endTime: 'Fri, 10:30 PM',
+    location: 'PG6 Advising',
+    tags: 'Activity'
   },
   {
     title: 'Team Building',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-    startTime: new Date(),
-    endTime: new Date(),
-    tags: []
+    description: '',
+    startTime: 'Fri, 9:30 PM',
+    endTime: 'Fri, 10:00 PM',
+    location: 'PG6 Atrium',
+    tags: 'Activity'
   },
   {
     title: 'Hacking Begins',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-    startTime: new Date(),
-    endTime: new Date(),
-    tags: []
+    description: '',
+    startTime: 'Fri, 10:00PM',
+    endTime: 'Sun, 7:00 AM',
+    location: 'PG6',
+    tags: 'Activity'
   },
   {
-    title: 'GE Digital Workshop',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-    startTime: new Date(),
-    endTime: new Date(),
-    tags: ['Workshop']
+    title: 'Server Side Socket Session',
+    description: '',
+    startTime: 'Fri, 9:30 PM',
+    endTime: 'Fri, 10:30 PM',
+    location: 'PG6 115',
+    tags: 'Workshop'
   },
   {
     title: 'Prototyping using Ruby & Ruby on Rails',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-    startTime: new Date(),
-    endTime: new Date(),
-    tags: ['Workshop']
+    description: '',
+    startTime: 'Fri, 10:30 PM',
+    endTime: 'Fri, 11:15 PM',
+    location: 'PG6 115',
+    tags: 'Workshop'
   },
   {
     title: 'Intro to GIT',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-    startTime: new Date(),
-    endTime: new Date(),
-    tags: ['Workshop']
+    description: '',
+    startTime: 'Fri, 11:15 PM',
+    endTime: 'Sat, 12:00 AM',
+    location: 'PG6 115',
+    tags: 'Workshop'
+  },
+  {
+    title: 'Midnight Snack',
+    description: '',
+    startTime: 'Fri, 11:50 AM',
+    endTime: 'Sat, 12:10 AM',
+    location: 'PG6 Atrium',
+    tags: 'Food'
   },
   {
     title: 'HTML/CSS',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-    startTime: new Date(),
-    endTime: new Date(),
-    tags: ['Workshop']
-  },
-  {
-    title: 'Midnight Snack',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-    startTime: new Date(),
-    endTime: new Date(),
-    tags: ['Food']
+    description: '',
+    startTime: 'Sat, 12:00 AM',
+    endTime: 'Sat, 12:45 AM',
+    location: 'PG6 115',
+    tags: 'Workshop'
   },
   {
     title: 'Javascript and APIs',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-    startTime: new Date(),
-    endTime: new Date(),
-    tags: ['Workshop']
+    description: '',
+    startTime: 'Sat, 12:45 AM',
+    endTime: 'Sat, 1:30 AM',
+    location: 'PG6 115',
+    tags: 'Workshop'
   },
   {
     title: 'React',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-    startTime: new Date(),
-    endTime: new Date(),
-    tags: ['Workshop']
+    description: '',
+    startTime: 'Sat, 1:30 AM',
+    endTime: 'Sat, 2:15 AM',
+    location: 'PG6 115',
+    tags: 'Workshop'
   },
   {
     title: 'Hardware Lab',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-    startTime: new Date(),
-    endTime: new Date(),
-    tags: []
+    description: '',
+    startTime: 'Sat, 2:00 AM',
+    endTime: 'Sat, 7:00 AM',
+    location: 'PG6 Advising',
+    tags: ''
   },
   {
     title: 'Breakfast',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-    startTime: new Date(),
-    endTime: new Date(),
-    tags: ['Food']
-  },
-  {
-    title: 'NodeJS',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-    startTime: new Date(),
-    endTime: new Date(),
-    tags: ['Workshop']
+    description: '',
+    startTime: 'Sat, 7:30 AM',
+    endTime: 'Sat, 9:00 AM',
+    location: 'PG6 Halfmoon',
+    tags: 'Food'
   },
   {
     title: 'Startups',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-    startTime: new Date(),
-    endTime: new Date(),
-    tags: ['Workshop']
+    description: '',
+    startTime: 'Sat, 10:00 AM',
+    endTime: 'Sat, 11:00 AM',
+    location: 'PG6 115',
+    tags: 'Workshop'
   },
   {
-    title: 'Functional Programming - Haskell',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-    startTime: new Date(),
-    endTime: new Date(),
-    tags: ['Workshop']
+    title: 'Functional Programming - Java',
+    description: '',
+    startTime: 'Sat, 11:15 AM',
+    endTime: 'Sat, 12:00 PM',
+    location: 'PG6 115',
+    tags: 'Workshop'
   },
   {
     title: 'Lunch',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-    startTime: new Date(),
-    endTime: new Date(),
-    tags: ['Food']
+    description: '',
+    startTime: 'Sat, 12:30 PM',
+    endTime: 'Sat, 1:30 PM',
+    location: 'PG6 Halfmooon',
+    tags: 'Food'
   },
   {
     title: 'Flask & Python',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-    startTime: new Date(),
-    endTime: new Date(),
-    tags: ['Workshop']
+    description: '',
+    startTime: 'Sat, 2:00 PM',
+    endTime: 'Sat, 2:45 PM',
+    location: 'PG6 115',
+    tags: 'Workshop'
   },
   {
-    title: 'Internship Opportunities',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-    startTime: new Date(),
-    endTime: new Date(),
-    tags: ['Workshop']
+    title: '4 Square',
+    description: '',
+    startTime: 'Sat, 3:30 PM',
+    endTime: 'Sat, 4:45 PM',
+    location: 'PG6 Parking Garage',
+    tags: 'Workshop'
   },
   {
-    title: 'VR',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-    startTime: new Date(),
-    endTime: new Date(),
-    tags: ['Workshop']
+    title: 'UI',
+    description: '',
+    startTime: 'Sat, 3:30 PM',
+    endTime: 'Sat, 4:15 PM',
+    location: 'PG6 115',
+    tags: 'Workshop'
   },
   {
-    title: 'Reason',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-    startTime: new Date(),
-    endTime: new Date(),
-    tags: ['Workshop']
+    title: 'ReasonML - Javascript developers',
+    description: '',
+    startTime: 'Sat, 4:15 PM',
+    endTime: 'Sat, 5:00 PM',
+    location: 'PG6 115',
+    tags: 'Workshop'
   },
   {
-    title: 'Machine Learning',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-    startTime: new Date(),
-    endTime: new Date(),
-    tags: ['Workshop']
+    title: 'Predicting stock prizes - Machine Learning',
+    description: '',
+    startTime: 'Sat, 5:00 PM',
+    endTime: 'Sat, 5:45 PM',
+    location: 'PG6 115',
+    tags: 'Workshop'
   },
   {
-    title: 'Sunset Yoga',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-    startTime: new Date(),
-    endTime: new Date(),
-    tags: []
+    title: 'Salsa',
+    description: '',
+    startTime: 'Sat, 5:45 PM',
+    endTime: 'Sat, 6:25 PM',
+    location: 'PG6 116',
+    tags: 'Activity'
   },
   {
     title: 'Dinner',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-    startTime: new Date(),
-    endTime: new Date(),
-    tags: ['Food']
+    description: '',
+    startTime: 'Sat, 7:00 PM',
+    endTime: 'Sat, 8:30 PM',
+    location: 'PG6 Halfmoon',
+    tags: 'Food'
   },
   {
-    title: 'How to Demo',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-    startTime: new Date(),
-    endTime: new Date(),
-    tags: ['Workshop']
+    title: 'Deployment',
+    description: '',
+    startTime: 'Sat, 8:30 PM',
+    endTime: 'Sat, 9:30 PM',
+    location: 'PG6 115',
+    tags: 'Workshop'
   },
   {
-    title: 'Ladies Strom Hackathons',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-    startTime: new Date(),
-    endTime: new Date(),
-    tags: []
+    title: 'Ladies Storm Hackathons',
+    description: '',
+    startTime: 'Sat, 9:00 PM',
+    endTime: 'Sat, 10:00 PM',
+    location: 'PG6 115',
+    tags: 'Activity'
   },
   {
     title: 'Cup Stacking',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-    startTime: new Date(),
-    endTime: new Date(),
-    tags: []
+    description: '',
+    startTime: 'Sat, 10:30 PM',
+    endTime: 'Sat, 11:00 PM',
+    location: 'PG6 Atrium',
+    tags: 'Activity'
   },
   {
     title: 'Midnight Snack',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-    startTime: new Date(),
-    endTime: new Date(),
-    tags: ['Food']
+    description: '',
+    startTime: 'Sun, 12:00 AM',
+    endTime: 'Sun, 12:45 AM',
+    location: 'PG6 Atrium',
+    tags: 'Food'
   },
   {
     title: 'Soylent Pong',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-    startTime: new Date(),
-    endTime: new Date(),
-    tags: ['Food']
-  },
-  {
-    title: 'Werewolf',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-    startTime: new Date(),
-    endTime: new Date(),
-    tags: []
+    description: '',
+    startTime: 'Sun, 1:00 AM',
+    endTime: 'Sun, 1:30 AM',
+    location: 'PG6 Atrium',
+    tags: 'Food'
   },
   {
     title: 'Devpost Submissions Due',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-    startTime: new Date(),
-    endTime: new Date(),
-    tags: []
+    description: '',
+    startTime: 'Sun, 7:00 AM',
+    endTime: 'N/A',
+    location: 'PG6',
+    tags: 'Activity'
   },
   {
     title: 'Breakfast',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-    startTime: new Date(),
-    endTime: new Date(),
-    tags: ['Food']
+    description: '',
+    startTime: 'Sun, 8:15 AM',
+    endTime: 'Sun, 9:00 AM',
+    location: 'PG6 Halfmoon',
+    tags: 'Food'
   },
   {
     title: 'Hacking Ends',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-    startTime: new Date(),
-    endTime: new Date(),
-    tags: []
+    description: '',
+    startTime: 'Sun, 9:00 AM',
+    endTime: 'N/A',
+    location: 'PG6 112',
+    tags: 'Activity'
   },
-  {
-    title: 'Expo Debuts',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-    startTime: new Date(),
-    endTime: new Date(),
-    tags: []
-  }
 ]
 
 export default schedule;
