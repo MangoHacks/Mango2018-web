@@ -59,8 +59,8 @@ function loadDate(){
   var minutesLeft = endDate.minutes;
   var secondsLeft = endDate.seconds;
   var str = daysLeft + ":" + hoursLeft + ":" + minutesLeft + ":" + secondsLeft;
-  document.getElementById("todaysDate").innerHTML = str;
 }
+
 setInterval(loadDate, 1000);
 
 class Live extends Component {

@@ -1,4 +1,3 @@
-
 import React, { Component } from 'react';
 import Modal from 'react-modal';
 
@@ -143,7 +142,7 @@ class VolunteerDashboard extends Component {
     const target = event.target;
     const id = target.id;
     let checkin = 'Yes';
-    fetch('http://localhost:8050/users/' + id,
+    fetch('http://mangohacks.com:8050/users/' + id,
       {
         method: 'PUT',
         "headers": {
@@ -162,7 +161,7 @@ class VolunteerDashboard extends Component {
     const target = event.target;
     const id = target.id;
 
-    fetch('http://localhost:8050/users/' + id,
+    fetch('http://mangohacks.com:8050/users/' + id,
       {
         method: 'GET'
       })
@@ -171,7 +170,7 @@ class VolunteerDashboard extends Component {
       })
   }
   renderVolunteerDashboard() {
-    fetch('http://localhost:8050/users',
+    fetch('http://mangohacks.com:8050/users',
       {
         method: 'GET'
       })
@@ -296,13 +295,14 @@ class VolunteerDashboard extends Component {
         <div className="dashboard-header">
           <p>Volunteer Dashboard</p>
             {
-                this.state.list.map((item, index) => {
-                  this.setState({
-                    count: index +1
-                  });
-                })
+                // this.state.list.map((item, index) => {
+                //   this.setState({
+                //     count: index +1
+                //   });
+                // })
+                
               }
-            <h3>{this.state.count}</h3>
+            <h3>{this.state.list.length}</h3>
           <button onClick={this.openModal}>Add User</button>
         </div>
 
